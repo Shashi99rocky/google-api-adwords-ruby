@@ -2,11 +2,11 @@
 
 = Introduction =
 
-We do a lot of work in our client libraries to make them as easy to use as possible. However, sometimes it's impossible to integrate it into existing systems. This is a quick guide to help you with using the !AdWords API in Ruby when adwords4r is not an option.
+We do a lot of work in our client libraries to make them as easy to use as possible. However, sometimes it's impossible to integrate it into existing systems. This is a quick guide to help you with using the !AdWords API in Ruby when *adwords4r* is not an option.
 
 = Dependencies =
 
-The first thing you'll need is a SOAP library. For all the workarounds that are required (more on that later), soap4r is still the best option. A simple
+The first thing you'll need is a SOAP library. For all the workarounds that are required (more on that later), *soap4r* is still the best option. A simple
 
 {{{
 % gem install soap4r
@@ -14,11 +14,11 @@ The first thing you'll need is a SOAP library. For all the workarounds that are 
 
 should do the trick.
 
-httpclient is also necessary, but the default version included with Ruby should work out of the box.
+*httpclient* is also necessary, but the default version included with Ruby should work out of the box.
 
 = Authentication =
 
-The first step in using the !AdWords API is authenticating successfully. For that, you can simply use [http://code.google.com/p/google-api-adwords-ruby/source/browse/trunk/lib/adwords4r/authtoken.rb authtoken.rb], part of the client library source code, since it has no external dependencies other than httpclient.
+The first step in using the !AdWords API is authenticating successfully. For that, you can simply use [http://code.google.com/p/google-api-adwords-ruby/source/browse/trunk/lib/adwords4r/authtoken.rb authtoken.rb], part of the client library source code, since it has no external dependencies other than *httpclient*.
 
 {{{
 require 'authtoken'
@@ -27,7 +27,7 @@ auth_token = AdWords::AuthToken.get_token(email, password, 'www.google.com', 443
 
 = Service headers =
 
-You'll need to add headers to your SOAP request, because this is where all the login details are specified. soap4r handles this with the SOAP::Header::!SimpleHeader class: by deriving a subclass and overloading on_simple_outbound, you can specify your own request headers. Here's an example class that you can modify to suit your needs:
+Login details are specified in SOAP headers, so it's crucial that you are able to specify these. *soap4r* handles this with the SOAP::Header::!SimpleHeader class: by deriving a subclass and overloading _on_simple_outbound_, you can specify your own request headers. Here's an example class that you can modify to suit your needs:
 
 {{{
 require 'soap/header/simplehandler'
@@ -63,13 +63,13 @@ class ExampleHeaderHandler < SOAP::Header::SimpleHandler
 end
 }}}
 
-It takes several parameters, most of which you should recognize (auth_token would be the authentication token from the previous step and user_agent, developer_token and client_email are |AdWords login credentials. 
+It takes several parameters, most of which you should recognize (_auth_token_ would be the authentication token from the previous step and _user_agent_, developer_token and _client_email_ are !AdWords login credentials. 
 
-namespace, however, is trickier; this is the namespace for the specific service you're calling. For most services, this would be https://adwords.google.com/api/adwords/cm/v200909, but the InfoService, for example, uses https://adwords.google.com/api/adwords/info/v200909. In order to check which namespace to use for the specific service you're invoking, check the "Namespace" field in the [http://code.google.com/apis/adwords/v2009/docs/reference/InfoService.html service's documentation page].
+_namespace_, however, is trickier; this is the namespace for the specific service you're calling. For most services, this would be _https://adwords.google.com/api/adwords/cm/v200909_, but the _!InfoService_, for example, uses _https://adwords.google.com/api/adwords/info/v200909_. In order to check which namespace to use for the specific service you're invoking, check the _Namespace_ entry in the [http://code.google.com/apis/adwords/v2009/docs/reference/InfoService.html service's documentation page].
 
 = Calling a service =
 
-There are two options for calling a web service with soap4r: reading the WSDL at runtime, or generating Ruby classes from the WSDL and using those. Here we'll take the first, since it's the simplest, and the one least likely to require patching to the soap4r library.
+There are two options for calling a web service with *soap4r*: reading the WSDL at runtime, or generating Ruby classes from the WSDL and using those. Here we'll take the first, since it's the simplest, and the one least likely to require patching to the *soap4r* library.
 
 {{{
 require 'soap/wsdlDriver'
@@ -93,7 +93,7 @@ response = campaign_service.get(:selector => selector)
 campaign = response.rval.entries.first
 }}}
 
-Some services require typed objects in certain requests. An example of this is the !AdGroupService, where bidding requires a typed object, like an instance of !ManualCPCAdGroupBids. In order to get this to work, you'll need to create a SOAPElement object and add an xsi:type property to it:
+Note: Some services require typed objects in certain requests. An example of this is the _!AdGroupService_, where bidding requires a typed object, like an instance of _ManualCPCAdGroupBids_. In order to get this to work, you'll need to create a SOAPElement object and add an _xsi:type_ property to it:
 
 {{{
 # Create new ad group structure.
