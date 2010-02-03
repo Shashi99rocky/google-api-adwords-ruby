@@ -2,8 +2,7 @@
 
 = Google adwords4r Library =
 
-Welcome to adwords4r: Bringing the delights of Ruby programming to the AdWords
-world!
+Welcome to adwords4r: Bringing the delights of Ruby programming to the !AdWords world!
 
 Documentation and comments are a work in progress.
 
@@ -46,7 +45,9 @@ $ ruby -rubygems my_program_that_uses_gems
 }}}
 
 If you do not use the rubygems option, you need to add
-   require 'rubygems'
+{{{
+require 'rubygems'
+}}}
 at the beginning of your programs.
 
 Then:
