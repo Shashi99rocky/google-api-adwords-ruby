@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <title>AdWords::Utils</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="../../css/reset.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="../../css/main.css" type="text/css" media="screen" />
+    <script src="../../js/jquery-1.3.2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/jquery-effect.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../js/main.js" type="text/javascript" charset="utf-8"></script>
+</head>
+
+<body>     
+    <div class="banner">
+        <h1>
+            <span class="type">Module</span> 
+            AdWords::Utils 
+            
+        </h1>
+        <ul class="files">
+            
+            <li><a href="../../files/lib/adwords4r/utils_rb.html">lib/adwords4r/utils.rb</a></li>
+            
+        </ul>
+    </div>
+    <div id="bodyContent">
+        <div id="content">
+    
+
+    
+
+    
+    
+
+    
+    
+    <div class="sectiontitle">Methods</div>
+    <dl class="methods">
+    
+        <dt>G</dt>
+        <dd>
+            <ul>
+                
+                <li><a href="#M000059">get_categories</a>,</li>
+                
+                <li><a href="#M000060">get_countries</a>,</li>
+                
+                <li><a href="#M000061">get_currencies</a>,</li>
+                
+                <li><a href="#M000067">get_operation_rates</a>,</li>
+                
+                <li><a href="#M000062">get_timezones</a>,</li>
+                
+                <li><a href="#M000063">get_us_cities</a>,</li>
+                
+                <li><a href="#M000064">get_us_metros</a>,</li>
+                
+                <li><a href="#M000065">get_world_cities</a>,</li>
+                
+                <li><a href="#M000066">get_world_regions</a></li>
+                
+            </ul>
+        </dd>
+    
+    </dl>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+            <div class="sectiontitle">Class Public methods</div>
+            
+            <div class="method">
+                <div class="title" id="M000059">
+                    
+                    <a name="M000059"></a><b>get_categories</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of available advertising categories.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>list of lists. Columns: path, name
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000059_source')" id="l_M000059_source">show</a>
+                        
+                    </p>
+                    <div id="M000059_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 35</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_categories</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_multiple_column_list</span>(<span class="ruby-value str">'categories.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000060">
+                    
+                    <a name="M000060"></a><b>get_countries</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of available countries.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>list of lists. Columns: country, code
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000060_source')" id="l_M000060_source">show</a>
+                        
+                    </p>
+                    <div id="M000060_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 44</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_countries</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_multiple_column_list</span>(<span class="ruby-value str">'countries.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000061">
+                    
+                    <a name="M000061"></a><b>get_currencies</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of available currencies.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>list of lists. Columns: code, currency
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000061_source')" id="l_M000061_source">show</a>
+                        
+                    </p>
+                    <div id="M000061_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 53</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_currencies</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_multiple_column_list</span>(<span class="ruby-value str">'currencies.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000067">
+                    
+                    <a name="M000067"></a><b>get_operation_rates</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of <a href="API.html">API</a> operation rates.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>list of lists. Columns: service, method, rate, per_item
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000067_source')" id="l_M000067_source">show</a>
+                        
+                    </p>
+                    <div id="M000067_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 107</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_operation_rates</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_multiple_column_list</span>(<span class="ruby-value str">'ops_rates.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000062">
+                    
+                    <a name="M000062"></a><b>get_timezones</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of available timezones.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>simple list of timezone names
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000062_source')" id="l_M000062_source">show</a>
+                        
+                    </p>
+                    <div id="M000062_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 62</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_timezones</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_single_column_list</span>(<span class="ruby-value str">'timezones.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000063">
+                    
+                    <a name="M000063"></a><b>get_us_cities</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of available US cities.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>list of lists. Columns: state, code
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000063_source')" id="l_M000063_source">show</a>
+                        
+                    </p>
+                    <div id="M000063_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 71</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_us_cities</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_multiple_column_list</span>(<span class="ruby-value str">'us_cities.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000064">
+                    
+                    <a name="M000064"></a><b>get_us_metros</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of available US metropolitan areas.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>list of lists. Columns: state, metro, code
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000064_source')" id="l_M000064_source">show</a>
+                        
+                    </p>
+                    <div id="M000064_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 80</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_us_metros</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_multiple_column_list</span>(<span class="ruby-value str">'us_metros.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000065">
+                    
+                    <a name="M000065"></a><b>get_world_cities</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of available world cities.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>list of lists. Columns: country, code
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000065_source')" id="l_M000065_source">show</a>
+                        
+                    </p>
+                    <div id="M000065_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 89</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_world_cities</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_multiple_column_list</span>(<span class="ruby-value str">'world_cities.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000066">
+                    
+                    <a name="M000066"></a><b>get_world_regions</b>()
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Retrieve list of available world regions.
+</p>
+<p>
+Returns:
+</p>
+<ul>
+<li>list of lists. Columns: country, code, region
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000066_source')" id="l_M000066_source">show</a>
+                        
+                    </p>
+                    <div id="M000066_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/utils.rb, line 98</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_world_regions</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_multiple_column_list</span>(<span class="ruby-value str">'world_regions.csv'</span>)
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+</div>
+    </div>
+  </body>
+</html>    
