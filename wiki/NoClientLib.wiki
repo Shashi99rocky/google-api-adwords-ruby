@@ -30,6 +30,8 @@ auth_token = AdWords::AuthToken.get_token(email, password, 'www.google.com', 443
 Login details are specified in SOAP headers, so it's crucial that you are able to specify these. *soap4r* handles this with the SOAP::Header::!SimpleHeader class: by deriving a subclass and overloading _on_simple_outbound_, you can specify your own request headers. Here's an example class that you can modify to suit your needs:
 
 {{{
+require 'rubygems'
+gem 'soap4r'
 require 'soap/header/simplehandler'
 
 class ExampleHeaderHandler < SOAP::Header::SimpleHandler
