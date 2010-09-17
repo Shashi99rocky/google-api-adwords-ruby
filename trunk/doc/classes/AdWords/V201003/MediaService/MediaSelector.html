@@ -39,38 +39,31 @@
 <a href="MediaSelector.html">MediaSelector</a>
 </p>
 <ul>
-<li><p>
-mediaType - <a
+<li>mediaType - <a
 href="MediaMediaType.html">AdWords::V201003::MediaService::MediaMediaType</a>
-</p>
+
 </li>
-<li><p>
-mediaSubType - <a
+<li>mediaSubType - <a
 href="MediaMediaSubType.html">AdWords::V201003::MediaService::MediaMediaSubType</a>
-</p>
+
 </li>
-<li><p>
-mediaIds - SOAP::SOAPLong
-</p>
+<li>mediaIds - SOAP::SOAPLong
+
 </li>
-<li><p>
-mediaReferenceIds - SOAP::SOAPLong
-</p>
+<li>mediaReferenceIds - SOAP::SOAPLong
+
 </li>
-<li><p>
-extendedCapabilityTypes - <a
+<li>extendedCapabilityTypes - <a
 href="MediaMediaExtendedCapabilityType.html">AdWords::V201003::MediaService::MediaMediaExtendedCapabilityType</a>
-</p>
+
 </li>
-<li><p>
-extendedCapabilityStates - <a
+<li>extendedCapabilityStates - <a
 href="MediaMediaExtendedCapabilityState.html">AdWords::V201003::MediaService::MediaMediaExtendedCapabilityState</a>
-</p>
+
 </li>
-<li><p>
-mimeTypes - <a
+<li>mimeTypes - <a
 href="MediaMimeType.html">AdWords::V201003::MediaService::MediaMimeType</a>
-</p>
+
 </li>
 </ul>
 
@@ -91,7 +84,7 @@ href="MediaMimeType.html">AdWords::V201003::MediaService::MediaMimeType</a>
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M001515">new</a></li>
                 
             </ul>
         </dd>
@@ -174,9 +167,9 @@ href="MediaMimeType.html">AdWords::V201003::MediaService::MediaMimeType</a>
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M001515">
                     
-                    <a name="method-c-new"></a><b>new</b>(mediaType = nil, mediaSubType = nil, mediaIds = [], mediaReferenceIds = [], extendedCapabilityTypes = [], extendedCapabilityStates = [], mimeTypes = [])
+                    <a name="M001515"></a><b>new</b>(mediaType = nil, mediaSubType = nil, mediaIds = [], mediaReferenceIds = [], extendedCapabilityTypes = [], extendedCapabilityStates = [], mimeTypes = [])
                     
                 </div>
                 
@@ -185,20 +178,20 @@ href="MediaMimeType.html">AdWords::V201003::MediaService::MediaMimeType</a>
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M001515_source')" id="l_M001515_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/v201003/MediaService.rb, line 343</span>
-343:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">mediaType</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">mediaSubType</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">mediaIds</span> = [], <span class="ruby-identifier">mediaReferenceIds</span> = [], <span class="ruby-identifier">extendedCapabilityTypes</span> = [], <span class="ruby-identifier">extendedCapabilityStates</span> = [], <span class="ruby-identifier">mimeTypes</span> = [])
-344:     <span class="ruby-ivar">@mediaType</span> = <span class="ruby-identifier">mediaType</span>
-345:     <span class="ruby-ivar">@mediaSubType</span> = <span class="ruby-identifier">mediaSubType</span>
-346:     <span class="ruby-ivar">@mediaIds</span> = <span class="ruby-identifier">mediaIds</span>
-347:     <span class="ruby-ivar">@mediaReferenceIds</span> = <span class="ruby-identifier">mediaReferenceIds</span>
-348:     <span class="ruby-ivar">@extendedCapabilityTypes</span> = <span class="ruby-identifier">extendedCapabilityTypes</span>
-349:     <span class="ruby-ivar">@extendedCapabilityStates</span> = <span class="ruby-identifier">extendedCapabilityStates</span>
-350:     <span class="ruby-ivar">@mimeTypes</span> = <span class="ruby-identifier">mimeTypes</span>
-351:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M001515_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/MediaService.rb, line 343</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">mediaType</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">mediaSubType</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">mediaIds</span> = [], <span class="ruby-identifier">mediaReferenceIds</span> = [], <span class="ruby-identifier">extendedCapabilityTypes</span> = [], <span class="ruby-identifier">extendedCapabilityStates</span> = [], <span class="ruby-identifier">mimeTypes</span> = [])
+    <span class="ruby-ivar">@mediaType</span> = <span class="ruby-identifier">mediaType</span>
+    <span class="ruby-ivar">@mediaSubType</span> = <span class="ruby-identifier">mediaSubType</span>
+    <span class="ruby-ivar">@mediaIds</span> = <span class="ruby-identifier">mediaIds</span>
+    <span class="ruby-ivar">@mediaReferenceIds</span> = <span class="ruby-identifier">mediaReferenceIds</span>
+    <span class="ruby-ivar">@extendedCapabilityTypes</span> = <span class="ruby-identifier">extendedCapabilityTypes</span>
+    <span class="ruby-ivar">@extendedCapabilityStates</span> = <span class="ruby-identifier">extendedCapabilityStates</span>
+    <span class="ruby-ivar">@mimeTypes</span> = <span class="ruby-identifier">mimeTypes</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

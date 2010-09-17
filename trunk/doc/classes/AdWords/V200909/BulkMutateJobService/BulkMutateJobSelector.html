@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="JobSelector.html">AdWords::V200909::BulkMutateJobService::JobSelector</a>
+                    JobSelector
                     
                 </span>
             
@@ -39,35 +39,28 @@
 <a href="BulkMutateJobSelector.html">BulkMutateJobSelector</a>
 </p>
 <ul>
-<li><p>
-customerJobKeys - SOAP::SOAPString
-</p>
+<li>customerJobKeys - SOAP::SOAPString
+
 </li>
-<li><p>
-includeHistory - SOAP::SOAPBoolean
-</p>
+<li>includeHistory - SOAP::SOAPBoolean
+
 </li>
-<li><p>
-include<a href="Stats.html">Stats</a> - SOAP::SOAPBoolean
-</p>
+<li>include<a href="Stats.html">Stats</a> - SOAP::SOAPBoolean
+
 </li>
-<li><p>
-<a href="BulkMutateJobSelector.html#jobSelector_Type">jobSelector_Type</a>
+<li><a href="BulkMutateJobSelector.html#jobSelector_Type">jobSelector_Type</a>
 - SOAP::SOAPString
-</p>
+
 </li>
-<li><p>
-jobIds - SOAP::SOAPLong
-</p>
+<li>jobIds - SOAP::SOAPLong
+
 </li>
-<li><p>
-jobStatuses - <a
+<li>jobStatuses - <a
 href="BasicJobStatus.html">AdWords::V200909::BulkMutateJobService::BasicJobStatus</a>
-</p>
+
 </li>
-<li><p>
-resultPartIndex - SOAP::SOAPInt
-</p>
+<li>resultPartIndex - SOAP::SOAPInt
+
 </li>
 </ul>
 
@@ -88,7 +81,7 @@ resultPartIndex - SOAP::SOAPInt
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M000830">new</a></li>
                 
             </ul>
         </dd>
@@ -171,9 +164,9 @@ resultPartIndex - SOAP::SOAPInt
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M000830">
                     
-                    <a name="method-c-new"></a><b>new</b>(customerJobKeys = [], includeHistory = nil, includeStats = nil, jobSelector_Type = nil, jobIds = [], jobStatuses = [], resultPartIndex = nil)
+                    <a name="M000830"></a><b>new</b>(customerJobKeys = [], includeHistory = nil, includeStats = nil, jobSelector_Type = nil, jobIds = [], jobStatuses = [], resultPartIndex = nil)
                     
                 </div>
                 
@@ -182,20 +175,20 @@ resultPartIndex - SOAP::SOAPInt
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000830_source')" id="l_M000830_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>      <span class="ruby-comment cmt"># File lib/adwords4r/v200909/BulkMutateJobService.rb, line 2431</span>
-2431:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">customerJobKeys</span> = [], <span class="ruby-identifier">includeHistory</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">includeStats</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">jobSelector_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">jobIds</span> = [], <span class="ruby-identifier">jobStatuses</span> = [], <span class="ruby-identifier">resultPartIndex</span> = <span class="ruby-keyword kw">nil</span>)
-2432:     <span class="ruby-ivar">@customerJobKeys</span> = <span class="ruby-identifier">customerJobKeys</span>
-2433:     <span class="ruby-ivar">@includeHistory</span> = <span class="ruby-identifier">includeHistory</span>
-2434:     <span class="ruby-ivar">@includeStats</span> = <span class="ruby-identifier">includeStats</span>
-2435:     <span class="ruby-ivar">@jobSelector_Type</span> = <span class="ruby-identifier">jobSelector_Type</span>
-2436:     <span class="ruby-ivar">@jobIds</span> = <span class="ruby-identifier">jobIds</span>
-2437:     <span class="ruby-ivar">@jobStatuses</span> = <span class="ruby-identifier">jobStatuses</span>
-2438:     <span class="ruby-ivar">@resultPartIndex</span> = <span class="ruby-identifier">resultPartIndex</span>
-2439:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M000830_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v200909/BulkMutateJobService.rb, line 2431</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">customerJobKeys</span> = [], <span class="ruby-identifier">includeHistory</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">includeStats</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">jobSelector_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">jobIds</span> = [], <span class="ruby-identifier">jobStatuses</span> = [], <span class="ruby-identifier">resultPartIndex</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@customerJobKeys</span> = <span class="ruby-identifier">customerJobKeys</span>
+    <span class="ruby-ivar">@includeHistory</span> = <span class="ruby-identifier">includeHistory</span>
+    <span class="ruby-ivar">@includeStats</span> = <span class="ruby-identifier">includeStats</span>
+    <span class="ruby-ivar">@jobSelector_Type</span> = <span class="ruby-identifier">jobSelector_Type</span>
+    <span class="ruby-ivar">@jobIds</span> = <span class="ruby-identifier">jobIds</span>
+    <span class="ruby-ivar">@jobStatuses</span> = <span class="ruby-identifier">jobStatuses</span>
+    <span class="ruby-ivar">@resultPartIndex</span> = <span class="ruby-identifier">resultPartIndex</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

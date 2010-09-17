@@ -39,41 +39,33 @@
 <a href="ReportDefinition.html">ReportDefinition</a>
 </p>
 <ul>
-<li><p>
-id - SOAP::SOAPLong
-</p>
+<li>id - SOAP::SOAPLong
+
 </li>
-<li><p>
-selector - <a
+<li>selector - <a
 href="Selector.html">AdWords::V201003::ReportDefinitionService::Selector</a>
-</p>
+
 </li>
-<li><p>
-reportName - SOAP::SOAPString
-</p>
+<li>reportName - SOAP::SOAPString
+
 </li>
-<li><p>
-reportType - <a
+<li>reportType - <a
 href="ReportDefinitionReportType.html">AdWords::V201003::ReportDefinitionService::ReportDefinitionReportType</a>
-</p>
+
 </li>
-<li><p>
-hasAttachment - SOAP::SOAPBoolean
-</p>
+<li>hasAttachment - SOAP::SOAPBoolean
+
 </li>
-<li><p>
-dateRangeType - <a
+<li>dateRangeType - <a
 href="ReportDefinitionDateRangeType.html">AdWords::V201003::ReportDefinitionService::ReportDefinitionDateRangeType</a>
-</p>
+
 </li>
-<li><p>
-downloadFormat - <a
+<li>downloadFormat - <a
 href="DownloadFormat.html">AdWords::V201003::ReportDefinitionService::DownloadFormat</a>
-</p>
+
 </li>
-<li><p>
-creationTime - SOAP::SOAPString
-</p>
+<li>creationTime - SOAP::SOAPString
+
 </li>
 </ul>
 
@@ -94,7 +86,7 @@ creationTime - SOAP::SOAPString
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M001587">new</a></li>
                 
             </ul>
         </dd>
@@ -185,9 +177,9 @@ creationTime - SOAP::SOAPString
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M001587">
                     
-                    <a name="method-c-new"></a><b>new</b>(id = nil, selector = nil, reportName = nil, reportType = nil, hasAttachment = nil, dateRangeType = nil, downloadFormat = nil, creationTime = nil)
+                    <a name="M001587"></a><b>new</b>(id = nil, selector = nil, reportName = nil, reportType = nil, hasAttachment = nil, dateRangeType = nil, downloadFormat = nil, creationTime = nil)
                     
                 </div>
                 
@@ -196,21 +188,21 @@ creationTime - SOAP::SOAPString
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M001587_source')" id="l_M001587_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionService.rb, line 591</span>
-591:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">selector</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">reportName</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">reportType</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">hasAttachment</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">dateRangeType</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">downloadFormat</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">creationTime</span> = <span class="ruby-keyword kw">nil</span>)
-592:     <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
-593:     <span class="ruby-ivar">@selector</span> = <span class="ruby-identifier">selector</span>
-594:     <span class="ruby-ivar">@reportName</span> = <span class="ruby-identifier">reportName</span>
-595:     <span class="ruby-ivar">@reportType</span> = <span class="ruby-identifier">reportType</span>
-596:     <span class="ruby-ivar">@hasAttachment</span> = <span class="ruby-identifier">hasAttachment</span>
-597:     <span class="ruby-ivar">@dateRangeType</span> = <span class="ruby-identifier">dateRangeType</span>
-598:     <span class="ruby-ivar">@downloadFormat</span> = <span class="ruby-identifier">downloadFormat</span>
-599:     <span class="ruby-ivar">@creationTime</span> = <span class="ruby-identifier">creationTime</span>
-600:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M001587_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionService.rb, line 591</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">selector</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">reportName</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">reportType</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">hasAttachment</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">dateRangeType</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">downloadFormat</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">creationTime</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+    <span class="ruby-ivar">@selector</span> = <span class="ruby-identifier">selector</span>
+    <span class="ruby-ivar">@reportName</span> = <span class="ruby-identifier">reportName</span>
+    <span class="ruby-ivar">@reportType</span> = <span class="ruby-identifier">reportType</span>
+    <span class="ruby-ivar">@hasAttachment</span> = <span class="ruby-identifier">hasAttachment</span>
+    <span class="ruby-ivar">@dateRangeType</span> = <span class="ruby-identifier">dateRangeType</span>
+    <span class="ruby-ivar">@downloadFormat</span> = <span class="ruby-identifier">downloadFormat</span>
+    <span class="ruby-ivar">@creationTime</span> = <span class="ruby-identifier">creationTime</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

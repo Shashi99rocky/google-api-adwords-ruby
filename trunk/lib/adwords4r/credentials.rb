@@ -82,6 +82,11 @@ module AdWords
             XSD::QName.new(ns, 'validateOnly'), 'true')
         header.add(validate_only)
       end
+      if @parent.partial_failure
+        partial_failure = SOAP::SOAPElement.new(
+            XSD::QName.new(ns, 'partialFailure'), 'true')
+        header.add(partial_failure)
+      end
       return header
     end
   end
@@ -127,6 +132,8 @@ module AdWords
     attr_accessor :use_mcc
     # Whether we're making validate-only requests
     attr_accessor :validate_only
+    # Whether we're making requests with support for partial failures
+    attr_accessor :partial_failure
 
     public
 
@@ -151,6 +158,7 @@ module AdWords
       @handlers = []
       @use_mcc = false
       @validate_only = false
+      @partial_failures = false
       credentials = get_defaults() if credentials.nil?
       credentials.each do |key, value|
         # 'environment' shouldn't go in the credentials array, and we'll ignore

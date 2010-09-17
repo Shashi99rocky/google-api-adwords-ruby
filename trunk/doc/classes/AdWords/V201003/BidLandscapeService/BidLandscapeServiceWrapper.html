@@ -57,7 +57,7 @@ service. This class is automatically generated.
         <dd>
             <ul>
                 
-                <li><a href="#method-i-getBidLandscape">getBidLandscape</a></li>
+                <li><a href="#M000207">getBidLandscape</a></li>
                 
             </ul>
         </dd>
@@ -66,7 +66,7 @@ service. This class is automatically generated.
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M000206">new</a></li>
                 
             </ul>
         </dd>
@@ -128,9 +128,9 @@ href="../../API.html">API</a> versions.
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M000206">
                     
-                    <a name="method-c-new"></a><b>new</b>(driver, api)
+                    <a name="M000206"></a><b>new</b>(driver, api)
                     
                 </div>
                 
@@ -143,15 +143,13 @@ href="BidLandscapeServiceWrapper.html">BidLandscapeServiceWrapper</a>.
 Args:
 </p>
 <ul>
-<li><p>
-driver: SOAP::RPC::Driver object with the remote SOAP methods for this
+<li>driver: SOAP::RPC::Driver object with the remote SOAP methods for this
 service
-</p>
+
 </li>
-<li><p>
-api: the <a href="../../API.html">AdWords::API</a> object to which the
+<li>api: the <a href="../../API.html">AdWords::API</a> object to which the
 wrapper belongs
-</p>
+
 </li>
 </ul>
 
@@ -162,16 +160,16 @@ wrapper belongs
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000206_source')" id="l_M000206_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>    <span class="ruby-comment cmt"># File lib/adwords4r/v201003/BidLandscapeServiceWrapper.rb, line 34</span>
-34:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">driver</span>, <span class="ruby-identifier">api</span>)
-35:           <span class="ruby-ivar">@driver</span> = <span class="ruby-identifier">driver</span>
-36:           <span class="ruby-ivar">@api</span> = <span class="ruby-identifier">api</span>
-37:           <span class="ruby-ivar">@module</span> = <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">V201003</span><span class="ruby-operator">::</span><span class="ruby-constant">BidLandscapeService</span>
-38:         <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M000206_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/BidLandscapeServiceWrapper.rb, line 34</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">driver</span>, <span class="ruby-identifier">api</span>)
+          <span class="ruby-ivar">@driver</span> = <span class="ruby-identifier">driver</span>
+          <span class="ruby-ivar">@api</span> = <span class="ruby-identifier">api</span>
+          <span class="ruby-ivar">@module</span> = <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">V201003</span><span class="ruby-operator">::</span><span class="ruby-constant">BidLandscapeService</span>
+        <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 
@@ -180,9 +178,9 @@ wrapper belongs
             <div class="sectiontitle">Instance Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-i-getBidLandscape">
+                <div class="title" id="M000207">
                     
-                    <a name="method-i-getBidLandscape"></a><b>getBidLandscape</b>(selector)
+                    <a name="M000207"></a><b>getBidLandscape</b>(selector)
                     
                 </div>
                 
@@ -199,20 +197,18 @@ online documentation for this method</a>.
 Args:
 </p>
 <ul>
-<li><p>
-selector: <a
+<li>selector: <a
 href="BidLandscapeSelector.html">AdWords::V201003::BidLandscapeService::BidLandscapeSelector</a>
-</p>
+
 </li>
 </ul>
 <p>
 Returns:
 </p>
 <ul>
-<li><p>
-rval: SOAP::SOAPArray of <a
+<li>rval: SOAP::SOAPArray of <a
 href="BidLandscape.html">AdWords::V201003::BidLandscapeService::BidLandscape</a>
-</p>
+
 </li>
 </ul>
 <p>
@@ -227,23 +223,23 @@ subclass thereof) if a SOAP fault occurs.
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-i-getBidLandscape_source')" id="l_method-i-getBidLandscape_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000207_source')" id="l_M000207_source">show</a>
                         
                     </p>
-                    <div id="method-i-getBidLandscape_source" class="dyn-source">
-                        <pre>    <span class="ruby-comment cmt"># File lib/adwords4r/v201003/BidLandscapeServiceWrapper.rb, line 52</span>
-52:         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getBidLandscape</span>(<span class="ruby-identifier">selector</span>)
-53:           <span class="ruby-keyword kw">begin</span>
-54:             <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">Service</span>.<span class="ruby-identifier">validate_param</span>(<span class="ruby-value str">'selector'</span>,
-55:                 <span class="ruby-identifier">selector</span>, <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">V201003</span><span class="ruby-operator">::</span><span class="ruby-constant">BidLandscapeService</span><span class="ruby-operator">::</span><span class="ruby-constant">BidLandscapeSelector</span>)
-56:             <span class="ruby-comment cmt"># Construct request object and make API call</span>
-57:             <span class="ruby-identifier">obj</span> = <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">V201003</span><span class="ruby-operator">::</span><span class="ruby-constant">BidLandscapeService</span><span class="ruby-operator">::</span><span class="ruby-constant">GetBidLandscape</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">selector</span>)
-58:             <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">getBidLandscape</span>(<span class="ruby-identifier">obj</span>)
-59:           <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">SOAP</span><span class="ruby-operator">::</span><span class="ruby-constant">FaultError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">fault</span>
-60:             <span class="ruby-identifier">raise</span>(<span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-identifier">create_specific_api_error</span>(<span class="ruby-identifier">fault</span>),
-61:                 <span class="ruby-value str">&quot;getBidLandscape Call Failed: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">fault</span>.<span class="ruby-identifier">faultstring</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">caller</span>)
-62:           <span class="ruby-keyword kw">end</span>
-63:         <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M000207_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/BidLandscapeServiceWrapper.rb, line 52</span>
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getBidLandscape</span>(<span class="ruby-identifier">selector</span>)
+          <span class="ruby-keyword kw">begin</span>
+            <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">Service</span>.<span class="ruby-identifier">validate_param</span>(<span class="ruby-value str">'selector'</span>,
+                <span class="ruby-identifier">selector</span>, <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">V201003</span><span class="ruby-operator">::</span><span class="ruby-constant">BidLandscapeService</span><span class="ruby-operator">::</span><span class="ruby-constant">BidLandscapeSelector</span>)
+            <span class="ruby-comment cmt"># Construct request object and make API call</span>
+            <span class="ruby-identifier">obj</span> = <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">V201003</span><span class="ruby-operator">::</span><span class="ruby-constant">BidLandscapeService</span><span class="ruby-operator">::</span><span class="ruby-constant">GetBidLandscape</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">selector</span>)
+            <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@driver</span>.<span class="ruby-identifier">getBidLandscape</span>(<span class="ruby-identifier">obj</span>)
+          <span class="ruby-keyword kw">rescue</span> <span class="ruby-constant">SOAP</span><span class="ruby-operator">::</span><span class="ruby-constant">FaultError</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">fault</span>
+            <span class="ruby-identifier">raise</span>(<span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">Error</span><span class="ruby-operator">::</span><span class="ruby-identifier">create_specific_api_error</span>(<span class="ruby-identifier">fault</span>),
+                <span class="ruby-value str">&quot;getBidLandscape Call Failed: &quot;</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">fault</span>.<span class="ruby-identifier">faultstring</span>.<span class="ruby-identifier">to_s</span>, <span class="ruby-identifier">caller</span>)
+          <span class="ruby-keyword kw">end</span>
+        <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

@@ -73,86 +73,6 @@ class SoapResponseHeader
   end
 end
 
-# Criterion
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-class Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-
-  def initialize(id = nil, criterion_Type = nil)
-    @id = id
-    @criterion_Type = criterion_Type
-  end
-end
-
-# ContentLabel
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-# - contentLabelType - AdWords::V201003::CampaignCriterionService::ContentLabelType
-class ContentLabel < Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-  attr_accessor :contentLabelType
-
-  def initialize(id = nil, criterion_Type = nil, contentLabelType = nil)
-    @id = id
-    @criterion_Type = criterion_Type
-    @contentLabelType = contentLabelType
-  end
-end
-
-# Keyword
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-# - text - SOAP::SOAPString
-# - matchType - AdWords::V201003::CampaignCriterionService::KeywordMatchType
-class Keyword < Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-  attr_accessor :text
-  attr_accessor :matchType
-
-  def initialize(id = nil, criterion_Type = nil, text = nil, matchType = nil)
-    @id = id
-    @criterion_Type = criterion_Type
-    @text = text
-    @matchType = matchType
-  end
-end
-
-# Placement
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-# - url - SOAP::SOAPString
-class Placement < Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-  attr_accessor :url
-
-  def initialize(id = nil, criterion_Type = nil, url = nil)
-    @id = id
-    @criterion_Type = criterion_Type
-    @url = url
-  end
-end
-
-# Vertical
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-# - path - SOAP::SOAPString
-class Vertical < Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-  attr_accessor :path
-
-  def initialize(id = nil, criterion_Type = nil, path = [])
-    @id = id
-    @criterion_Type = criterion_Type
-    @path = path
-  end
-end
-
 # ApiError
 # abstract
 # - fieldPath - SOAP::SOAPString
@@ -752,6 +672,86 @@ class ApiException < ApplicationException
     @message = message
     @applicationException_Type = applicationException_Type
     @errors = errors
+  end
+end
+
+# Criterion
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+class Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+
+  def initialize(id = nil, criterion_Type = nil)
+    @id = id
+    @criterion_Type = criterion_Type
+  end
+end
+
+# ContentLabel
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+# - contentLabelType - AdWords::V201003::CampaignCriterionService::ContentLabelType
+class ContentLabel < Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+  attr_accessor :contentLabelType
+
+  def initialize(id = nil, criterion_Type = nil, contentLabelType = nil)
+    @id = id
+    @criterion_Type = criterion_Type
+    @contentLabelType = contentLabelType
+  end
+end
+
+# Keyword
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+# - text - SOAP::SOAPString
+# - matchType - AdWords::V201003::CampaignCriterionService::KeywordMatchType
+class Keyword < Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+  attr_accessor :text
+  attr_accessor :matchType
+
+  def initialize(id = nil, criterion_Type = nil, text = nil, matchType = nil)
+    @id = id
+    @criterion_Type = criterion_Type
+    @text = text
+    @matchType = matchType
+  end
+end
+
+# Placement
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+# - url - SOAP::SOAPString
+class Placement < Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+  attr_accessor :url
+
+  def initialize(id = nil, criterion_Type = nil, url = nil)
+    @id = id
+    @criterion_Type = criterion_Type
+    @url = url
+  end
+end
+
+# Vertical
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+# - path - SOAP::SOAPString
+class Vertical < Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+  attr_accessor :path
+
+  def initialize(id = nil, criterion_Type = nil, path = [])
+    @id = id
+    @criterion_Type = criterion_Type
+    @path = path
   end
 end
 

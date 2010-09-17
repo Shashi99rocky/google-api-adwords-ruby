@@ -155,29 +155,6 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => AdWords::V201003::CampaignAdExtensionService::LbcListingData,
-    :schema_type => XSD::QName.new(NsV201003, "LbcListingData"),
-    :schema_element => [
-      ["adExtensionId", "SOAP::SOAPLong", [0, 1]],
-      ["lbcKey", "SOAP::SOAPLong", [0, 1]],
-      ["displayState", "SOAP::SOAPString", [0, 1]],
-      ["contentCheckStatus", "AdWords::V201003::CampaignAdExtensionService::LbcListingDataContentCheckStatus", [0, 1]],
-      ["ownerVerified", "SOAP::SOAPBoolean", [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
-    :class => AdWords::V201003::CampaignAdExtensionService::LbcListingDataOperation,
-    :schema_type => XSD::QName.new(NsV201003, "LbcListingDataOperation"),
-    :schema_basetype => XSD::QName.new(NsV201003, "Operation"),
-    :schema_element => [
-      ["operator", "AdWords::V201003::CampaignAdExtensionService::Operator", [0, 1]],
-      ["operation_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201003, "Operation.Type")], [0, 1]],
-      ["operand", "AdWords::V201003::CampaignAdExtensionService::LbcListingData", [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
     :class => AdWords::V201003::CampaignAdExtensionService::LocationExtension,
     :schema_type => XSD::QName.new(NsV201003, "LocationExtension"),
     :schema_basetype => XSD::QName.new(NsV201003, "AdExtension"),
@@ -631,11 +608,6 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => AdWords::V201003::CampaignAdExtensionService::InternalApiErrorReason,
     :schema_type => XSD::QName.new(NsV201003, "InternalApiError.Reason")
-  )
-
-  EncodedRegistry.register(
-    :class => AdWords::V201003::CampaignAdExtensionService::LbcListingDataContentCheckStatus,
-    :schema_type => XSD::QName.new(NsV201003, "LbcListingData.ContentCheckStatus")
   )
 
   EncodedRegistry.register(
@@ -870,29 +842,6 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => AdWords::V201003::CampaignAdExtensionService::LbcListingData,
-    :schema_type => XSD::QName.new(NsV201003, "LbcListingData"),
-    :schema_element => [
-      ["adExtensionId", "SOAP::SOAPLong", [0, 1]],
-      ["lbcKey", "SOAP::SOAPLong", [0, 1]],
-      ["displayState", "SOAP::SOAPString", [0, 1]],
-      ["contentCheckStatus", "AdWords::V201003::CampaignAdExtensionService::LbcListingDataContentCheckStatus", [0, 1]],
-      ["ownerVerified", "SOAP::SOAPBoolean", [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
-    :class => AdWords::V201003::CampaignAdExtensionService::LbcListingDataOperation,
-    :schema_type => XSD::QName.new(NsV201003, "LbcListingDataOperation"),
-    :schema_basetype => XSD::QName.new(NsV201003, "Operation"),
-    :schema_element => [
-      ["operator", "AdWords::V201003::CampaignAdExtensionService::Operator", [0, 1]],
-      ["operation_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201003, "Operation.Type")], [0, 1]],
-      ["operand", "AdWords::V201003::CampaignAdExtensionService::LbcListingData", [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
     :class => AdWords::V201003::CampaignAdExtensionService::LocationExtension,
     :schema_type => XSD::QName.new(NsV201003, "LocationExtension"),
     :schema_basetype => XSD::QName.new(NsV201003, "AdExtension"),
@@ -1346,11 +1295,6 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => AdWords::V201003::CampaignAdExtensionService::InternalApiErrorReason,
     :schema_type => XSD::QName.new(NsV201003, "InternalApiError.Reason")
-  )
-
-  LiteralRegistry.register(
-    :class => AdWords::V201003::CampaignAdExtensionService::LbcListingDataContentCheckStatus,
-    :schema_type => XSD::QName.new(NsV201003, "LbcListingData.ContentCheckStatus")
   )
 
   LiteralRegistry.register(

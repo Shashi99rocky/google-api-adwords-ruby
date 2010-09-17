@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="Ad.html">AdWords::V201003::AdGroupAdService::Ad</a>
+                    Ad
                     
                 </span>
             
@@ -39,55 +39,43 @@
 <a href="RichMediaAd.html">RichMediaAd</a> abstract
 </p>
 <ul>
-<li><p>
-id - SOAP::SOAPLong
-</p>
+<li>id - SOAP::SOAPLong
+
 </li>
-<li><p>
-url - SOAP::SOAPString
-</p>
+<li>url - SOAP::SOAPString
+
 </li>
-<li><p>
-displayUrl - SOAP::SOAPString
-</p>
+<li>displayUrl - SOAP::SOAPString
+
 </li>
-<li><p>
-approvalStatus - <a
+<li>approvalStatus - <a
 href="AdApprovalStatus.html">AdWords::V201003::AdGroupAdService::AdApprovalStatus</a>
-</p>
+
 </li>
-<li><p>
-disapprovalReasons - SOAP::SOAPString
-</p>
+<li>disapprovalReasons - SOAP::SOAPString
+
 </li>
-<li><p>
-trademarkDisapproved - SOAP::SOAPBoolean
-</p>
+<li>trademarkDisapproved - SOAP::SOAPBoolean
+
 </li>
-<li><p>
-<a href="RichMediaAd.html#ad_Type">ad_Type</a> - SOAP::SOAPString
-</p>
+<li><a href="RichMediaAd.html#ad_Type">ad_Type</a> - SOAP::SOAPString
+
 </li>
-<li><p>
-name - SOAP::SOAPString
-</p>
+<li>name - SOAP::SOAPString
+
 </li>
-<li><p>
-dimensions - <a
+<li>dimensions - <a
 href="Dimensions.html">AdWords::V201003::AdGroupAdService::Dimensions</a>
-</p>
+
 </li>
-<li><p>
-snippet - SOAP::SOAPString
-</p>
+<li>snippet - SOAP::SOAPString
+
 </li>
-<li><p>
-impressionBeaconUrl - SOAP::SOAPString
-</p>
+<li>impressionBeaconUrl - SOAP::SOAPString
+
 </li>
-<li><p>
-certifiedVendorFormatId - SOAP::SOAPLong
-</p>
+<li>certifiedVendorFormatId - SOAP::SOAPLong
+
 </li>
 </ul>
 
@@ -108,7 +96,7 @@ certifiedVendorFormatId - SOAP::SOAPLong
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M001985">new</a></li>
                 
             </ul>
         </dd>
@@ -231,9 +219,9 @@ certifiedVendorFormatId - SOAP::SOAPLong
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M001985">
                     
-                    <a name="method-c-new"></a><b>new</b>(id = nil, url = nil, displayUrl = nil, approvalStatus = nil, disapprovalReasons = [], trademarkDisapproved = nil, ad_Type = nil, name = nil, dimensions = nil, snippet = nil, impressionBeaconUrl = nil, certifiedVendorFormatId = nil)
+                    <a name="M001985"></a><b>new</b>(id = nil, url = nil, displayUrl = nil, approvalStatus = nil, disapprovalReasons = [], trademarkDisapproved = nil, ad_Type = nil, name = nil, dimensions = nil, snippet = nil, impressionBeaconUrl = nil, certifiedVendorFormatId = nil)
                     
                 </div>
                 
@@ -242,25 +230,25 @@ certifiedVendorFormatId - SOAP::SOAPLong
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M001985_source')" id="l_M001985_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>      <span class="ruby-comment cmt"># File lib/adwords4r/v201003/AdGroupAdService.rb, line 2014</span>
-2014:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">displayUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">approvalStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">disapprovalReasons</span> = [], <span class="ruby-identifier">trademarkDisapproved</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">ad_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">name</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">dimensions</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">snippet</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">impressionBeaconUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">certifiedVendorFormatId</span> = <span class="ruby-keyword kw">nil</span>)
-2015:     <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
-2016:     <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
-2017:     <span class="ruby-ivar">@displayUrl</span> = <span class="ruby-identifier">displayUrl</span>
-2018:     <span class="ruby-ivar">@approvalStatus</span> = <span class="ruby-identifier">approvalStatus</span>
-2019:     <span class="ruby-ivar">@disapprovalReasons</span> = <span class="ruby-identifier">disapprovalReasons</span>
-2020:     <span class="ruby-ivar">@trademarkDisapproved</span> = <span class="ruby-identifier">trademarkDisapproved</span>
-2021:     <span class="ruby-ivar">@ad_Type</span> = <span class="ruby-identifier">ad_Type</span>
-2022:     <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
-2023:     <span class="ruby-ivar">@dimensions</span> = <span class="ruby-identifier">dimensions</span>
-2024:     <span class="ruby-ivar">@snippet</span> = <span class="ruby-identifier">snippet</span>
-2025:     <span class="ruby-ivar">@impressionBeaconUrl</span> = <span class="ruby-identifier">impressionBeaconUrl</span>
-2026:     <span class="ruby-ivar">@certifiedVendorFormatId</span> = <span class="ruby-identifier">certifiedVendorFormatId</span>
-2027:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M001985_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/AdGroupAdService.rb, line 2014</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">displayUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">approvalStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">disapprovalReasons</span> = [], <span class="ruby-identifier">trademarkDisapproved</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">ad_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">name</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">dimensions</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">snippet</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">impressionBeaconUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">certifiedVendorFormatId</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+    <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+    <span class="ruby-ivar">@displayUrl</span> = <span class="ruby-identifier">displayUrl</span>
+    <span class="ruby-ivar">@approvalStatus</span> = <span class="ruby-identifier">approvalStatus</span>
+    <span class="ruby-ivar">@disapprovalReasons</span> = <span class="ruby-identifier">disapprovalReasons</span>
+    <span class="ruby-ivar">@trademarkDisapproved</span> = <span class="ruby-identifier">trademarkDisapproved</span>
+    <span class="ruby-ivar">@ad_Type</span> = <span class="ruby-identifier">ad_Type</span>
+    <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+    <span class="ruby-ivar">@dimensions</span> = <span class="ruby-identifier">dimensions</span>
+    <span class="ruby-ivar">@snippet</span> = <span class="ruby-identifier">snippet</span>
+    <span class="ruby-ivar">@impressionBeaconUrl</span> = <span class="ruby-identifier">impressionBeaconUrl</span>
+    <span class="ruby-ivar">@certifiedVendorFormatId</span> = <span class="ruby-identifier">certifiedVendorFormatId</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

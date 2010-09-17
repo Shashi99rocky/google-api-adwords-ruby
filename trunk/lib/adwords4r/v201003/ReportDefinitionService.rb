@@ -67,22 +67,6 @@ class ReportDefinitionField
   end
 end
 
-# Selector
-# - fields - SOAP::SOAPString
-# - predicates - AdWords::V201003::ReportDefinitionService::Predicate
-# - dateRange - AdWords::V201003::ReportDefinitionService::DateRange
-class Selector
-  attr_accessor :fields
-  attr_accessor :predicates
-  attr_accessor :dateRange
-
-  def initialize(fields = [], predicates = [], dateRange = nil)
-    @fields = fields
-    @predicates = predicates
-    @dateRange = dateRange
-  end
-end
-
 # SoapHeader
 # - authToken - SOAP::SOAPString
 # - clientCustomerId - SOAP::SOAPString
@@ -124,6 +108,22 @@ class SoapResponseHeader
     @operations = operations
     @responseTime = responseTime
     @units = units
+  end
+end
+
+# Selector
+# - fields - SOAP::SOAPString
+# - predicates - AdWords::V201003::ReportDefinitionService::Predicate
+# - dateRange - AdWords::V201003::ReportDefinitionService::DateRange
+class Selector
+  attr_accessor :fields
+  attr_accessor :predicates
+  attr_accessor :dateRange
+
+  def initialize(fields = [], predicates = [], dateRange = nil)
+    @fields = fields
+    @predicates = predicates
+    @dateRange = dateRange
   end
 end
 
@@ -699,6 +699,7 @@ class DownloadFormat < ::String
   CSV = DownloadFormat.new("CSV")
   CSVFOREXCEL = DownloadFormat.new("CSVFOREXCEL")
   GZIPPED_CSV = DownloadFormat.new("GZIPPED_CSV")
+  GZIPPED_XML = DownloadFormat.new("GZIPPED_XML")
   TSV = DownloadFormat.new("TSV")
   XML = DownloadFormat.new("XML")
 end

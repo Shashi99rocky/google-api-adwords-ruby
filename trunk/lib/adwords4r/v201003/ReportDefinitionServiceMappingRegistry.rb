@@ -260,16 +260,6 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => AdWords::V201003::ReportDefinitionService::Selector,
-    :schema_type => XSD::QName.new(NsV201003, "Selector"),
-    :schema_element => [
-      ["fields", "SOAP::SOAPString[]", [0, nil]],
-      ["predicates", "AdWords::V201003::ReportDefinitionService::Predicate[]", [0, nil]],
-      ["dateRange", "AdWords::V201003::ReportDefinitionService::DateRange", [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
     :class => AdWords::V201003::ReportDefinitionService::SizeLimitError,
     :schema_type => XSD::QName.new(NsV201003, "SizeLimitError"),
     :schema_basetype => XSD::QName.new(NsV201003, "ApiError"),
@@ -303,6 +293,16 @@ module DefaultMappingRegistry
       ["operations", "SOAP::SOAPLong", [0, 1]],
       ["responseTime", "SOAP::SOAPLong", [0, 1]],
       ["units", "SOAP::SOAPLong", [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => AdWords::V201003::ReportDefinitionService::Selector,
+    :schema_type => XSD::QName.new(NsV201003, "Selector"),
+    :schema_element => [
+      ["fields", "SOAP::SOAPString[]", [0, nil]],
+      ["predicates", "AdWords::V201003::ReportDefinitionService::Predicate[]", [0, nil]],
+      ["dateRange", "AdWords::V201003::ReportDefinitionService::DateRange", [0, 1]]
     ]
   )
 
@@ -731,16 +731,6 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => AdWords::V201003::ReportDefinitionService::Selector,
-    :schema_type => XSD::QName.new(NsV201003, "Selector"),
-    :schema_element => [
-      ["fields", "SOAP::SOAPString[]", [0, nil]],
-      ["predicates", "AdWords::V201003::ReportDefinitionService::Predicate[]", [0, nil]],
-      ["dateRange", "AdWords::V201003::ReportDefinitionService::DateRange", [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
     :class => AdWords::V201003::ReportDefinitionService::SizeLimitError,
     :schema_type => XSD::QName.new(NsV201003, "SizeLimitError"),
     :schema_basetype => XSD::QName.new(NsV201003, "ApiError"),
@@ -774,6 +764,16 @@ module DefaultMappingRegistry
       ["operations", "SOAP::SOAPLong", [0, 1]],
       ["responseTime", "SOAP::SOAPLong", [0, 1]],
       ["units", "SOAP::SOAPLong", [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => AdWords::V201003::ReportDefinitionService::Selector,
+    :schema_type => XSD::QName.new(NsV201003, "Selector"),
+    :schema_element => [
+      ["fields", "SOAP::SOAPString[]", [0, nil]],
+      ["predicates", "AdWords::V201003::ReportDefinitionService::Predicate[]", [0, nil]],
+      ["dateRange", "AdWords::V201003::ReportDefinitionService::DateRange", [0, 1]]
     ]
   )
 

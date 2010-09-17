@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="JobStats.html">AdWords::V200909::BulkMutateJobService::JobStats</a>
+                    JobStats
                     
                 </span>
             
@@ -39,34 +39,27 @@
 <a href="BulkMutateJobStats.html">BulkMutateJobStats</a>
 </p>
 <ul>
-<li><p>
-progressPercent - SOAP::SOAPInt
-</p>
+<li>progressPercent - SOAP::SOAPInt
+
 </li>
-<li><p>
-pendingTimeMillis - SOAP::SOAPLong
-</p>
+<li>pendingTimeMillis - SOAP::SOAPLong
+
 </li>
-<li><p>
-processingTimeMillis - SOAP::SOAPLong
-</p>
+<li>processingTimeMillis - SOAP::SOAPLong
+
 </li>
-<li><p>
-<a href="BulkMutateJobStats.html#jobStats_Type">jobStats_Type</a> -
+<li><a href="BulkMutateJobStats.html#jobStats_Type">jobStats_Type</a> -
 SOAP::SOAPString
-</p>
+
 </li>
-<li><p>
-numOperations - SOAP::SOAPInt
-</p>
+<li>numOperations - SOAP::SOAPInt
+
 </li>
-<li><p>
-numFailedOperations - SOAP::SOAPInt
-</p>
+<li>numFailedOperations - SOAP::SOAPInt
+
 </li>
-<li><p>
-numUnprocessedOperations - SOAP::SOAPInt
-</p>
+<li>numUnprocessedOperations - SOAP::SOAPInt
+
 </li>
 </ul>
 
@@ -87,7 +80,7 @@ numUnprocessedOperations - SOAP::SOAPInt
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M000833">new</a></li>
                 
             </ul>
         </dd>
@@ -170,9 +163,9 @@ numUnprocessedOperations - SOAP::SOAPInt
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M000833">
                     
-                    <a name="method-c-new"></a><b>new</b>(progressPercent = nil, pendingTimeMillis = nil, processingTimeMillis = nil, jobStats_Type = nil, numOperations = nil, numFailedOperations = nil, numUnprocessedOperations = nil)
+                    <a name="M000833"></a><b>new</b>(progressPercent = nil, pendingTimeMillis = nil, processingTimeMillis = nil, jobStats_Type = nil, numOperations = nil, numFailedOperations = nil, numUnprocessedOperations = nil)
                     
                 </div>
                 
@@ -181,20 +174,20 @@ numUnprocessedOperations - SOAP::SOAPInt
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000833_source')" id="l_M000833_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>      <span class="ruby-comment cmt"># File lib/adwords4r/v200909/BulkMutateJobService.rb, line 2478</span>
-2478:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">progressPercent</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">pendingTimeMillis</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">processingTimeMillis</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">jobStats_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numOperations</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numFailedOperations</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numUnprocessedOperations</span> = <span class="ruby-keyword kw">nil</span>)
-2479:     <span class="ruby-ivar">@progressPercent</span> = <span class="ruby-identifier">progressPercent</span>
-2480:     <span class="ruby-ivar">@pendingTimeMillis</span> = <span class="ruby-identifier">pendingTimeMillis</span>
-2481:     <span class="ruby-ivar">@processingTimeMillis</span> = <span class="ruby-identifier">processingTimeMillis</span>
-2482:     <span class="ruby-ivar">@jobStats_Type</span> = <span class="ruby-identifier">jobStats_Type</span>
-2483:     <span class="ruby-ivar">@numOperations</span> = <span class="ruby-identifier">numOperations</span>
-2484:     <span class="ruby-ivar">@numFailedOperations</span> = <span class="ruby-identifier">numFailedOperations</span>
-2485:     <span class="ruby-ivar">@numUnprocessedOperations</span> = <span class="ruby-identifier">numUnprocessedOperations</span>
-2486:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M000833_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v200909/BulkMutateJobService.rb, line 2478</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">progressPercent</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">pendingTimeMillis</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">processingTimeMillis</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">jobStats_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numOperations</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numFailedOperations</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numUnprocessedOperations</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@progressPercent</span> = <span class="ruby-identifier">progressPercent</span>
+    <span class="ruby-ivar">@pendingTimeMillis</span> = <span class="ruby-identifier">pendingTimeMillis</span>
+    <span class="ruby-ivar">@processingTimeMillis</span> = <span class="ruby-identifier">processingTimeMillis</span>
+    <span class="ruby-ivar">@jobStats_Type</span> = <span class="ruby-identifier">jobStats_Type</span>
+    <span class="ruby-ivar">@numOperations</span> = <span class="ruby-identifier">numOperations</span>
+    <span class="ruby-ivar">@numFailedOperations</span> = <span class="ruby-identifier">numFailedOperations</span>
+    <span class="ruby-ivar">@numUnprocessedOperations</span> = <span class="ruby-identifier">numUnprocessedOperations</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

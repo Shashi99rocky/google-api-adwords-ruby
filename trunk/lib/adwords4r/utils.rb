@@ -125,6 +125,25 @@ module AdWords
       return map
     end
 
+    # Returns the source operation index for an error
+    #
+    # Args:
+    # - error: the error to be analyzed
+    #
+    # Returns:
+    # - index for the source operation, nil if none
+    #
+    def self.operation_index_for_error(error)
+      if error and error.respond_to? :fieldPath and error.fieldPath
+        parts = error.fieldPath.split('.')
+        if parts.length > 0
+          match = parts.first.match(/operations\[(\d)\]/)
+          return match ? match[1].to_i : nil
+        end
+      end
+      return nil
+    end
+
     private
 
     # Returns the directory where the CSV files are located.

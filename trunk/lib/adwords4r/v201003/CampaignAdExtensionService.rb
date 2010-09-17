@@ -57,28 +57,6 @@ class GeoPoint
   end
 end
 
-# LbcListingData
-# - adExtensionId - SOAP::SOAPLong
-# - lbcKey - SOAP::SOAPLong
-# - displayState - SOAP::SOAPString
-# - contentCheckStatus - AdWords::V201003::CampaignAdExtensionService::LbcListingDataContentCheckStatus
-# - ownerVerified - SOAP::SOAPBoolean
-class LbcListingData
-  attr_accessor :adExtensionId
-  attr_accessor :lbcKey
-  attr_accessor :displayState
-  attr_accessor :contentCheckStatus
-  attr_accessor :ownerVerified
-
-  def initialize(adExtensionId = nil, lbcKey = nil, displayState = nil, contentCheckStatus = nil, ownerVerified = nil)
-    @adExtensionId = adExtensionId
-    @lbcKey = lbcKey
-    @displayState = displayState
-    @contentCheckStatus = contentCheckStatus
-    @ownerVerified = ownerVerified
-  end
-end
-
 # Paging
 # - startIndex - SOAP::SOAPInt
 # - numberResults - SOAP::SOAPInt
@@ -950,22 +928,6 @@ class Operation
   end
 end
 
-# LbcListingDataOperation
-# - operator - AdWords::V201003::CampaignAdExtensionService::Operator
-# - operation_Type - SOAP::SOAPString
-# - operand - AdWords::V201003::CampaignAdExtensionService::LbcListingData
-class LbcListingDataOperation < Operation
-  attr_accessor :operator
-  attr_accessor :operation_Type
-  attr_accessor :operand
-
-  def initialize(operator = nil, operation_Type = nil, operand = nil)
-    @operator = operator
-    @operation_Type = operation_Type
-    @operand = operand
-  end
-end
-
 # CampaignAdExtensionOperation
 # - operator - AdWords::V201003::CampaignAdExtensionService::Operator
 # - operation_Type - SOAP::SOAPString
@@ -1137,14 +1099,6 @@ end
 class InternalApiErrorReason < ::String
   UNEXPECTED_INTERNAL_API_ERROR = InternalApiErrorReason.new("UNEXPECTED_INTERNAL_API_ERROR")
   UNKNOWN = InternalApiErrorReason.new("UNKNOWN")
-end
-
-# LbcListingData.ContentCheckStatus
-class LbcListingDataContentCheckStatus < ::String
-  FLAGGED = LbcListingDataContentCheckStatus.new("FLAGGED")
-  PASSED = LbcListingDataContentCheckStatus.new("PASSED")
-  REJECTED = LbcListingDataContentCheckStatus.new("REJECTED")
-  UNCHECKED = LbcListingDataContentCheckStatus.new("UNCHECKED")
 end
 
 # LocationExtension.Source

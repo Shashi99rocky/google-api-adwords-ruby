@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="PolicyViolationError.html">AdWords::V200909::TargetingIdeaService::PolicyViolationError</a>
+                    PolicyViolationError
                     
                 </span>
             
@@ -39,44 +39,35 @@
 <a href="CriterionPolicyError.html">CriterionPolicyError</a>
 </p>
 <ul>
-<li><p>
-fieldPath - SOAP::SOAPString
-</p>
+<li>fieldPath - SOAP::SOAPString
+
 </li>
-<li><p>
-trigger - SOAP::SOAPString
-</p>
+<li>trigger - SOAP::SOAPString
+
 </li>
-<li><p>
-<a href="CriterionPolicyError.html#apiError_Type">apiError_Type</a> -
+<li><a href="CriterionPolicyError.html#apiError_Type">apiError_Type</a> -
 SOAP::SOAPString
-</p>
+
 </li>
-<li><p>
-key - <a
+<li>key - <a
 href="PolicyViolationKey.html">AdWords::V200909::TargetingIdeaService::PolicyViolationKey</a>
-</p>
+
 </li>
-<li><p>
-externalPolicyName - SOAP::SOAPString
-</p>
+<li>externalPolicyName - SOAP::SOAPString
+
 </li>
-<li><p>
-externalPolicyUrl - SOAP::SOAPString
-</p>
+<li>externalPolicyUrl - SOAP::SOAPString
+
 </li>
-<li><p>
-externalPolicyDescription - SOAP::SOAPString
-</p>
+<li>externalPolicyDescription - SOAP::SOAPString
+
 </li>
-<li><p>
-isExemptable - SOAP::SOAPBoolean
-</p>
+<li>isExemptable - SOAP::SOAPBoolean
+
 </li>
-<li><p>
-violatingParts - <a
+<li>violatingParts - <a
 href="PolicyViolationErrorPart.html">AdWords::V200909::TargetingIdeaService::PolicyViolationErrorPart</a>
-</p>
+
 </li>
 </ul>
 
@@ -97,7 +88,7 @@ href="PolicyViolationErrorPart.html">AdWords::V200909::TargetingIdeaService::Pol
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M000527">new</a></li>
                 
             </ul>
         </dd>
@@ -196,9 +187,9 @@ href="PolicyViolationErrorPart.html">AdWords::V200909::TargetingIdeaService::Pol
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M000527">
                     
-                    <a name="method-c-new"></a><b>new</b>(fieldPath = nil, trigger = nil, apiError_Type = nil, key = nil, externalPolicyName = nil, externalPolicyUrl = nil, externalPolicyDescription = nil, isExemptable = nil, violatingParts = [])
+                    <a name="M000527"></a><b>new</b>(fieldPath = nil, trigger = nil, apiError_Type = nil, key = nil, externalPolicyName = nil, externalPolicyUrl = nil, externalPolicyDescription = nil, isExemptable = nil, violatingParts = [])
                     
                 </div>
                 
@@ -207,22 +198,22 @@ href="PolicyViolationErrorPart.html">AdWords::V200909::TargetingIdeaService::Pol
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000527_source')" id="l_M000527_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>      <span class="ruby-comment cmt"># File lib/adwords4r/v200909/TargetingIdeaService.rb, line 1076</span>
-1076:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">fieldPath</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">trigger</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">apiError_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">key</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">externalPolicyName</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">externalPolicyUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">externalPolicyDescription</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">isExemptable</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">violatingParts</span> = [])
-1077:     <span class="ruby-ivar">@fieldPath</span> = <span class="ruby-identifier">fieldPath</span>
-1078:     <span class="ruby-ivar">@trigger</span> = <span class="ruby-identifier">trigger</span>
-1079:     <span class="ruby-ivar">@apiError_Type</span> = <span class="ruby-identifier">apiError_Type</span>
-1080:     <span class="ruby-ivar">@key</span> = <span class="ruby-identifier">key</span>
-1081:     <span class="ruby-ivar">@externalPolicyName</span> = <span class="ruby-identifier">externalPolicyName</span>
-1082:     <span class="ruby-ivar">@externalPolicyUrl</span> = <span class="ruby-identifier">externalPolicyUrl</span>
-1083:     <span class="ruby-ivar">@externalPolicyDescription</span> = <span class="ruby-identifier">externalPolicyDescription</span>
-1084:     <span class="ruby-ivar">@isExemptable</span> = <span class="ruby-identifier">isExemptable</span>
-1085:     <span class="ruby-ivar">@violatingParts</span> = <span class="ruby-identifier">violatingParts</span>
-1086:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M000527_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v200909/TargetingIdeaService.rb, line 1028</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">fieldPath</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">trigger</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">apiError_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">key</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">externalPolicyName</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">externalPolicyUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">externalPolicyDescription</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">isExemptable</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">violatingParts</span> = [])
+    <span class="ruby-ivar">@fieldPath</span> = <span class="ruby-identifier">fieldPath</span>
+    <span class="ruby-ivar">@trigger</span> = <span class="ruby-identifier">trigger</span>
+    <span class="ruby-ivar">@apiError_Type</span> = <span class="ruby-identifier">apiError_Type</span>
+    <span class="ruby-ivar">@key</span> = <span class="ruby-identifier">key</span>
+    <span class="ruby-ivar">@externalPolicyName</span> = <span class="ruby-identifier">externalPolicyName</span>
+    <span class="ruby-ivar">@externalPolicyUrl</span> = <span class="ruby-identifier">externalPolicyUrl</span>
+    <span class="ruby-ivar">@externalPolicyDescription</span> = <span class="ruby-identifier">externalPolicyDescription</span>
+    <span class="ruby-ivar">@isExemptable</span> = <span class="ruby-identifier">isExemptable</span>
+    <span class="ruby-ivar">@violatingParts</span> = <span class="ruby-identifier">violatingParts</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

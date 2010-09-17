@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="Ad.html">AdWords::V201003::BulkMutateJobService::Ad</a>
+                    Ad
                     
                 </span>
             
@@ -39,63 +39,49 @@
 <a href="MobileAd.html">MobileAd</a>
 </p>
 <ul>
-<li><p>
-id - SOAP::SOAPLong
-</p>
+<li>id - SOAP::SOAPLong
+
 </li>
-<li><p>
-url - SOAP::SOAPString
-</p>
+<li>url - SOAP::SOAPString
+
 </li>
-<li><p>
-displayUrl - SOAP::SOAPString
-</p>
+<li>displayUrl - SOAP::SOAPString
+
 </li>
-<li><p>
-approvalStatus - <a
+<li>approvalStatus - <a
 href="AdApprovalStatus.html">AdWords::V201003::BulkMutateJobService::AdApprovalStatus</a>
-</p>
+
 </li>
-<li><p>
-disapprovalReasons - SOAP::SOAPString
-</p>
+<li>disapprovalReasons - SOAP::SOAPString
+
 </li>
-<li><p>
-trademarkDisapproved - SOAP::SOAPBoolean
-</p>
+<li>trademarkDisapproved - SOAP::SOAPBoolean
+
 </li>
-<li><p>
-<a href="MobileAd.html#ad_Type">ad_Type</a> - SOAP::SOAPString
-</p>
+<li><a href="MobileAd.html#ad_Type">ad_Type</a> - SOAP::SOAPString
+
 </li>
-<li><p>
-headline - SOAP::SOAPString
-</p>
+<li>headline - SOAP::SOAPString
+
 </li>
-<li><p>
-description - SOAP::SOAPString
-</p>
+<li>description - SOAP::SOAPString
+
 </li>
-<li><p>
-markupLanguages - <a
+<li>markupLanguages - <a
 href="MarkupLanguageType.html">AdWords::V201003::BulkMutateJobService::MarkupLanguageType</a>
-</p>
+
 </li>
-<li><p>
-mobileCarriers - SOAP::SOAPString
-</p>
+<li>mobileCarriers - SOAP::SOAPString
+
 </li>
-<li><p>
-businessName - SOAP::SOAPString
-</p>
+<li>businessName - SOAP::SOAPString
+
 </li>
-<li><p>
-countryCode - SOAP::SOAPString
-</p>
+<li>countryCode - SOAP::SOAPString
+
 </li>
-<li><p>
-phoneNumber - SOAP::SOAPString
-</p>
+<li>phoneNumber - SOAP::SOAPString
+
 </li>
 </ul>
 
@@ -116,7 +102,7 @@ phoneNumber - SOAP::SOAPString
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M001222">new</a></li>
                 
             </ul>
         </dd>
@@ -255,9 +241,9 @@ phoneNumber - SOAP::SOAPString
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M001222">
                     
-                    <a name="method-c-new"></a><b>new</b>(id = nil, url = nil, displayUrl = nil, approvalStatus = nil, disapprovalReasons = [], trademarkDisapproved = nil, ad_Type = nil, headline = nil, description = nil, markupLanguages = [], mobileCarriers = [], businessName = nil, countryCode = nil, phoneNumber = nil)
+                    <a name="M001222"></a><b>new</b>(id = nil, url = nil, displayUrl = nil, approvalStatus = nil, disapprovalReasons = [], trademarkDisapproved = nil, ad_Type = nil, headline = nil, description = nil, markupLanguages = [], mobileCarriers = [], businessName = nil, countryCode = nil, phoneNumber = nil)
                     
                 </div>
                 
@@ -266,27 +252,27 @@ phoneNumber - SOAP::SOAPString
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M001222_source')" id="l_M001222_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/v201003/BulkMutateJobService.rb, line 203</span>
-203:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">displayUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">approvalStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">disapprovalReasons</span> = [], <span class="ruby-identifier">trademarkDisapproved</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">ad_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">headline</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">description</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">markupLanguages</span> = [], <span class="ruby-identifier">mobileCarriers</span> = [], <span class="ruby-identifier">businessName</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">countryCode</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">phoneNumber</span> = <span class="ruby-keyword kw">nil</span>)
-204:     <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
-205:     <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
-206:     <span class="ruby-ivar">@displayUrl</span> = <span class="ruby-identifier">displayUrl</span>
-207:     <span class="ruby-ivar">@approvalStatus</span> = <span class="ruby-identifier">approvalStatus</span>
-208:     <span class="ruby-ivar">@disapprovalReasons</span> = <span class="ruby-identifier">disapprovalReasons</span>
-209:     <span class="ruby-ivar">@trademarkDisapproved</span> = <span class="ruby-identifier">trademarkDisapproved</span>
-210:     <span class="ruby-ivar">@ad_Type</span> = <span class="ruby-identifier">ad_Type</span>
-211:     <span class="ruby-ivar">@headline</span> = <span class="ruby-identifier">headline</span>
-212:     <span class="ruby-ivar">@description</span> = <span class="ruby-identifier">description</span>
-213:     <span class="ruby-ivar">@markupLanguages</span> = <span class="ruby-identifier">markupLanguages</span>
-214:     <span class="ruby-ivar">@mobileCarriers</span> = <span class="ruby-identifier">mobileCarriers</span>
-215:     <span class="ruby-ivar">@businessName</span> = <span class="ruby-identifier">businessName</span>
-216:     <span class="ruby-ivar">@countryCode</span> = <span class="ruby-identifier">countryCode</span>
-217:     <span class="ruby-ivar">@phoneNumber</span> = <span class="ruby-identifier">phoneNumber</span>
-218:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M001222_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/BulkMutateJobService.rb, line 203</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">displayUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">approvalStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">disapprovalReasons</span> = [], <span class="ruby-identifier">trademarkDisapproved</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">ad_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">headline</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">description</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">markupLanguages</span> = [], <span class="ruby-identifier">mobileCarriers</span> = [], <span class="ruby-identifier">businessName</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">countryCode</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">phoneNumber</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+    <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+    <span class="ruby-ivar">@displayUrl</span> = <span class="ruby-identifier">displayUrl</span>
+    <span class="ruby-ivar">@approvalStatus</span> = <span class="ruby-identifier">approvalStatus</span>
+    <span class="ruby-ivar">@disapprovalReasons</span> = <span class="ruby-identifier">disapprovalReasons</span>
+    <span class="ruby-ivar">@trademarkDisapproved</span> = <span class="ruby-identifier">trademarkDisapproved</span>
+    <span class="ruby-ivar">@ad_Type</span> = <span class="ruby-identifier">ad_Type</span>
+    <span class="ruby-ivar">@headline</span> = <span class="ruby-identifier">headline</span>
+    <span class="ruby-ivar">@description</span> = <span class="ruby-identifier">description</span>
+    <span class="ruby-ivar">@markupLanguages</span> = <span class="ruby-identifier">markupLanguages</span>
+    <span class="ruby-ivar">@mobileCarriers</span> = <span class="ruby-identifier">mobileCarriers</span>
+    <span class="ruby-ivar">@businessName</span> = <span class="ruby-identifier">businessName</span>
+    <span class="ruby-ivar">@countryCode</span> = <span class="ruby-identifier">countryCode</span>
+    <span class="ruby-ivar">@phoneNumber</span> = <span class="ruby-identifier">phoneNumber</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 
