@@ -399,15 +399,6 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
-    :class => AdWords::V201003::CampaignCriterionService::Criterion,
-    :schema_type => XSD::QName.new(NsV201003, "Criterion"),
-    :schema_element => [
-      ["id", "SOAP::SOAPLong", [0, 1]],
-      ["criterion_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201003, "Criterion.Type")], [0, 1]]
-    ]
-  )
-
-  EncodedRegistry.register(
     :class => AdWords::V201003::CampaignCriterionService::DatabaseError,
     :schema_type => XSD::QName.new(NsV201003, "DatabaseError"),
     :schema_basetype => XSD::QName.new(NsV201003, "ApiError"),
@@ -437,6 +428,15 @@ module DefaultMappingRegistry
     :schema_element => [
       ["message", "SOAP::SOAPString", [0, 1]],
       ["applicationException_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201003, "ApplicationException.Type")], [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
+    :class => AdWords::V201003::CampaignCriterionService::Criterion,
+    :schema_type => XSD::QName.new(NsV201003, "Criterion"),
+    :schema_element => [
+      ["id", "SOAP::SOAPLong", [0, 1]],
+      ["criterion_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201003, "Criterion.Type")], [0, 1]]
     ]
   )
 
@@ -1017,15 +1017,6 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
-    :class => AdWords::V201003::CampaignCriterionService::Criterion,
-    :schema_type => XSD::QName.new(NsV201003, "Criterion"),
-    :schema_element => [
-      ["id", "SOAP::SOAPLong", [0, 1]],
-      ["criterion_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201003, "Criterion.Type")], [0, 1]]
-    ]
-  )
-
-  LiteralRegistry.register(
     :class => AdWords::V201003::CampaignCriterionService::DatabaseError,
     :schema_type => XSD::QName.new(NsV201003, "DatabaseError"),
     :schema_basetype => XSD::QName.new(NsV201003, "ApiError"),
@@ -1055,6 +1046,15 @@ module DefaultMappingRegistry
     :schema_element => [
       ["message", "SOAP::SOAPString", [0, 1]],
       ["applicationException_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201003, "ApplicationException.Type")], [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => AdWords::V201003::CampaignCriterionService::Criterion,
+    :schema_type => XSD::QName.new(NsV201003, "Criterion"),
+    :schema_element => [
+      ["id", "SOAP::SOAPLong", [0, 1]],
+      ["criterion_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201003, "Criterion.Type")], [0, 1]]
     ]
   )
 

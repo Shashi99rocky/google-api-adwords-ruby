@@ -56,7 +56,7 @@ Handles the headers used in <= v13 (both sandbox and production)
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M000037">new</a></li>
                 
             </ul>
         </dd>
@@ -65,7 +65,7 @@ Handles the headers used in <= v13 (both sandbox and production)
         <dd>
             <ul>
                 
-                <li><a href="#method-i-on_simple_outbound">on_simple_outbound</a></li>
+                <li><a href="#M000038">on_simple_outbound</a></li>
                 
             </ul>
         </dd>
@@ -108,9 +108,9 @@ Handles the headers used in <= v13 (both sandbox and production)
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M000037">
                     
-                    <a name="method-c-new"></a><b>new</b>(tag, credentials)
+                    <a name="M000037"></a><b>new</b>(tag, credentials)
                     
                 </div>
                 
@@ -123,13 +123,11 @@ href="Pre2009HeaderHandler.html">Pre2009HeaderHandler</a>.
 Args:
 </p>
 <ul>
-<li><p>
-tag: XML tag name to be handled (email, password, etc.)
-</p>
+<li>tag: XML tag name to be handled (email, password, etc.)
+
 </li>
-<li><p>
-value: value to be sent inside tag on outgoing requests
-</p>
+<li>value: value to be sent inside tag on outgoing requests
+
 </li>
 </ul>
 
@@ -140,16 +138,16 @@ value: value to be sent inside tag on outgoing requests
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000037_source')" id="l_M000037_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/credentials.rb, line 101</span>
-101:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">credentials</span>)
-102:       <span class="ruby-keyword kw">super</span>(<span class="ruby-constant">XSD</span><span class="ruby-operator">::</span><span class="ruby-constant">QName</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">tag</span>))
-103:       <span class="ruby-ivar">@tag</span> = <span class="ruby-identifier">tag</span>
-104:       <span class="ruby-ivar">@credentials</span> = <span class="ruby-identifier">credentials</span>
-105:     <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M000037_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/credentials.rb, line 106</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">tag</span>, <span class="ruby-identifier">credentials</span>)
+      <span class="ruby-keyword kw">super</span>(<span class="ruby-constant">XSD</span><span class="ruby-operator">::</span><span class="ruby-constant">QName</span>.<span class="ruby-identifier">new</span>(<span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">tag</span>))
+      <span class="ruby-ivar">@tag</span> = <span class="ruby-identifier">tag</span>
+      <span class="ruby-ivar">@credentials</span> = <span class="ruby-identifier">credentials</span>
+    <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 
@@ -158,9 +156,9 @@ value: value to be sent inside tag on outgoing requests
             <div class="sectiontitle">Instance Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-i-on_simple_outbound">
+                <div class="title" id="M000038">
                     
-                    <a name="method-i-on_simple_outbound"></a><b>on_simple_outbound</b>()
+                    <a name="M000038"></a><b>on_simple_outbound</b>()
                     
                 </div>
                 
@@ -176,20 +174,20 @@ Handles callback.
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-i-on_simple_outbound_source')" id="l_method-i-on_simple_outbound_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000038_source')" id="l_M000038_source">show</a>
                         
                     </p>
-                    <div id="method-i-on_simple_outbound_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/credentials.rb, line 108</span>
-108:     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_simple_outbound</span>
-109:       <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@tag</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'clientEmail'</span>
-110:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">client_email</span>
-111:       <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@tag</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'clientCustomerId'</span>
-112:         <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">client_customer_id</span>
-113:       <span class="ruby-keyword kw">else</span>
-114:         <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">credentials</span>[<span class="ruby-ivar">@tag</span>]
-115:       <span class="ruby-keyword kw">end</span>
-116:     <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M000038_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/credentials.rb, line 113</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_simple_outbound</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-ivar">@tag</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'clientEmail'</span>
+        <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">client_email</span>
+      <span class="ruby-keyword kw">elsif</span> <span class="ruby-ivar">@tag</span> <span class="ruby-operator">==</span> <span class="ruby-value str">'clientCustomerId'</span>
+        <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">client_customer_id</span>
+      <span class="ruby-keyword kw">else</span>
+        <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">credentials</span>[<span class="ruby-ivar">@tag</span>]
+      <span class="ruby-keyword kw">end</span>
+    <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

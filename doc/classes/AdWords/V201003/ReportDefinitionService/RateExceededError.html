@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="ApiError.html">AdWords::V201003::ReportDefinitionService::ApiError</a>
+                    ApiError
                     
                 </span>
             
@@ -39,39 +39,31 @@
 <a href="RateExceededError.html">RateExceededError</a>
 </p>
 <ul>
-<li><p>
-fieldPath - SOAP::SOAPString
-</p>
+<li>fieldPath - SOAP::SOAPString
+
 </li>
-<li><p>
-trigger - SOAP::SOAPString
-</p>
+<li>trigger - SOAP::SOAPString
+
 </li>
-<li><p>
-errorString - SOAP::SOAPString
-</p>
+<li>errorString - SOAP::SOAPString
+
 </li>
-<li><p>
-<a href="RateExceededError.html#apiError_Type">apiError_Type</a> -
+<li><a href="RateExceededError.html#apiError_Type">apiError_Type</a> -
 SOAP::SOAPString
-</p>
+
 </li>
-<li><p>
-reason - <a
+<li>reason - <a
 href="RateExceededErrorReason.html">AdWords::V201003::ReportDefinitionService::RateExceededErrorReason</a>
-</p>
+
 </li>
-<li><p>
-rateName - SOAP::SOAPString
-</p>
+<li>rateName - SOAP::SOAPString
+
 </li>
-<li><p>
-rateScope - SOAP::SOAPString
-</p>
+<li>rateScope - SOAP::SOAPString
+
 </li>
-<li><p>
-retryAfterSeconds - SOAP::SOAPInt
-</p>
+<li>retryAfterSeconds - SOAP::SOAPInt
+
 </li>
 </ul>
 
@@ -92,7 +84,7 @@ retryAfterSeconds - SOAP::SOAPInt
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M001578">new</a></li>
                 
             </ul>
         </dd>
@@ -183,9 +175,9 @@ retryAfterSeconds - SOAP::SOAPInt
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M001578">
                     
-                    <a name="method-c-new"></a><b>new</b>(fieldPath = nil, trigger = nil, errorString = nil, apiError_Type = nil, reason = nil, rateName = nil, rateScope = nil, retryAfterSeconds = nil)
+                    <a name="M001578"></a><b>new</b>(fieldPath = nil, trigger = nil, errorString = nil, apiError_Type = nil, reason = nil, rateName = nil, rateScope = nil, retryAfterSeconds = nil)
                     
                 </div>
                 
@@ -194,21 +186,21 @@ retryAfterSeconds - SOAP::SOAPInt
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M001578_source')" id="l_M001578_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionService.rb, line 411</span>
-411:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">fieldPath</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">trigger</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">errorString</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">apiError_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">reason</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">rateName</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">rateScope</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">retryAfterSeconds</span> = <span class="ruby-keyword kw">nil</span>)
-412:     <span class="ruby-ivar">@fieldPath</span> = <span class="ruby-identifier">fieldPath</span>
-413:     <span class="ruby-ivar">@trigger</span> = <span class="ruby-identifier">trigger</span>
-414:     <span class="ruby-ivar">@errorString</span> = <span class="ruby-identifier">errorString</span>
-415:     <span class="ruby-ivar">@apiError_Type</span> = <span class="ruby-identifier">apiError_Type</span>
-416:     <span class="ruby-ivar">@reason</span> = <span class="ruby-identifier">reason</span>
-417:     <span class="ruby-ivar">@rateName</span> = <span class="ruby-identifier">rateName</span>
-418:     <span class="ruby-ivar">@rateScope</span> = <span class="ruby-identifier">rateScope</span>
-419:     <span class="ruby-ivar">@retryAfterSeconds</span> = <span class="ruby-identifier">retryAfterSeconds</span>
-420:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M001578_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionService.rb, line 411</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">fieldPath</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">trigger</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">errorString</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">apiError_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">reason</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">rateName</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">rateScope</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">retryAfterSeconds</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@fieldPath</span> = <span class="ruby-identifier">fieldPath</span>
+    <span class="ruby-ivar">@trigger</span> = <span class="ruby-identifier">trigger</span>
+    <span class="ruby-ivar">@errorString</span> = <span class="ruby-identifier">errorString</span>
+    <span class="ruby-ivar">@apiError_Type</span> = <span class="ruby-identifier">apiError_Type</span>
+    <span class="ruby-ivar">@reason</span> = <span class="ruby-identifier">reason</span>
+    <span class="ruby-ivar">@rateName</span> = <span class="ruby-identifier">rateName</span>
+    <span class="ruby-ivar">@rateScope</span> = <span class="ruby-identifier">rateScope</span>
+    <span class="ruby-ivar">@retryAfterSeconds</span> = <span class="ruby-identifier">retryAfterSeconds</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

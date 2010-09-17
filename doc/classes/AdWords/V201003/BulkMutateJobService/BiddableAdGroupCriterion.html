@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="AdGroupCriterion.html">AdWords::V201003::BulkMutateJobService::AdGroupCriterion</a>
+                    AdGroupCriterion
                     
                 </span>
             
@@ -39,59 +39,48 @@
 <a href="BiddableAdGroupCriterion.html">BiddableAdGroupCriterion</a>
 </p>
 <ul>
-<li><p>
-adGroupId - SOAP::SOAPLong
-</p>
+<li>adGroupId - SOAP::SOAPLong
+
 </li>
-<li><p>
-criterion - <a
+<li>criterion - <a
 href="Criterion.html">AdWords::V201003::BulkMutateJobService::Criterion</a>
-</p>
+
 </li>
-<li><p>
-<a
+<li><a
 href="BiddableAdGroupCriterion.html#adGroupCriterion_Type">adGroupCriterion_Type</a>
 - SOAP::SOAPString
-</p>
+
 </li>
-<li><p>
-userStatus - <a
+<li>userStatus - <a
 href="UserStatus.html">AdWords::V201003::BulkMutateJobService::UserStatus</a>
-</p>
+
 </li>
-<li><p>
-system<a href="ServingStatus.html">ServingStatus</a> - <a
+<li>system<a href="ServingStatus.html">ServingStatus</a> - <a
 href="SystemServingStatus.html">AdWords::V201003::BulkMutateJobService::SystemServingStatus</a>
-</p>
+
 </li>
-<li><p>
-approvalStatus - <a
+<li>approvalStatus - <a
 href="ApprovalStatus.html">AdWords::V201003::BulkMutateJobService::ApprovalStatus</a>
-</p>
+
 </li>
-<li><p>
-destinationUrl - SOAP::SOAPString
-</p>
+<li>destinationUrl - SOAP::SOAPString
+
 </li>
-<li><p>
-bids - <a
+<li>bids - <a
 href="AdGroupCriterionBids.html">AdWords::V201003::BulkMutateJobService::AdGroupCriterionBids</a>
-</p>
+
 </li>
-<li><p>
-firstPageCpc - <a
+<li>firstPageCpc - <a
 href="Bid.html">AdWords::V201003::BulkMutateJobService::Bid</a>
-</p>
+
 </li>
-<li><p>
-qualityInfo - <a
+<li>qualityInfo - <a
 href="QualityInfo.html">AdWords::V201003::BulkMutateJobService::QualityInfo</a>
-</p>
+
 </li>
-<li><p>
-stats - <a
+<li>stats - <a
 href="Stats.html">AdWords::V201003::BulkMutateJobService::Stats</a>
-</p>
+
 </li>
 </ul>
 
@@ -112,7 +101,7 @@ href="Stats.html">AdWords::V201003::BulkMutateJobService::Stats</a>
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M001266">new</a></li>
                 
             </ul>
         </dd>
@@ -227,9 +216,9 @@ href="Stats.html">AdWords::V201003::BulkMutateJobService::Stats</a>
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M001266">
                     
-                    <a name="method-c-new"></a><b>new</b>(adGroupId = nil, criterion = nil, adGroupCriterion_Type = nil, userStatus = nil, systemServingStatus = nil, approvalStatus = nil, destinationUrl = nil, bids = nil, firstPageCpc = nil, qualityInfo = nil, stats = nil)
+                    <a name="M001266"></a><b>new</b>(adGroupId = nil, criterion = nil, adGroupCriterion_Type = nil, userStatus = nil, systemServingStatus = nil, approvalStatus = nil, destinationUrl = nil, bids = nil, firstPageCpc = nil, qualityInfo = nil, stats = nil)
                     
                 </div>
                 
@@ -238,24 +227,24 @@ href="Stats.html">AdWords::V201003::BulkMutateJobService::Stats</a>
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M001266_source')" id="l_M001266_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/v201003/BulkMutateJobService.rb, line 747</span>
-747:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">adGroupId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">criterion</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">adGroupCriterion_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">userStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">systemServingStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">approvalStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">destinationUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">bids</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">firstPageCpc</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">qualityInfo</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">stats</span> = <span class="ruby-keyword kw">nil</span>)
-748:     <span class="ruby-ivar">@adGroupId</span> = <span class="ruby-identifier">adGroupId</span>
-749:     <span class="ruby-ivar">@criterion</span> = <span class="ruby-identifier">criterion</span>
-750:     <span class="ruby-ivar">@adGroupCriterion_Type</span> = <span class="ruby-identifier">adGroupCriterion_Type</span>
-751:     <span class="ruby-ivar">@userStatus</span> = <span class="ruby-identifier">userStatus</span>
-752:     <span class="ruby-ivar">@systemServingStatus</span> = <span class="ruby-identifier">systemServingStatus</span>
-753:     <span class="ruby-ivar">@approvalStatus</span> = <span class="ruby-identifier">approvalStatus</span>
-754:     <span class="ruby-ivar">@destinationUrl</span> = <span class="ruby-identifier">destinationUrl</span>
-755:     <span class="ruby-ivar">@bids</span> = <span class="ruby-identifier">bids</span>
-756:     <span class="ruby-ivar">@firstPageCpc</span> = <span class="ruby-identifier">firstPageCpc</span>
-757:     <span class="ruby-ivar">@qualityInfo</span> = <span class="ruby-identifier">qualityInfo</span>
-758:     <span class="ruby-ivar">@stats</span> = <span class="ruby-identifier">stats</span>
-759:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M001266_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/BulkMutateJobService.rb, line 747</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">adGroupId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">criterion</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">adGroupCriterion_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">userStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">systemServingStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">approvalStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">destinationUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">bids</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">firstPageCpc</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">qualityInfo</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">stats</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@adGroupId</span> = <span class="ruby-identifier">adGroupId</span>
+    <span class="ruby-ivar">@criterion</span> = <span class="ruby-identifier">criterion</span>
+    <span class="ruby-ivar">@adGroupCriterion_Type</span> = <span class="ruby-identifier">adGroupCriterion_Type</span>
+    <span class="ruby-ivar">@userStatus</span> = <span class="ruby-identifier">userStatus</span>
+    <span class="ruby-ivar">@systemServingStatus</span> = <span class="ruby-identifier">systemServingStatus</span>
+    <span class="ruby-ivar">@approvalStatus</span> = <span class="ruby-identifier">approvalStatus</span>
+    <span class="ruby-ivar">@destinationUrl</span> = <span class="ruby-identifier">destinationUrl</span>
+    <span class="ruby-ivar">@bids</span> = <span class="ruby-identifier">bids</span>
+    <span class="ruby-ivar">@firstPageCpc</span> = <span class="ruby-identifier">firstPageCpc</span>
+    <span class="ruby-ivar">@qualityInfo</span> = <span class="ruby-identifier">qualityInfo</span>
+    <span class="ruby-ivar">@stats</span> = <span class="ruby-identifier">stats</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="Ad.html">AdWords::V200909::BulkMutateJobService::Ad</a>
+                    Ad
                     
                 </span>
             
@@ -39,57 +39,45 @@
 <a href="TemplateAd.html">TemplateAd</a>
 </p>
 <ul>
-<li><p>
-id - SOAP::SOAPLong
-</p>
+<li>id - SOAP::SOAPLong
+
 </li>
-<li><p>
-url - SOAP::SOAPString
-</p>
+<li>url - SOAP::SOAPString
+
 </li>
-<li><p>
-displayUrl - SOAP::SOAPString
-</p>
+<li>displayUrl - SOAP::SOAPString
+
 </li>
-<li><p>
-approvalStatus - <a
+<li>approvalStatus - <a
 href="AdApprovalStatus.html">AdWords::V200909::BulkMutateJobService::AdApprovalStatus</a>
-</p>
+
 </li>
-<li><p>
-disapprovalReasons - SOAP::SOAPString
-</p>
+<li>disapprovalReasons - SOAP::SOAPString
+
 </li>
-<li><p>
-<a href="TemplateAd.html#ad_Type">ad_Type</a> - SOAP::SOAPString
-</p>
+<li><a href="TemplateAd.html#ad_Type">ad_Type</a> - SOAP::SOAPString
+
 </li>
-<li><p>
-templateId - SOAP::SOAPLong
-</p>
+<li>templateId - SOAP::SOAPLong
+
 </li>
-<li><p>
-adUnionId - <a
+<li>adUnionId - <a
 href="AdUnionId.html">AdWords::V200909::BulkMutateJobService::AdUnionId</a>
-</p>
+
 </li>
-<li><p>
-templateElements - <a
+<li>templateElements - <a
 href="TemplateElement.html">AdWords::V200909::BulkMutateJobService::TemplateElement</a>
-</p>
+
 </li>
-<li><p>
-dimensions - <a
+<li>dimensions - <a
 href="Dimensions.html">AdWords::V200909::BulkMutateJobService::Dimensions</a>
-</p>
+
 </li>
-<li><p>
-name - SOAP::SOAPString
-</p>
+<li>name - SOAP::SOAPString
+
 </li>
-<li><p>
-duration - SOAP::SOAPInt
-</p>
+<li>duration - SOAP::SOAPInt
+
 </li>
 </ul>
 
@@ -110,7 +98,7 @@ duration - SOAP::SOAPInt
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M000636">new</a></li>
                 
             </ul>
         </dd>
@@ -233,9 +221,9 @@ duration - SOAP::SOAPInt
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M000636">
                     
-                    <a name="method-c-new"></a><b>new</b>(id = nil, url = nil, displayUrl = nil, approvalStatus = nil, disapprovalReasons = [], ad_Type = nil, templateId = nil, adUnionId = nil, templateElements = [], dimensions = nil, name = nil, duration = nil)
+                    <a name="M000636"></a><b>new</b>(id = nil, url = nil, displayUrl = nil, approvalStatus = nil, disapprovalReasons = [], ad_Type = nil, templateId = nil, adUnionId = nil, templateElements = [], dimensions = nil, name = nil, duration = nil)
                     
                 </div>
                 
@@ -244,25 +232,25 @@ duration - SOAP::SOAPInt
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000636_source')" id="l_M000636_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/v200909/BulkMutateJobService.rb, line 267</span>
-267:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">displayUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">approvalStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">disapprovalReasons</span> = [], <span class="ruby-identifier">ad_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">templateId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">adUnionId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">templateElements</span> = [], <span class="ruby-identifier">dimensions</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">name</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">duration</span> = <span class="ruby-keyword kw">nil</span>)
-268:     <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
-269:     <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
-270:     <span class="ruby-ivar">@displayUrl</span> = <span class="ruby-identifier">displayUrl</span>
-271:     <span class="ruby-ivar">@approvalStatus</span> = <span class="ruby-identifier">approvalStatus</span>
-272:     <span class="ruby-ivar">@disapprovalReasons</span> = <span class="ruby-identifier">disapprovalReasons</span>
-273:     <span class="ruby-ivar">@ad_Type</span> = <span class="ruby-identifier">ad_Type</span>
-274:     <span class="ruby-ivar">@templateId</span> = <span class="ruby-identifier">templateId</span>
-275:     <span class="ruby-ivar">@adUnionId</span> = <span class="ruby-identifier">adUnionId</span>
-276:     <span class="ruby-ivar">@templateElements</span> = <span class="ruby-identifier">templateElements</span>
-277:     <span class="ruby-ivar">@dimensions</span> = <span class="ruby-identifier">dimensions</span>
-278:     <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
-279:     <span class="ruby-ivar">@duration</span> = <span class="ruby-identifier">duration</span>
-280:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M000636_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v200909/BulkMutateJobService.rb, line 267</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">url</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">displayUrl</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">approvalStatus</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">disapprovalReasons</span> = [], <span class="ruby-identifier">ad_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">templateId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">adUnionId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">templateElements</span> = [], <span class="ruby-identifier">dimensions</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">name</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">duration</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+    <span class="ruby-ivar">@url</span> = <span class="ruby-identifier">url</span>
+    <span class="ruby-ivar">@displayUrl</span> = <span class="ruby-identifier">displayUrl</span>
+    <span class="ruby-ivar">@approvalStatus</span> = <span class="ruby-identifier">approvalStatus</span>
+    <span class="ruby-ivar">@disapprovalReasons</span> = <span class="ruby-identifier">disapprovalReasons</span>
+    <span class="ruby-ivar">@ad_Type</span> = <span class="ruby-identifier">ad_Type</span>
+    <span class="ruby-ivar">@templateId</span> = <span class="ruby-identifier">templateId</span>
+    <span class="ruby-ivar">@adUnionId</span> = <span class="ruby-identifier">adUnionId</span>
+    <span class="ruby-ivar">@templateElements</span> = <span class="ruby-identifier">templateElements</span>
+    <span class="ruby-ivar">@dimensions</span> = <span class="ruby-identifier">dimensions</span>
+    <span class="ruby-ivar">@name</span> = <span class="ruby-identifier">name</span>
+    <span class="ruby-ivar">@duration</span> = <span class="ruby-identifier">duration</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="Job.html">AdWords::V201003::BulkMutateJobService::Job</a>
+                    Job
                     
                 </span>
             
@@ -39,70 +39,56 @@
 <a href="BulkMutateJob.html">BulkMutateJob</a>
 </p>
 <ul>
-<li><p>
-customerJobKey - SOAP::SOAPString
-</p>
+<li>customerJobKey - SOAP::SOAPString
+
 </li>
-<li><p>
-context - <a
+<li>context - <a
 href="JobContext.html">AdWords::V201003::BulkMutateJobService::JobContext</a>
-</p>
+
 </li>
-<li><p>
-failureReason - <a
+<li>failureReason - <a
 href="ApiErrorReason.html">AdWords::V201003::BulkMutateJobService::ApiErrorReason</a>
-</p>
+
 </li>
-<li><p>
-stats - <a
+<li>stats - <a
 href="JobStats.html">AdWords::V201003::BulkMutateJobService::JobStats</a>
-</p>
+
 </li>
-<li><p>
-billingSummary - <a
+<li>billingSummary - <a
 href="BillingSummary.html">AdWords::V201003::BulkMutateJobService::BillingSummary</a>
-</p>
+
 </li>
-<li><p>
-<a href="BulkMutateJob.html#job_Type">job_Type</a> - SOAP::SOAPString
-</p>
+<li><a href="BulkMutateJob.html#job_Type">job_Type</a> - SOAP::SOAPString
+
 </li>
-<li><p>
-id - SOAP::SOAPLong
-</p>
+<li>id - SOAP::SOAPLong
+
 </li>
-<li><p>
-policy - <a
+<li>policy - <a
 href="BulkMutateJobPolicy.html">AdWords::V201003::BulkMutateJobService::BulkMutateJobPolicy</a>
-</p>
+
 </li>
-<li><p>
-request - <a
+<li>request - <a
 href="BulkMutateRequest.html">AdWords::V201003::BulkMutateJobService::BulkMutateRequest</a>
-</p>
+
 </li>
-<li><p>
-status - <a
+<li>status - <a
 href="BasicJobStatus.html">AdWords::V201003::BulkMutateJobService::BasicJobStatus</a>
-</p>
+
 </li>
-<li><p>
-history - <a
+<li>history - <a
 href="BulkMutateJobEvent.html">AdWords::V201003::BulkMutateJobService::BulkMutateJobEvent</a>
-</p>
+
 </li>
-<li><p>
-result - <a
+<li>result - <a
 href="BulkMutateResult.html">AdWords::V201003::BulkMutateJobService::BulkMutateResult</a>
-</p>
+
 </li>
-<li><p>
-numRequestParts - SOAP::SOAPInt
-</p>
+<li>numRequestParts - SOAP::SOAPInt
+
 </li>
-<li><p>
-numRequestPartsReceived - SOAP::SOAPInt
-</p>
+<li>numRequestPartsReceived - SOAP::SOAPInt
+
 </li>
 </ul>
 
@@ -123,7 +109,7 @@ numRequestPartsReceived - SOAP::SOAPInt
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M001430">new</a></li>
                 
             </ul>
         </dd>
@@ -262,9 +248,9 @@ numRequestPartsReceived - SOAP::SOAPInt
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M001430">
                     
-                    <a name="method-c-new"></a><b>new</b>(customerJobKey = nil, context = nil, failureReason = nil, stats = nil, billingSummary = nil, job_Type = nil, id = nil, policy = nil, request = nil, status = nil, history = [], result = nil, numRequestParts = nil, numRequestPartsReceived = nil)
+                    <a name="M001430"></a><b>new</b>(customerJobKey = nil, context = nil, failureReason = nil, stats = nil, billingSummary = nil, job_Type = nil, id = nil, policy = nil, request = nil, status = nil, history = [], result = nil, numRequestParts = nil, numRequestPartsReceived = nil)
                     
                 </div>
                 
@@ -273,27 +259,27 @@ numRequestPartsReceived - SOAP::SOAPInt
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M001430_source')" id="l_M001430_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>      <span class="ruby-comment cmt"># File lib/adwords4r/v201003/BulkMutateJobService.rb, line 2763</span>
-2763:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">customerJobKey</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">context</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">failureReason</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">stats</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">billingSummary</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">job_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">policy</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">request</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">status</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">history</span> = [], <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numRequestParts</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numRequestPartsReceived</span> = <span class="ruby-keyword kw">nil</span>)
-2764:     <span class="ruby-ivar">@customerJobKey</span> = <span class="ruby-identifier">customerJobKey</span>
-2765:     <span class="ruby-ivar">@context</span> = <span class="ruby-identifier">context</span>
-2766:     <span class="ruby-ivar">@failureReason</span> = <span class="ruby-identifier">failureReason</span>
-2767:     <span class="ruby-ivar">@stats</span> = <span class="ruby-identifier">stats</span>
-2768:     <span class="ruby-ivar">@billingSummary</span> = <span class="ruby-identifier">billingSummary</span>
-2769:     <span class="ruby-ivar">@job_Type</span> = <span class="ruby-identifier">job_Type</span>
-2770:     <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
-2771:     <span class="ruby-ivar">@policy</span> = <span class="ruby-identifier">policy</span>
-2772:     <span class="ruby-ivar">@request</span> = <span class="ruby-identifier">request</span>
-2773:     <span class="ruby-ivar">@status</span> = <span class="ruby-identifier">status</span>
-2774:     <span class="ruby-ivar">@history</span> = <span class="ruby-identifier">history</span>
-2775:     <span class="ruby-ivar">@result</span> = <span class="ruby-identifier">result</span>
-2776:     <span class="ruby-ivar">@numRequestParts</span> = <span class="ruby-identifier">numRequestParts</span>
-2777:     <span class="ruby-ivar">@numRequestPartsReceived</span> = <span class="ruby-identifier">numRequestPartsReceived</span>
-2778:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M001430_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/BulkMutateJobService.rb, line 2763</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">customerJobKey</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">context</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">failureReason</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">stats</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">billingSummary</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">job_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">id</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">policy</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">request</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">status</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">history</span> = [], <span class="ruby-identifier">result</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numRequestParts</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">numRequestPartsReceived</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@customerJobKey</span> = <span class="ruby-identifier">customerJobKey</span>
+    <span class="ruby-ivar">@context</span> = <span class="ruby-identifier">context</span>
+    <span class="ruby-ivar">@failureReason</span> = <span class="ruby-identifier">failureReason</span>
+    <span class="ruby-ivar">@stats</span> = <span class="ruby-identifier">stats</span>
+    <span class="ruby-ivar">@billingSummary</span> = <span class="ruby-identifier">billingSummary</span>
+    <span class="ruby-ivar">@job_Type</span> = <span class="ruby-identifier">job_Type</span>
+    <span class="ruby-ivar">@id</span> = <span class="ruby-identifier">id</span>
+    <span class="ruby-ivar">@policy</span> = <span class="ruby-identifier">policy</span>
+    <span class="ruby-ivar">@request</span> = <span class="ruby-identifier">request</span>
+    <span class="ruby-ivar">@status</span> = <span class="ruby-identifier">status</span>
+    <span class="ruby-ivar">@history</span> = <span class="ruby-identifier">history</span>
+    <span class="ruby-ivar">@result</span> = <span class="ruby-identifier">result</span>
+    <span class="ruby-ivar">@numRequestParts</span> = <span class="ruby-identifier">numRequestParts</span>
+    <span class="ruby-ivar">@numRequestPartsReceived</span> = <span class="ruby-identifier">numRequestPartsReceived</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

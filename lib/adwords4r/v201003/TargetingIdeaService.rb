@@ -188,70 +188,6 @@ class LongValue < NumberValue
   end
 end
 
-# Criterion
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-class Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-
-  def initialize(id = nil, criterion_Type = nil)
-    @id = id
-    @criterion_Type = criterion_Type
-  end
-end
-
-# Keyword
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-# - text - SOAP::SOAPString
-# - matchType - AdWords::V201003::TargetingIdeaService::KeywordMatchType
-class Keyword < Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-  attr_accessor :text
-  attr_accessor :matchType
-
-  def initialize(id = nil, criterion_Type = nil, text = nil, matchType = nil)
-    @id = id
-    @criterion_Type = criterion_Type
-    @text = text
-    @matchType = matchType
-  end
-end
-
-# Placement
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-# - url - SOAP::SOAPString
-class Placement < Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-  attr_accessor :url
-
-  def initialize(id = nil, criterion_Type = nil, url = nil)
-    @id = id
-    @criterion_Type = criterion_Type
-    @url = url
-  end
-end
-
-# Vertical
-# - id - SOAP::SOAPLong
-# - criterion_Type - SOAP::SOAPString
-# - path - SOAP::SOAPString
-class Vertical < Criterion
-  attr_accessor :id
-  attr_accessor :criterion_Type
-  attr_accessor :path
-
-  def initialize(id = nil, criterion_Type = nil, path = [])
-    @id = id
-    @criterion_Type = criterion_Type
-    @path = path
-  end
-end
-
 # Target
 # abstract
 # - target_Type - SOAP::SOAPString
@@ -1330,6 +1266,70 @@ class ApiException < ApplicationException
   end
 end
 
+# Criterion
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+class Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+
+  def initialize(id = nil, criterion_Type = nil)
+    @id = id
+    @criterion_Type = criterion_Type
+  end
+end
+
+# Keyword
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+# - text - SOAP::SOAPString
+# - matchType - AdWords::V201003::TargetingIdeaService::KeywordMatchType
+class Keyword < Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+  attr_accessor :text
+  attr_accessor :matchType
+
+  def initialize(id = nil, criterion_Type = nil, text = nil, matchType = nil)
+    @id = id
+    @criterion_Type = criterion_Type
+    @text = text
+    @matchType = matchType
+  end
+end
+
+# Placement
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+# - url - SOAP::SOAPString
+class Placement < Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+  attr_accessor :url
+
+  def initialize(id = nil, criterion_Type = nil, url = nil)
+    @id = id
+    @criterion_Type = criterion_Type
+    @url = url
+  end
+end
+
+# Vertical
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+# - path - SOAP::SOAPString
+class Vertical < Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+  attr_accessor :path
+
+  def initialize(id = nil, criterion_Type = nil, path = [])
+    @id = id
+    @criterion_Type = criterion_Type
+    @path = path
+  end
+end
+
 # AdFormatSpec
 # - format - AdWords::V201003::TargetingIdeaService::SiteConstantsAdFormat
 class AdFormatSpec
@@ -1622,19 +1622,6 @@ class AverageTargetedMonthlySearchesSearchParameter < SearchParameter
   end
 end
 
-# ExcludedKeywordSearchParameter
-# - searchParameter_Type - SOAP::SOAPString
-# - keywords - AdWords::V201003::TargetingIdeaService::Keyword
-class ExcludedKeywordSearchParameter < SearchParameter
-  attr_accessor :searchParameter_Type
-  attr_accessor :keywords
-
-  def initialize(searchParameter_Type = nil, keywords = [])
-    @searchParameter_Type = searchParameter_Type
-    @keywords = keywords
-  end
-end
-
 # GlobalMonthlySearchesSearchParameter
 # - searchParameter_Type - SOAP::SOAPString
 # - operation - AdWords::V201003::TargetingIdeaService::LongComparisonOperation
@@ -1645,19 +1632,6 @@ class GlobalMonthlySearchesSearchParameter < SearchParameter
   def initialize(searchParameter_Type = nil, operation = nil)
     @searchParameter_Type = searchParameter_Type
     @operation = operation
-  end
-end
-
-# RelatedToKeywordSearchParameter
-# - searchParameter_Type - SOAP::SOAPString
-# - keywords - AdWords::V201003::TargetingIdeaService::Keyword
-class RelatedToKeywordSearchParameter < SearchParameter
-  attr_accessor :searchParameter_Type
-  attr_accessor :keywords
-
-  def initialize(searchParameter_Type = nil, keywords = [])
-    @searchParameter_Type = searchParameter_Type
-    @keywords = keywords
   end
 end
 
@@ -1684,6 +1658,32 @@ class LanguageTargetSearchParameter < SearchParameter
   def initialize(searchParameter_Type = nil, languageTargets = [])
     @searchParameter_Type = searchParameter_Type
     @languageTargets = languageTargets
+  end
+end
+
+# ExcludedKeywordSearchParameter
+# - searchParameter_Type - SOAP::SOAPString
+# - keywords - AdWords::V201003::TargetingIdeaService::Keyword
+class ExcludedKeywordSearchParameter < SearchParameter
+  attr_accessor :searchParameter_Type
+  attr_accessor :keywords
+
+  def initialize(searchParameter_Type = nil, keywords = [])
+    @searchParameter_Type = searchParameter_Type
+    @keywords = keywords
+  end
+end
+
+# RelatedToKeywordSearchParameter
+# - searchParameter_Type - SOAP::SOAPString
+# - keywords - AdWords::V201003::TargetingIdeaService::Keyword
+class RelatedToKeywordSearchParameter < SearchParameter
+  attr_accessor :searchParameter_Type
+  attr_accessor :keywords
+
+  def initialize(searchParameter_Type = nil, keywords = [])
+    @searchParameter_Type = searchParameter_Type
+    @keywords = keywords
   end
 end
 
@@ -1882,19 +1882,6 @@ class WebpageDescriptorAttribute < Attribute
   end
 end
 
-# KeywordAttribute
-# - attribute_Type - SOAP::SOAPString
-# - value - AdWords::V201003::TargetingIdeaService::Keyword
-class KeywordAttribute < Attribute
-  attr_accessor :attribute_Type
-  attr_accessor :value
-
-  def initialize(attribute_Type = nil, value = nil)
-    @attribute_Type = attribute_Type
-    @value = value
-  end
-end
-
 # MoneyAttribute
 # - attribute_Type - SOAP::SOAPString
 # - value - AdWords::V201003::TargetingIdeaService::Money
@@ -1908,10 +1895,10 @@ class MoneyAttribute < Attribute
   end
 end
 
-# PlacementAttribute
+# LongRangeAttribute
 # - attribute_Type - SOAP::SOAPString
-# - value - AdWords::V201003::TargetingIdeaService::Placement
-class PlacementAttribute < Attribute
+# - value - AdWords::V201003::TargetingIdeaService::C_Range
+class LongRangeAttribute < Attribute
   attr_accessor :attribute_Type
   attr_accessor :value
 
@@ -1921,10 +1908,23 @@ class PlacementAttribute < Attribute
   end
 end
 
-# LongRangeAttribute
+# KeywordAttribute
 # - attribute_Type - SOAP::SOAPString
-# - value - AdWords::V201003::TargetingIdeaService::C_Range
-class LongRangeAttribute < Attribute
+# - value - AdWords::V201003::TargetingIdeaService::Keyword
+class KeywordAttribute < Attribute
+  attr_accessor :attribute_Type
+  attr_accessor :value
+
+  def initialize(attribute_Type = nil, value = nil)
+    @attribute_Type = attribute_Type
+    @value = value
+  end
+end
+
+# PlacementAttribute
+# - attribute_Type - SOAP::SOAPString
+# - value - AdWords::V201003::TargetingIdeaService::Placement
+class PlacementAttribute < Attribute
   attr_accessor :attribute_Type
   attr_accessor :value
 

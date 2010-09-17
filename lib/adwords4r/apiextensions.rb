@@ -38,8 +38,8 @@ module AdWords
     @@methods = {
       'downloadXmlReport'    => ['job_id'],
       'downloadCsvReport'    => ['job_id'],
-      'downloadReport'       => ['report_definition_id', 'path'],
-      'downloadReportAsFile' => ['report_definition_id']
+      'downloadReport'       => ['report_definition_id'],
+      'downloadReportAsFile' => ['report_definition_id', 'path']
     }
 
     # Return list of all extension methods, indexed by version and service.

@@ -20,7 +20,7 @@
             
                 <span class="parent">&lt; 
                     
-                    <a href="BidLandscape.html">AdWords::V201003::BidLandscapeService::BidLandscape</a>
+                    BidLandscape
                     
                 </span>
             
@@ -39,36 +39,29 @@
 <a href="CriterionBidLandscape.html">CriterionBidLandscape</a>
 </p>
 <ul>
-<li><p>
-campaignId - SOAP::SOAPLong
-</p>
+<li>campaignId - SOAP::SOAPLong
+
 </li>
-<li><p>
-adGroupId - SOAP::SOAPLong
-</p>
+<li>adGroupId - SOAP::SOAPLong
+
 </li>
-<li><p>
-startDate - SOAP::SOAPString
-</p>
+<li>startDate - SOAP::SOAPString
+
 </li>
-<li><p>
-endDate - SOAP::SOAPString
-</p>
+<li>endDate - SOAP::SOAPString
+
 </li>
-<li><p>
-landscapePoints - <a
+<li>landscapePoints - <a
 href="BidLandscapeLandscapePoint.html">AdWords::V201003::BidLandscapeService::BidLandscapeLandscapePoint</a>
-</p>
+
 </li>
-<li><p>
-<a
+<li><a
 href="CriterionBidLandscape.html#bidLandscape_Type">bidLandscape_Type</a> -
 SOAP::SOAPString
-</p>
+
 </li>
-<li><p>
-criterionId - SOAP::SOAPLong
-</p>
+<li>criterionId - SOAP::SOAPLong
+
 </li>
 </ul>
 
@@ -89,7 +82,7 @@ criterionId - SOAP::SOAPLong
         <dd>
             <ul>
                 
-                <li><a href="#method-c-new">new</a></li>
+                <li><a href="#M001467">new</a></li>
                 
             </ul>
         </dd>
@@ -172,9 +165,9 @@ criterionId - SOAP::SOAPLong
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="method-c-new">
+                <div class="title" id="M001467">
                     
-                    <a name="method-c-new"></a><b>new</b>(campaignId = nil, adGroupId = nil, startDate = nil, endDate = nil, landscapePoints = [], bidLandscape_Type = nil, criterionId = nil)
+                    <a name="M001467"></a><b>new</b>(campaignId = nil, adGroupId = nil, startDate = nil, endDate = nil, landscapePoints = [], bidLandscape_Type = nil, criterionId = nil)
                     
                 </div>
                 
@@ -183,20 +176,20 @@ criterionId - SOAP::SOAPLong
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('method-c-new_source')" id="l_method-c-new_source">show</a>
+                        Source: <a href="javascript:toggleSource('M001467_source')" id="l_M001467_source">show</a>
                         
                     </p>
-                    <div id="method-c-new_source" class="dyn-source">
-                        <pre>     <span class="ruby-comment cmt"># File lib/adwords4r/v201003/BidLandscapeService.rb, line 673</span>
-673:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">campaignId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">adGroupId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">startDate</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">endDate</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">landscapePoints</span> = [], <span class="ruby-identifier">bidLandscape_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">criterionId</span> = <span class="ruby-keyword kw">nil</span>)
-674:     <span class="ruby-ivar">@campaignId</span> = <span class="ruby-identifier">campaignId</span>
-675:     <span class="ruby-ivar">@adGroupId</span> = <span class="ruby-identifier">adGroupId</span>
-676:     <span class="ruby-ivar">@startDate</span> = <span class="ruby-identifier">startDate</span>
-677:     <span class="ruby-ivar">@endDate</span> = <span class="ruby-identifier">endDate</span>
-678:     <span class="ruby-ivar">@landscapePoints</span> = <span class="ruby-identifier">landscapePoints</span>
-679:     <span class="ruby-ivar">@bidLandscape_Type</span> = <span class="ruby-identifier">bidLandscape_Type</span>
-680:     <span class="ruby-ivar">@criterionId</span> = <span class="ruby-identifier">criterionId</span>
-681:   <span class="ruby-keyword kw">end</span></pre>
+                    <div id="M001467_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/BidLandscapeService.rb, line 673</span>
+  <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">campaignId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">adGroupId</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">startDate</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">endDate</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">landscapePoints</span> = [], <span class="ruby-identifier">bidLandscape_Type</span> = <span class="ruby-keyword kw">nil</span>, <span class="ruby-identifier">criterionId</span> = <span class="ruby-keyword kw">nil</span>)
+    <span class="ruby-ivar">@campaignId</span> = <span class="ruby-identifier">campaignId</span>
+    <span class="ruby-ivar">@adGroupId</span> = <span class="ruby-identifier">adGroupId</span>
+    <span class="ruby-ivar">@startDate</span> = <span class="ruby-identifier">startDate</span>
+    <span class="ruby-ivar">@endDate</span> = <span class="ruby-identifier">endDate</span>
+    <span class="ruby-ivar">@landscapePoints</span> = <span class="ruby-identifier">landscapePoints</span>
+    <span class="ruby-ivar">@bidLandscape_Type</span> = <span class="ruby-identifier">bidLandscape_Type</span>
+    <span class="ruby-ivar">@criterionId</span> = <span class="ruby-identifier">criterionId</span>
+  <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
                 

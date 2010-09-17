@@ -28,7 +28,7 @@ module AdWords
   module Service
 
     # Set defaults
-    DEFAULT_VERSION = 200909
+    DEFAULT_VERSION = 201008
     DEFAULT_ENVIRONMENT = 'PRODUCTION'
 
     # Configure the services available to each version
@@ -42,7 +42,13 @@ module AdWords
                  'AdGroup', 'AdParam', 'BidLandscape', 'BulkMutateJob',
                  'CampaignAdExtension', 'CampaignCriterion', 'Campaign',
                  'CampaignTarget', 'GeoLocation', 'Info', 'Media',
-                 'ReportDefinition', 'TargetingIdea']
+                 'ReportDefinition', 'TargetingIdea'],
+      201008 => ['AdExtensionOverride', 'AdGroupAd', 'AdGroupCriterion',
+                 'AdGroup', 'AdParam', 'BidLandscape', 'BulkMutateJob',
+                 'CampaignAdExtension', 'CampaignCriterion', 'Campaign',
+                 'CampaignTarget', 'Experiment', 'GeoLocation',
+                 'Info', 'Media', 'ReportDefinition', 'TargetingIdea',
+                 'TrafficEstimator']
     }
 
     # Configure the different environments, with the base URL for each one
@@ -51,11 +57,13 @@ module AdWords
         13 => 'https://adwords.google.com/api/adwords/',
         200909 => 'https://adwords.google.com/api/adwords/',
         201003 => 'https://adwords.google.com/api/adwords/',
+        201008 => 'https://adwords.google.com/api/adwords/',
       },
       'SANDBOX' => {
         13 => 'https://sandbox.google.com/api/adwords/',
         200909 => 'https://adwords-sandbox.google.com/api/adwords/',
-        201003 => 'https://adwords-sandbox.google.com/api/adwords/'
+        201003 => 'https://adwords-sandbox.google.com/api/adwords/',
+        201008 => 'https://adwords-sandbox.google.com/api/adwords/'
       }
     }
 
@@ -96,7 +104,27 @@ module AdWords
       [201003, 'Info'] => 'info/v201003/',
       [201003, 'Media'] => 'cm/v201003/',
       [201003, 'ReportDefinition'] => 'cm/v201003/',
-      [201003, 'TargetingIdea'] => 'o/v201003/'
+      [201003, 'TargetingIdea'] => 'o/v201003/',
+       # v201008
+      [201008, 'AdExtensionOverride'] => 'cm/v201008/',
+      [201008, 'AdGroupAd'] => 'cm/v201008/',
+      [201008, 'AdGroupCriterion'] => 'cm/v201008/',
+      [201008, 'AdGroup'] => 'cm/v201008/',
+      [201008, 'AdParam'] => 'cm/v201008/',
+      [201008, 'BidLandscape'] => 'cm/v201008/',
+      [201008, 'BulkMutateJob'] => 'job/v201008/',
+      [201008, 'CampaignAdExtension'] => 'cm/v201008/',
+      [201008, 'CampaignCriterion'] => 'cm/v201008/',
+      [201008, 'Campaign'] => 'cm/v201008/',
+      [201008, 'CampaignTarget'] => 'cm/v201008/',
+      [201008, 'Experiment'] => 'cm/v201008/',
+      [201008, 'GeoLocation'] => 'cm/v201008/',
+      [201008, 'Info'] => 'info/v201008/',
+      [201008, 'Media'] => 'cm/v201008/',
+      [201008, 'ReportDefinition'] => 'cm/v201008/',
+      [201008, 'ServicedAccount'] => 'mcm/v201008/',
+      [201008, 'TargetingIdea'] => 'o/v201008/',
+      [201008, 'TrafficEstimator'] => 'o/v201008/'
     }
 
     # Configure the auth servers to use for each environment

@@ -154,6 +154,40 @@ module AdWords
       @credentials.validate_only = value
     end
 
+    # Helper method to provide a simple way of performing requests with support
+    # for partial failures. Executes a block of code with partial failures
+    # enabled and/or returns the current status of the property.
+    #
+    # Args:
+    # - accepts a block, which it will execute as a validate-only operation.
+    #
+    # Returns:
+    # Boolean indicating whether validate-only operations are currently enabled
+    # or disabled
+    #
+    def partial_failure
+      if block_given?
+        previous = @credentials.partial_failure
+        begin
+          @credentials.partial_failure = true
+          yield
+        ensure
+          @credentials.partial_failure = previous
+        end
+      end
+      return @credentials.partial_failure
+    end
+
+    # Helper method to provide a simple way of performing requests with support
+    # for partial failures.
+    #
+    # Args:
+    # - value: the new value for the property (boolean)
+    #
+    def partial_failure=(value)
+      @credentials.partial_failure = value
+    end
+
     # Obtain an API service, given a version and its name.
     #
     # Args:
