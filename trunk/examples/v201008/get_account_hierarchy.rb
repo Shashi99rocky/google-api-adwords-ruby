@@ -17,49 +17,73 @@
 #           See the License for the specific language governing permissions and
 #           limitations under the License.
 #
-# This example shows how to check for conversion optimizer eligibility by
-# examining the conversionOptimizerEligibility field of the Campaign.
+# This example illustrates how to retrieve the account hierarchy under an
+# account.
 #
-# Tags: CampaignService.get
+# Tags: ServicedAccountService.get
 
 require 'rubygems'
 gem 'soap4r', '= 1.5.8'
 require 'adwords4r'
-require 'pp'
 
 API_VERSION = 201008
 
-def get_conversion_optimizer_eligibility()
+def format_id(id)
+  str_id = id.to_s
+  if str_id.size >= 6
+    return str_id[0, 3] + '-' + str_id[3, 3] + '-' + str_id[6..-1]
+  else
+    return str_id
+  end
+end
+
+def get_account_hierarchy()
   # AdWords::AdWordsCredentials.new will read a credentials file from
   # ENV['HOME']/adwords.properties when called without parameters.
   adwords = AdWords::API.new
-  campaign_srv = adwords.get_service('Campaign', API_VERSION)
+  serviced_account_srv = adwords.get_service('ServicedAccount', API_VERSION)
 
-  campaign_id = 'INSERT_CAMPAIGN_ID_HERE'.to_i
-
-  # Get campaign.
+  # Get the account hierarchy for this account.
   # The 'module' method being called here provides a shortcut to the
   # module containing the classes for this service. This helps us avoid
   # typing the full class name every time we need to create an object.
-  selector = campaign_srv.module::CampaignSelector.new
-  selector.ids = [campaign_id]
-  response = campaign_srv.get(selector)
+  selector = serviced_account_srv.module::ServicedAccountSelector.new
+  selector.serviceTypes = ['UI_AND_API', 'API_ONLY']
+  selector.enablePaging = false
 
-  if response and response.rval and response.rval.entries
-    campaigns = response.rval.entries
-    campaigns.each do |campaign|
-      eligibility = campaign.conversionOptimizerEligibility
-      if eligibility.eligible
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is eligible to use the conversion optimizer."
-      else
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is not eligible to use the conversion optimizer " +
-            "for the reasons: #{eligibility.rejectionReasons.pretty_inspect}"
+  response = nil
+
+  # Run with MCC account.
+  adwords.use_mcc do
+    response = serviced_account_srv.get(selector)
+  end
+
+  if response and response.rval
+    # Display the accounts.
+    graph = response.rval
+    account_number = graph.accounts ? graph.accounts.size : 0
+    puts "There are %d customers under this account hierarchy." %
+        account_number
+    if graph.accounts
+      graph.accounts.each_with_index do |account, index|
+        puts "#{index + 1}) Customer id: #{format_id(account.customerId)}"
+        puts "Login email: #{account.login}"
+        puts "Company Name: #{account.companyName}"
+        puts "IsMcc: #{account.canManageClients}"
+        puts ''
+      end
+
+      puts ''
+
+      # Display the links.
+      graph.links.each do |link|
+        puts "There is a #{link.typeOfLink} link of type #{link.serviceType} " +
+            "from #{format_id(link.managerId.id)} to " +
+            "#{format_id(link.clientId.id)}"
       end
     end
   else
-      puts "No campaigns were found."
+      puts "No accounts were found."
   end
 end
 
@@ -70,7 +94,7 @@ if __FILE__ == $0
   ENV['ADWORDS4R_DEBUG'] = 'false'
 
   begin
-    get_conversion_optimizer_eligibility()
+    get_account_hierarchy()
 
   # Connection error. Likely transitory.
   rescue Errno::ECONNRESET, SOAP::HTTPStreamError, SocketError => e

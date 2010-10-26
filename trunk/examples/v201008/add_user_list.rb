@@ -17,50 +17,46 @@
 #           See the License for the specific language governing permissions and
 #           limitations under the License.
 #
-# This example shows how to check for conversion optimizer eligibility by
-# examining the conversionOptimizerEligibility field of the Campaign.
+# This example illustrates how to create a user list.
 #
-# Tags: CampaignService.get
+# Tags: UserListService.mutate
 
 require 'rubygems'
 gem 'soap4r', '= 1.5.8'
 require 'adwords4r'
-require 'pp'
 
 API_VERSION = 201008
 
-def get_conversion_optimizer_eligibility()
+def add_user_list()
   # AdWords::AdWordsCredentials.new will read a credentials file from
   # ENV['HOME']/adwords.properties when called without parameters.
   adwords = AdWords::API.new
-  campaign_srv = adwords.get_service('Campaign', API_VERSION)
+  user_list_srv = adwords.get_service('UserList', API_VERSION)
 
-  campaign_id = 'INSERT_CAMPAIGN_ID_HERE'.to_i
-
-  # Get campaign.
+  # Prepare for adding remarketing user list.
   # The 'module' method being called here provides a shortcut to the
   # module containing the classes for this service. This helps us avoid
   # typing the full class name every time we need to create an object.
-  selector = campaign_srv.module::CampaignSelector.new
-  selector.ids = [campaign_id]
-  response = campaign_srv.get(selector)
+  user_list = user_list_srv.module::RemarketingUserList.new
+  name = 'Mars cruise customers #%s' % (Time.new.to_f * 1000).to_i
+  user_list.name = name
+  user_list.description = 'A list of mars cruise customers in the last year'
+  user_list.status = 'OPEN'
+  user_list.membershipLifeSpan = 365
+  user_list.conversionTypes = [{
+    :name => name
+  }]
 
-  if response and response.rval and response.rval.entries
-    campaigns = response.rval.entries
-    campaigns.each do |campaign|
-      eligibility = campaign.conversionOptimizerEligibility
-      if eligibility.eligible
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is eligible to use the conversion optimizer."
-      else
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is not eligible to use the conversion optimizer " +
-            "for the reasons: #{eligibility.rejectionReasons.pretty_inspect}"
-      end
-    end
-  else
-      puts "No campaigns were found."
-  end
+  operation = {
+    :operand => user_list,
+    :operator => 'ADD'
+  }
+
+  # Add user list.
+  response = user_list_srv.mutate([operation])
+  user_list = response.rval.value.first
+  puts 'User list with name \"%s\" and id %d was added.' %
+      [user_list.name, user_list.id]
 end
 
 if __FILE__ == $0
@@ -70,7 +66,7 @@ if __FILE__ == $0
   ENV['ADWORDS4R_DEBUG'] = 'false'
 
   begin
-    get_conversion_optimizer_eligibility()
+    add_user_list()
 
   # Connection error. Likely transitory.
   rescue Errno::ECONNRESET, SOAP::HTTPStreamError, SocketError => e

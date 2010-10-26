@@ -17,49 +17,52 @@
 #           See the License for the specific language governing permissions and
 #           limitations under the License.
 #
-# This example shows how to check for conversion optimizer eligibility by
-# examining the conversionOptimizerEligibility field of the Campaign.
+# This example gets all bulk mutate jobs in the account. To add a bulk mutate
+# job, run perform_bulk_mutate_job.rb.
 #
-# Tags: CampaignService.get
+# Tags: BulkMutateJobService.get
 
 require 'rubygems'
 gem 'soap4r', '= 1.5.8'
 require 'adwords4r'
-require 'pp'
 
 API_VERSION = 201008
 
-def get_conversion_optimizer_eligibility()
+def get_all_bulk_mutate_jobs()
   # AdWords::AdWordsCredentials.new will read a credentials file from
   # ENV['HOME']/adwords.properties when called without parameters.
   adwords = AdWords::API.new
-  campaign_srv = adwords.get_service('Campaign', API_VERSION)
+  bulk_mutate_job_srv = adwords.get_service('BulkMutateJob', API_VERSION)
 
-  campaign_id = 'INSERT_CAMPAIGN_ID_HERE'.to_i
-
-  # Get campaign.
+  # Get all the bulk mutate jobs.
   # The 'module' method being called here provides a shortcut to the
   # module containing the classes for this service. This helps us avoid
   # typing the full class name every time we need to create an object.
-  selector = campaign_srv.module::CampaignSelector.new
-  selector.ids = [campaign_id]
-  response = campaign_srv.get(selector)
+  selector = bulk_mutate_job_srv.module::BulkMutateJobSelector.new
+  response = bulk_mutate_job_srv.get(selector)
 
-  if response and response.rval and response.rval.entries
-    campaigns = response.rval.entries
-    campaigns.each do |campaign|
-      eligibility = campaign.conversionOptimizerEligibility
-      if eligibility.eligible
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is eligible to use the conversion optimizer."
-      else
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is not eligible to use the conversion optimizer " +
-            "for the reasons: #{eligibility.rejectionReasons.pretty_inspect}"
+  if response and response.entries
+    jobs = response.entries
+    jobs.each do |job|
+      puts "Bulk mutate job with id %d and status '%s' was found." %
+          [job.id, job.status]
+      if job.status == 'PENDING'
+        puts "  Total parts: %d, parts received: %d." %
+            [job.numRequestParts, job.numRequestPartsReceived]
+      elsif job.status == 'PROCESSING'
+        if job.stats
+          puts "  Percent complete: %d." % job.stats.progressPercent
+        end
+      elsif job.status == 'COMPLETED'
+        if job.stats
+          puts "  Total operations: %d, failed: %d, unprocessed %d." %
+              [job.stats.numOperations, job.stats.numFailedOperations,
+               job.stats.numUnprocessedOperations]
+        end
       end
     end
   else
-      puts "No campaigns were found."
+    puts "No bulk mutate jobs were found."
   end
 end
 
@@ -70,7 +73,7 @@ if __FILE__ == $0
   ENV['ADWORDS4R_DEBUG'] = 'false'
 
   begin
-    get_conversion_optimizer_eligibility()
+    get_all_bulk_mutate_jobs()
 
   # Connection error. Likely transitory.
   rescue Errno::ECONNRESET, SOAP::HTTPStreamError, SocketError => e

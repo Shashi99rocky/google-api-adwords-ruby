@@ -17,50 +17,42 @@
 #           See the License for the specific language governing permissions and
 #           limitations under the License.
 #
-# This example shows how to check for conversion optimizer eligibility by
-# examining the conversionOptimizerEligibility field of the Campaign.
+# This example deletes a user list by setting the status to 'CLOSED'. To get
+# user lists, run get_all_user_lists.rb.
 #
-# Tags: CampaignService.get
+# Tags: UserListService.mutate
 
 require 'rubygems'
 gem 'soap4r', '= 1.5.8'
 require 'adwords4r'
-require 'pp'
 
 API_VERSION = 201008
 
-def get_conversion_optimizer_eligibility()
+def delete_user_list()
   # AdWords::AdWordsCredentials.new will read a credentials file from
   # ENV['HOME']/adwords.properties when called without parameters.
   adwords = AdWords::API.new
-  campaign_srv = adwords.get_service('Campaign', API_VERSION)
+  user_list_srv = adwords.get_service('UserList', API_VERSION)
 
-  campaign_id = 'INSERT_CAMPAIGN_ID_HERE'.to_i
+  user_list_id = 'INSERT_USER_LIST_ID_HERE'.to_i
 
-  # Get campaign.
-  # The 'module' method being called here provides a shortcut to the
-  # module containing the classes for this service. This helps us avoid
-  # typing the full class name every time we need to create an object.
-  selector = campaign_srv.module::CampaignSelector.new
-  selector.ids = [campaign_id]
-  response = campaign_srv.get(selector)
+  # Prepare for deleting remarketing user list. Bear in mind that you must
+  # create an object of the appropriate type in order to perform the update.
+  # If you are unsure which type a user list is, you should perform a 'get' on
+  # it first.
+  user_list = user_list_srv.module::RemarketingUserList.new
+  user_list.id = user_list_id
+  user_list.status = 'CLOSED'
+  operation = {
+    :operand => user_list,
+    :operator => 'SET'
+  }
 
-  if response and response.rval and response.rval.entries
-    campaigns = response.rval.entries
-    campaigns.each do |campaign|
-      eligibility = campaign.conversionOptimizerEligibility
-      if eligibility.eligible
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is eligible to use the conversion optimizer."
-      else
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is not eligible to use the conversion optimizer " +
-            "for the reasons: #{eligibility.rejectionReasons.pretty_inspect}"
-      end
-    end
-  else
-      puts "No campaigns were found."
-  end
+  # Delete user list.
+  response = user_list_srv.mutate([operation])
+  user_list = response.rval.value.first
+  puts 'User list with name \"%s\" and id %d was deleted (closed).' %
+      [user_list.name, user_list.id]
 end
 
 if __FILE__ == $0
@@ -70,7 +62,7 @@ if __FILE__ == $0
   ENV['ADWORDS4R_DEBUG'] = 'false'
 
   begin
-    get_conversion_optimizer_eligibility()
+    delete_user_list()
 
   # Connection error. Likely transitory.
   rescue Errno::ECONNRESET, SOAP::HTTPStreamError, SocketError => e

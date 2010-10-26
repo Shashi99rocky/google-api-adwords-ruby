@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 #
-# Author:: api.sgomes@gmail.com (Sérgio Gomes)
+# Author:: sgomes@google.com (Sérgio Gomes)
 #
 # Copyright:: Copyright 2010, Google Inc. All Rights Reserved.
 #
@@ -17,50 +17,41 @@
 #           See the License for the specific language governing permissions and
 #           limitations under the License.
 #
-# This example shows how to check for conversion optimizer eligibility by
-# examining the conversionOptimizerEligibility field of the Campaign.
+# This example deletes a bulk mutate job using the 'REMOVE' operator. Jobs may
+# only deleted if they are in the 'PENDING' state and have not yet recieved
+# all of their request parts. To get bulk mutate jobs, run
+# get_all_bulk_mutate_jobs.rb.
 #
-# Tags: CampaignService.get
+# Tags: BulkMutateJobService.mutate
 
 require 'rubygems'
 gem 'soap4r', '= 1.5.8'
 require 'adwords4r'
-require 'pp'
 
 API_VERSION = 201008
 
-def get_conversion_optimizer_eligibility()
+def delete_bulk_mutate_job()
   # AdWords::AdWordsCredentials.new will read a credentials file from
   # ENV['HOME']/adwords.properties when called without parameters.
   adwords = AdWords::API.new
-  campaign_srv = adwords.get_service('Campaign', API_VERSION)
+  bulk_mutate_job_srv = adwords.get_service('BulkMutateJob', API_VERSION)
 
-  campaign_id = 'INSERT_CAMPAIGN_ID_HERE'.to_i
+  job_id = 'INSERT_BULK_MUTATE_JOB_ID_HERE'
 
-  # Get campaign.
-  # The 'module' method being called here provides a shortcut to the
-  # module containing the classes for this service. This helps us avoid
-  # typing the full class name every time we need to create an object.
-  selector = campaign_srv.module::CampaignSelector.new
-  selector.ids = [campaign_id]
-  response = campaign_srv.get(selector)
+  # Create a job.
+  job = bulk_mutate_job_srv.module::BulkMutateJob.new
+  job.id = job_id
 
-  if response and response.rval and response.rval.entries
-    campaigns = response.rval.entries
-    campaigns.each do |campaign|
-      eligibility = campaign.conversionOptimizerEligibility
-      if eligibility.eligible
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is eligible to use the conversion optimizer."
-      else
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is not eligible to use the conversion optimizer " +
-            "for the reasons: #{eligibility.rejectionReasons.pretty_inspect}"
-      end
-    end
-  else
-      puts "No campaigns were found."
-  end
+  # Create operation.
+  job_operation = bulk_mutate_job_srv.module::JobOperation.new
+  job_operation.operator = 'REMOVE'
+  job_operation.operand = job
+
+  # Delete job.
+  response = bulk_mutate_job_srv.mutate(job_operation)
+  job = response.rval
+  puts 'Job id %d was successfully deleted.' % job.id
+
 end
 
 if __FILE__ == $0
@@ -70,7 +61,7 @@ if __FILE__ == $0
   ENV['ADWORDS4R_DEBUG'] = 'false'
 
   begin
-    get_conversion_optimizer_eligibility()
+    delete_bulk_mutate_job()
 
   # Connection error. Likely transitory.
   rescue Errno::ECONNRESET, SOAP::HTTPStreamError, SocketError => e
