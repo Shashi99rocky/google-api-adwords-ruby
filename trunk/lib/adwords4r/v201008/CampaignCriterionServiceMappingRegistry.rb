@@ -397,6 +397,18 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => AdWords::V201008::CampaignCriterionService::CriterionUserInterest,
+    :schema_type => XSD::QName.new(NsV201008, "CriterionUserInterest"),
+    :schema_basetype => XSD::QName.new(NsV201008, "Criterion"),
+    :schema_element => [
+      ["id", "SOAP::SOAPLong", [0, 1]],
+      ["criterion_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201008, "Criterion.Type")], [0, 1]],
+      ["userInterestId", "SOAP::SOAPLong", [0, 1]],
+      ["userInterestName", "SOAP::SOAPString", [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => AdWords::V201008::CampaignCriterionService::CriterionUserList,
     :schema_type => XSD::QName.new(NsV201008, "CriterionUserList"),
     :schema_basetype => XSD::QName.new(NsV201008, "Criterion"),
@@ -1060,6 +1072,18 @@ module DefaultMappingRegistry
       ["operations", "SOAP::SOAPLong", [0, 1]],
       ["responseTime", "SOAP::SOAPLong", [0, 1]],
       ["units", "SOAP::SOAPLong", [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
+    :class => AdWords::V201008::CampaignCriterionService::CriterionUserInterest,
+    :schema_type => XSD::QName.new(NsV201008, "CriterionUserInterest"),
+    :schema_basetype => XSD::QName.new(NsV201008, "Criterion"),
+    :schema_element => [
+      ["id", "SOAP::SOAPLong", [0, 1]],
+      ["criterion_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201008, "Criterion.Type")], [0, 1]],
+      ["userInterestId", "SOAP::SOAPLong", [0, 1]],
+      ["userInterestName", "SOAP::SOAPString", [0, 1]]
     ]
   )
 

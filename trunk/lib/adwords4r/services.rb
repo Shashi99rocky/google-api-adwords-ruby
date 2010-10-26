@@ -44,11 +44,11 @@ module AdWords
                  'CampaignTarget', 'GeoLocation', 'Info', 'Media',
                  'ReportDefinition', 'TargetingIdea'],
       201008 => ['AdExtensionOverride', 'AdGroupAd', 'AdGroupCriterion',
-                 'AdGroup', 'AdParam', 'BidLandscape', 'BulkMutateJob',
+                 'AdGroup', 'AdParam', 'Alert', 'BidLandscape', 'BulkMutateJob',
                  'CampaignAdExtension', 'CampaignCriterion', 'Campaign',
-                 'CampaignTarget', 'Experiment', 'GeoLocation',
-                 'Info', 'Media', 'ReportDefinition', 'TargetingIdea',
-                 'TrafficEstimator']
+                 'CampaignTarget', 'CustomerSync', 'Experiment', 'GeoLocation',
+                 'Info', 'Media', 'ServicedAccount', 'ReportDefinition',
+                 'TargetingIdea', 'TrafficEstimator', 'UserList']
     }
 
     # Configure the different environments, with the base URL for each one
@@ -105,18 +105,20 @@ module AdWords
       [201003, 'Media'] => 'cm/v201003/',
       [201003, 'ReportDefinition'] => 'cm/v201003/',
       [201003, 'TargetingIdea'] => 'o/v201003/',
-       # v201008
+      # v201008
       [201008, 'AdExtensionOverride'] => 'cm/v201008/',
       [201008, 'AdGroupAd'] => 'cm/v201008/',
       [201008, 'AdGroupCriterion'] => 'cm/v201008/',
       [201008, 'AdGroup'] => 'cm/v201008/',
       [201008, 'AdParam'] => 'cm/v201008/',
+      [201008, 'Alert'] => 'mcm/v201008/',
       [201008, 'BidLandscape'] => 'cm/v201008/',
       [201008, 'BulkMutateJob'] => 'job/v201008/',
       [201008, 'CampaignAdExtension'] => 'cm/v201008/',
       [201008, 'CampaignCriterion'] => 'cm/v201008/',
       [201008, 'Campaign'] => 'cm/v201008/',
       [201008, 'CampaignTarget'] => 'cm/v201008/',
+      [201008, 'CustomerSync'] => 'ch/v201008/',
       [201008, 'Experiment'] => 'cm/v201008/',
       [201008, 'GeoLocation'] => 'cm/v201008/',
       [201008, 'Info'] => 'info/v201008/',
@@ -124,7 +126,8 @@ module AdWords
       [201008, 'ReportDefinition'] => 'cm/v201008/',
       [201008, 'ServicedAccount'] => 'mcm/v201008/',
       [201008, 'TargetingIdea'] => 'o/v201008/',
-      [201008, 'TrafficEstimator'] => 'o/v201008/'
+      [201008, 'TrafficEstimator'] => 'o/v201008/',
+      [201008, 'UserList'] => 'cm/v201008/'
     }
 
     # Configure the auth servers to use for each environment

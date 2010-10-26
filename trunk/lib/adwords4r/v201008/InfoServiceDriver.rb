@@ -16,7 +16,7 @@ class InfoServiceInterface < ::SOAP::RPC::Driver
         ["out", "parameters", ["::SOAP::SOAPElement", "https://adwords.google.com/api/adwords/info/v201008", "getResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
-        :faults => {"AdWords::V201008::InfoService::ApiException_"=>{:namespace=>nil, :use=>"literal", :ns=>"https://adwords.google.com/api/adwords/info/v201008", :name=>"ApiException", :encodingstyle=>"document"}} }
+        :faults => {"AdWords::V201008::InfoService::ApiException_"=>{:namespace=>nil, :ns=>"https://adwords.google.com/api/adwords/info/v201008", :name=>"ApiException", :encodingstyle=>"document", :use=>"literal"}} }
     ]
   ]
 

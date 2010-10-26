@@ -31,7 +31,10 @@ module AdWords
     # Using camelCase to match API method names.
     @@extensions = {
       [13, 'Report'] => ['downloadXmlReport', 'downloadCsvReport'],
-      [201003, 'ReportDefinition'] => ['downloadReport', 'downloadReportAsFile']
+      [201003, 'ReportDefinition'] => ['downloadReport',
+          'downloadReportAsFile'],
+      [201008, 'ReportDefinition'] => ['downloadReport',
+          'downloadReportAsFile']
     }
 
     # Defines the parameter list for every extension method

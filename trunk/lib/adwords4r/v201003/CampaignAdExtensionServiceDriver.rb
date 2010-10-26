@@ -16,7 +16,7 @@ class CampaignAdExtensionServiceInterface < ::SOAP::RPC::Driver
         ["out", "parameters", ["::SOAP::SOAPElement", "https://adwords.google.com/api/adwords/cm/v201003", "getResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
-        :faults => {"AdWords::V201003::CampaignAdExtensionService::ApiException"=>{:namespace=>nil, :use=>"literal", :ns=>"https://adwords.google.com/api/adwords/cm/v201003", :name=>"ApiException", :encodingstyle=>"document"}} }
+        :faults => {"AdWords::V201003::CampaignAdExtensionService::ApiException"=>{:namespace=>nil, :ns=>"https://adwords.google.com/api/adwords/cm/v201003", :name=>"ApiException", :encodingstyle=>"document", :use=>"literal"}} }
     ],
     [ "",
       "mutate",
@@ -24,7 +24,7 @@ class CampaignAdExtensionServiceInterface < ::SOAP::RPC::Driver
         ["out", "parameters", ["::SOAP::SOAPElement", "https://adwords.google.com/api/adwords/cm/v201003", "mutateResponse"]] ],
       { :request_style =>  :document, :request_use =>  :literal,
         :response_style => :document, :response_use => :literal,
-        :faults => {"AdWords::V201003::CampaignAdExtensionService::ApiException"=>{:namespace=>nil, :use=>"literal", :ns=>"https://adwords.google.com/api/adwords/cm/v201003", :name=>"ApiException", :encodingstyle=>"document"}} }
+        :faults => {"AdWords::V201003::CampaignAdExtensionService::ApiException"=>{:namespace=>nil, :ns=>"https://adwords.google.com/api/adwords/cm/v201003", :name=>"ApiException", :encodingstyle=>"document", :use=>"literal"}} }
     ]
   ]
 

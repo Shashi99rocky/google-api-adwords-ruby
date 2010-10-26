@@ -420,6 +420,19 @@ module DefaultMappingRegistry
   )
 
   EncodedRegistry.register(
+    :class => AdWords::V201008::CampaignAdExtensionService::RejectedError,
+    :schema_type => XSD::QName.new(NsV201008, "RejectedError"),
+    :schema_basetype => XSD::QName.new(NsV201008, "ApiError"),
+    :schema_element => [
+      ["fieldPath", "SOAP::SOAPString", [0, 1]],
+      ["trigger", "SOAP::SOAPString", [0, 1]],
+      ["errorString", "SOAP::SOAPString", [0, 1]],
+      ["apiError_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201008, "ApiError.Type")], [0, 1]],
+      ["reason", "AdWords::V201008::CampaignAdExtensionService::RejectedErrorReason", [0, 1]]
+    ]
+  )
+
+  EncodedRegistry.register(
     :class => AdWords::V201008::CampaignAdExtensionService::RequestError,
     :schema_type => XSD::QName.new(NsV201008, "RequestError"),
     :schema_basetype => XSD::QName.new(NsV201008, "ApiError"),
@@ -818,6 +831,11 @@ module DefaultMappingRegistry
   EncodedRegistry.register(
     :class => AdWords::V201008::CampaignAdExtensionService::RegionCodeErrorReason,
     :schema_type => XSD::QName.new(NsV201008, "RegionCodeError.Reason")
+  )
+
+  EncodedRegistry.register(
+    :class => AdWords::V201008::CampaignAdExtensionService::RejectedErrorReason,
+    :schema_type => XSD::QName.new(NsV201008, "RejectedError.Reason")
   )
 
   EncodedRegistry.register(
@@ -1257,6 +1275,19 @@ module DefaultMappingRegistry
   )
 
   LiteralRegistry.register(
+    :class => AdWords::V201008::CampaignAdExtensionService::RejectedError,
+    :schema_type => XSD::QName.new(NsV201008, "RejectedError"),
+    :schema_basetype => XSD::QName.new(NsV201008, "ApiError"),
+    :schema_element => [
+      ["fieldPath", "SOAP::SOAPString", [0, 1]],
+      ["trigger", "SOAP::SOAPString", [0, 1]],
+      ["errorString", "SOAP::SOAPString", [0, 1]],
+      ["apiError_Type", ["SOAP::SOAPString", XSD::QName.new(NsV201008, "ApiError.Type")], [0, 1]],
+      ["reason", "AdWords::V201008::CampaignAdExtensionService::RejectedErrorReason", [0, 1]]
+    ]
+  )
+
+  LiteralRegistry.register(
     :class => AdWords::V201008::CampaignAdExtensionService::RequestError,
     :schema_type => XSD::QName.new(NsV201008, "RequestError"),
     :schema_basetype => XSD::QName.new(NsV201008, "ApiError"),
@@ -1655,6 +1686,11 @@ module DefaultMappingRegistry
   LiteralRegistry.register(
     :class => AdWords::V201008::CampaignAdExtensionService::RegionCodeErrorReason,
     :schema_type => XSD::QName.new(NsV201008, "RegionCodeError.Reason")
+  )
+
+  LiteralRegistry.register(
+    :class => AdWords::V201008::CampaignAdExtensionService::RejectedErrorReason,
+    :schema_type => XSD::QName.new(NsV201008, "RejectedError.Reason")
   )
 
   LiteralRegistry.register(

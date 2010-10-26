@@ -765,6 +765,25 @@ class Placement < Criterion
   end
 end
 
+# CriterionUserInterest
+# - id - SOAP::SOAPLong
+# - criterion_Type - SOAP::SOAPString
+# - userInterestId - SOAP::SOAPLong
+# - userInterestName - SOAP::SOAPString
+class CriterionUserInterest < Criterion
+  attr_accessor :id
+  attr_accessor :criterion_Type
+  attr_accessor :userInterestId
+  attr_accessor :userInterestName
+
+  def initialize(id = nil, criterion_Type = nil, userInterestId = nil, userInterestName = nil)
+    @id = id
+    @criterion_Type = criterion_Type
+    @userInterestId = userInterestId
+    @userInterestName = userInterestName
+  end
+end
+
 # CriterionUserList
 # - id - SOAP::SOAPLong
 # - criterion_Type - SOAP::SOAPString
