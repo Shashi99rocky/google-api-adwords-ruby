@@ -112,6 +112,18 @@ module AdWords
           end
         end
 
+        # <i>Extension method</i> -- Calls the AdWords::Extensions.downloadReport method
+        # with +self+ as the first parameter.
+        def downloadReport(report_definition_id)
+          return AdWords::Extensions.downloadReport(self, report_definition_id)
+        end
+
+        # <i>Extension method</i> -- Calls the AdWords::Extensions.downloadReportAsFile method
+        # with +self+ as the first parameter.
+        def downloadReportAsFile(report_definition_id, path)
+          return AdWords::Extensions.downloadReportAsFile(self, report_definition_id, path)
+        end
+
       end
     end
   end

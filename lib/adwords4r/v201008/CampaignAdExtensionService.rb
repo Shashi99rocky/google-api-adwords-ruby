@@ -853,6 +853,28 @@ class RegionCodeError < ApiError
   end
 end
 
+# RejectedError
+# - fieldPath - SOAP::SOAPString
+# - trigger - SOAP::SOAPString
+# - errorString - SOAP::SOAPString
+# - apiError_Type - SOAP::SOAPString
+# - reason - AdWords::V201008::CampaignAdExtensionService::RejectedErrorReason
+class RejectedError < ApiError
+  attr_accessor :fieldPath
+  attr_accessor :trigger
+  attr_accessor :errorString
+  attr_accessor :apiError_Type
+  attr_accessor :reason
+
+  def initialize(fieldPath = nil, trigger = nil, errorString = nil, apiError_Type = nil, reason = nil)
+    @fieldPath = fieldPath
+    @trigger = trigger
+    @errorString = errorString
+    @apiError_Type = apiError_Type
+    @reason = reason
+  end
+end
+
 # RequestError
 # - fieldPath - SOAP::SOAPString
 # - trigger - SOAP::SOAPString
@@ -1479,6 +1501,11 @@ end
 # RegionCodeError.Reason
 class RegionCodeErrorReason < ::String
   INVALID_REGION_CODE = RegionCodeErrorReason.new("INVALID_REGION_CODE")
+end
+
+# RejectedError.Reason
+class RejectedErrorReason < ::String
+  UNKNOWN_VALUE = RejectedErrorReason.new("UNKNOWN_VALUE")
 end
 
 # RequestError.Reason
