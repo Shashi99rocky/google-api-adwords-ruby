@@ -36,6 +36,8 @@ def add_experiment()
   # ENV['HOME']/adwords.properties when called without parameters.
   adwords = AdWords::API.new
   experiment_srv = adwords.get_service('Experiment', API_VERSION)
+  ad_group_srv = adwords.get_service('AdGroup', API_VERSION)
+  ad_group_criterion_srv = adwords.get_service('AdGroupCriterion', API_VERSION)
 
   campaign_id = 'INSERT_CAMPAIGN_ID_HERE'.to_i
   ad_group_id = 'INSERT_AD_GROUP_ID_HERE'.to_i
@@ -57,6 +59,69 @@ def add_experiment()
   experiment = response.rval.value.first
   puts 'Experiment with name "%s" and id %d was added.' %
       [experiment.name, experiment.id]
+
+  experiment_id = experiment.id
+
+  # Set ad group for the experiment.
+  ad_group = ad_group_srv.module::AdGroup.new
+  ad_group.id = ad_group_id
+
+  # Create experiment bid multiplier rule that will modify ad group bid for the
+  # experiment.
+  bid_multipliers =
+      ad_group_srv.module::ManualCPCAdGroupExperimentBidMultipliers.new
+  bid_multipliers.maxCpcMultiplier = {:multiplier => 1.5}
+
+  # Set experiment data to the ad group.
+  experiment_data = ad_group_srv.module::AdGroupExperimentData.new
+  experiment_data.experimentId = experiment_id
+  experiment_data.experimentDeltaStatus = 'MODIFIED'
+  experiment_data.experimentBidMultipliers = bid_multipliers
+  ad_group.experimentData = experiment_data
+
+  # Prepare for updating ad group.
+  operation = {
+    :operand => ad_group,
+    :operator => 'SET'
+  }
+
+  # Update ad group.
+  response = ad_group_srv.mutate([operation])
+  ad_group = response.rval.value.first
+  puts 'Ad group id %d was updated for the experiment.' % ad_group.id
+
+  # Set ad group criteria for the experiment.
+  criterion = ad_group_criterion_srv.module::Criterion.new
+  criterion.id = criterion_id
+  ad_group_criterion =
+      ad_group_criterion_srv.module::BiddableAdGroupCriterion.new
+  ad_group_criterion.adGroupId = ad_group_id
+  ad_group_criterion.criterion = criterion
+
+  # Create experiment bid multiplier rule that will modify criterion bid for the
+  # experiment.
+  bid_multiplier = ad_group_criterion_srv.module::
+      ManualCPCAdGroupCriterionExperimentBidMultiplier.new
+  bid_multiplier.maxCpcMultiplier = { :multiplier => 1.5 }
+
+  # Set experiment data to the criterion.
+  experiment_data =
+      ad_group_criterion_srv.module::BiddableAdGroupCriterionExperimentData.new
+  experiment_data.experimentId = experiment_id
+  experiment_data.experimentDeltaStatus = 'MODIFIED'
+  experiment_data.experimentBidMultiplier = bid_multiplier
+
+  # Prepare for updating ad group criterion.
+  operation = ad_group_criterion_srv.module::AdGroupCriterionOperation.new
+  operation.operator = 'SET'
+  operation.operand = ad_group_criterion
+
+  # Update criterion.
+  response = ad_group_criterion_srv.mutate([operation])
+  criterion = response.rval.value.first
+  puts 'Criterion id %d was successfully updated for the experiment.' %
+      [criterion.criterion.id]
+
 end
 
 if __FILE__ == $0

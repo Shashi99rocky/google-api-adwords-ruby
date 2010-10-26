@@ -17,49 +17,66 @@
 #           See the License for the specific language governing permissions and
 #           limitations under the License.
 #
-# This example shows how to check for conversion optimizer eligibility by
-# examining the conversionOptimizerEligibility field of the Campaign.
+# This code example illustrates how to retrieve campaign alerts for a user.
+# The alerts are restricted to a maximum of 10 entries.
 #
-# Tags: CampaignService.get
+# Tags: AlertService.get
 
 require 'rubygems'
 gem 'soap4r', '= 1.5.8'
 require 'adwords4r'
-require 'pp'
 
 API_VERSION = 201008
 
-def get_conversion_optimizer_eligibility()
+def format_id(id)
+  str_id = id.to_s
+  if str_id.size >= 6
+    return str_id[0, 3] + '-' + str_id[3, 3] + '-' + str_id[6..-1]
+  else
+    return str_id
+  end
+end
+
+def get_campaign_alerts()
   # AdWords::AdWordsCredentials.new will read a credentials file from
   # ENV['HOME']/adwords.properties when called without parameters.
   adwords = AdWords::API.new
-  campaign_srv = adwords.get_service('Campaign', API_VERSION)
+  alert_srv = adwords.get_service('Alert', API_VERSION)
 
-  campaign_id = 'INSERT_CAMPAIGN_ID_HERE'.to_i
-
-  # Get campaign.
+  # Create the alert query.
   # The 'module' method being called here provides a shortcut to the
   # module containing the classes for this service. This helps us avoid
   # typing the full class name every time we need to create an object.
-  selector = campaign_srv.module::CampaignSelector.new
-  selector.ids = [campaign_id]
-  response = campaign_srv.get(selector)
+  query = alert_srv.module::AlertQuery.new
+  query.filterSpec = 'ALL'
+  query.clientSpec = 'ALL'
+  query.triggerTimeSpec = 'ALL_TIME'
+  query.severities = ['GREEN', 'YELLOW', 'RED']
+  query.types = ['CAMPAIGN_ENDING', 'CAMPAIGN_ENDED']
+
+  # Create the selector.
+  selector = alert_srv.module::AlertSelector.new
+  selector.query = query
+  selector.paging = {
+    :startIndex => 0,
+    :numberResults => 10
+  }
+
+  # Get alerts.
+  response = alert_srv.get(selector)
 
   if response and response.rval and response.rval.entries
-    campaigns = response.rval.entries
-    campaigns.each do |campaign|
-      eligibility = campaign.conversionOptimizerEligibility
-      if eligibility.eligible
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is eligible to use the conversion optimizer."
-      else
-        puts "Campaign with name is \"#{campaign.name}\" and id " +
-            "#{campaign.id} is not eligible to use the conversion optimizer " +
-            "for the reasons: #{eligibility.rejectionReasons.pretty_inspect}"
+    alerts = response.rval.entries
+    alerts.each_with_index do |alert, index|
+      puts "{index}) Customer Id is #{format_id(alert.clientCustomerId)}, " +
+          "alert type is '#{alert.alertType}', severity is " +
+          "#{alert.alertSeverity}."
+      alert.details.each do |detail|
+        puts "  - triggered at #{detail.triggerTime}"
       end
     end
   else
-      puts "No campaigns were found."
+    puts "No alerts were found."
   end
 end
 
@@ -67,10 +84,10 @@ if __FILE__ == $0
   # To enable logging of SOAP requests, set the ADWORDS4R_DEBUG environment
   # variable to 'true'. This can be done either from your operating system
   # environment or via code, as done below.
-  ENV['ADWORDS4R_DEBUG'] = 'false'
+  ENV['ADWORDS4R_DEBUG'] = 'true'
 
   begin
-    get_conversion_optimizer_eligibility()
+    get_campaign_alerts()
 
   # Connection error. Likely transitory.
   rescue Errno::ECONNRESET, SOAP::HTTPStreamError, SocketError => e

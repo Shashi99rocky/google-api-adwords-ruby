@@ -72,4 +72,3 @@ if __FILE__ == $0
     puts 'Source: %s' % e.backtrace.first
   end
 end
-
