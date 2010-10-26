@@ -58,9 +58,9 @@ automatically generated.
         <dd>
             <ul>
                 
-                <li><a href="#M000226">downloadReport</a>,</li>
+                <li><a href="#M000213">downloadReport</a>,</li>
                 
-                <li><a href="#M000227">downloadReportAsFile</a></li>
+                <li><a href="#M000214">downloadReportAsFile</a></li>
                 
             </ul>
         </dd>
@@ -69,9 +69,9 @@ automatically generated.
         <dd>
             <ul>
                 
-                <li><a href="#M000220">get</a>,</li>
+                <li><a href="#M000210">get</a>,</li>
                 
-                <li><a href="#M000222">getReportFields</a></li>
+                <li><a href="#M000211">getReportFields</a></li>
                 
             </ul>
         </dd>
@@ -80,7 +80,7 @@ automatically generated.
         <dd>
             <ul>
                 
-                <li><a href="#M000225">mutate</a></li>
+                <li><a href="#M000212">mutate</a></li>
                 
             </ul>
         </dd>
@@ -89,7 +89,7 @@ automatically generated.
         <dd>
             <ul>
                 
-                <li><a href="#M000219">new</a></li>
+                <li><a href="#M000208">new</a></li>
                 
             </ul>
         </dd>
@@ -151,9 +151,9 @@ href="../../API.html">API</a> versions.
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="M000219">
+                <div class="title" id="M000208">
                     
-                    <a name="M000219"></a><b>new</b>(driver, api)
+                    <a name="M000208"></a><b>new</b>(driver, api)
                     
                 </div>
                 
@@ -183,10 +183,10 @@ wrapper belongs
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000219_source')" id="l_M000219_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000208_source')" id="l_M000208_source">show</a>
                         
                     </p>
-                    <div id="M000219_source" class="dyn-source">
+                    <div id="M000208_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionServiceWrapper.rb, line 34</span>
         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">driver</span>, <span class="ruby-identifier">api</span>)
           <span class="ruby-ivar">@driver</span> = <span class="ruby-identifier">driver</span>
@@ -201,16 +201,16 @@ wrapper belongs
             <div class="sectiontitle">Instance Public methods</div>
             
             <div class="method">
-                <div class="title" id="M000226">
+                <div class="title" id="M000213">
                     
-                    <a name="M000226"></a><b>downloadReport</b>(report_definition_id, path)
+                    <a name="M000213"></a><b>downloadReport</b>(report_definition_id)
                     
                 </div>
                 
                 <div class="description">
                   <p>
 <em>Extension method</em> &#8212; Calls the <a
-href="../../Extensions.html#M000115">AdWords::Extensions.downloadReport</a>
+href="../../Extensions.html#M000069">AdWords::Extensions.downloadReport</a>
 method with <tt>self</tt> as the first parameter.
 </p>
 
@@ -221,13 +221,13 @@ method with <tt>self</tt> as the first parameter.
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000226_source')" id="l_M000226_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000213_source')" id="l_M000213_source">show</a>
                         
                     </p>
-                    <div id="M000226_source" class="dyn-source">
+                    <div id="M000213_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionServiceWrapper.rb, line 117</span>
-        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">downloadReport</span>(<span class="ruby-identifier">report_definition_id</span>, <span class="ruby-identifier">path</span>)
-          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">Extensions</span>.<span class="ruby-identifier">downloadReport</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">report_definition_id</span>, <span class="ruby-identifier">path</span>)
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">downloadReport</span>(<span class="ruby-identifier">report_definition_id</span>)
+          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">Extensions</span>.<span class="ruby-identifier">downloadReport</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">report_definition_id</span>)
         <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
@@ -235,16 +235,16 @@ method with <tt>self</tt> as the first parameter.
             </div>
             
             <div class="method">
-                <div class="title" id="M000227">
+                <div class="title" id="M000214">
                     
-                    <a name="M000227"></a><b>downloadReportAsFile</b>(report_definition_id)
+                    <a name="M000214"></a><b>downloadReportAsFile</b>(report_definition_id, path)
                     
                 </div>
                 
                 <div class="description">
                   <p>
 <em>Extension method</em> &#8212; Calls the <a
-href="../../Extensions.html#M000113">AdWords::Extensions.downloadReportAsFile</a>
+href="../../Extensions.html#M000067">AdWords::Extensions.downloadReportAsFile</a>
 method with <tt>self</tt> as the first parameter.
 </p>
 
@@ -255,13 +255,13 @@ method with <tt>self</tt> as the first parameter.
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000227_source')" id="l_M000227_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000214_source')" id="l_M000214_source">show</a>
                         
                     </p>
-                    <div id="M000227_source" class="dyn-source">
+                    <div id="M000214_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionServiceWrapper.rb, line 123</span>
-        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">downloadReportAsFile</span>(<span class="ruby-identifier">report_definition_id</span>)
-          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">Extensions</span>.<span class="ruby-identifier">downloadReportAsFile</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">report_definition_id</span>)
+        <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">downloadReportAsFile</span>(<span class="ruby-identifier">report_definition_id</span>, <span class="ruby-identifier">path</span>)
+          <span class="ruby-keyword kw">return</span> <span class="ruby-constant">AdWords</span><span class="ruby-operator">::</span><span class="ruby-constant">Extensions</span>.<span class="ruby-identifier">downloadReportAsFile</span>(<span class="ruby-keyword kw">self</span>, <span class="ruby-identifier">report_definition_id</span>, <span class="ruby-identifier">path</span>)
         <span class="ruby-keyword kw">end</span></pre>
                     </div>
                 </div>
@@ -269,9 +269,9 @@ method with <tt>self</tt> as the first parameter.
             </div>
             
             <div class="method">
-                <div class="title" id="M000220">
+                <div class="title" id="M000210">
                     
-                    <a name="M000220"></a><b>get</b>(selector)
+                    <a name="M000210"></a><b>get</b>(selector)
                     
                 </div>
                 
@@ -314,10 +314,10 @@ subclass thereof) if a SOAP fault occurs.
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000220_source')" id="l_M000220_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000210_source')" id="l_M000210_source">show</a>
                         
                     </p>
-                    <div id="M000220_source" class="dyn-source">
+                    <div id="M000210_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionServiceWrapper.rb, line 52</span>
         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get</span>(<span class="ruby-identifier">selector</span>)
           <span class="ruby-keyword kw">begin</span>
@@ -337,9 +337,9 @@ subclass thereof) if a SOAP fault occurs.
             </div>
             
             <div class="method">
-                <div class="title" id="M000222">
+                <div class="title" id="M000211">
                     
-                    <a name="M000222"></a><b>getReportFields</b>(reportType)
+                    <a name="M000211"></a><b>getReportFields</b>(reportType)
                     
                 </div>
                 
@@ -382,10 +382,10 @@ subclass thereof) if a SOAP fault occurs.
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000222_source')" id="l_M000222_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000211_source')" id="l_M000211_source">show</a>
                         
                     </p>
-                    <div id="M000222_source" class="dyn-source">
+                    <div id="M000211_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionServiceWrapper.rb, line 77</span>
         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">getReportFields</span>(<span class="ruby-identifier">reportType</span>)
           <span class="ruby-keyword kw">begin</span>
@@ -405,9 +405,9 @@ subclass thereof) if a SOAP fault occurs.
             </div>
             
             <div class="method">
-                <div class="title" id="M000225">
+                <div class="title" id="M000212">
                     
-                    <a name="M000225"></a><b>mutate</b>(operations)
+                    <a name="M000212"></a><b>mutate</b>(operations)
                     
                 </div>
                 
@@ -450,10 +450,10 @@ subclass thereof) if a SOAP fault occurs.
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000225_source')" id="l_M000225_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000212_source')" id="l_M000212_source">show</a>
                         
                     </p>
-                    <div id="M000225_source" class="dyn-source">
+                    <div id="M000212_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/v201003/ReportDefinitionServiceWrapper.rb, line 102</span>
         <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">mutate</span>(<span class="ruby-identifier">operations</span>)
           <span class="ruby-keyword kw">begin</span>
