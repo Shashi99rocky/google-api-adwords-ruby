@@ -19,7 +19,7 @@
         </h1>
         <ul class="files">
             <li>ChangeLog.txt</li>
-            <li>Last modified: Wed Sep 15 16:52:02 +0100 2010</li>
+            <li>Last modified: Fri Oct 22 18:37:41 +0100 2010</li>
         </ul>
     </div>
 
@@ -28,6 +28,25 @@
     
     <div class="description">
         <p>
+19.3.0
+</p>
+<ul>
+<li>Added support for CustomerSyncService, ServicedAccountService and
+UserListService in v201008.
+
+</li>
+<li>Added several examples for new services.
+
+</li>
+<li>Updated get_conversion_optimizer_eligibility.rb to new fields in v201008.
+
+</li>
+<li>Removed CSV files and utility methods; they&#8217;ve been deprecated by the
+documentation.
+
+</li>
+</ul>
+<p>
 19.2.0
 </p>
 <ul>
@@ -131,8 +150,8 @@ deprecated. The version parameter is now optional and defaults to 13.
 reference to the module containing all the classes for the service, so the
 full class name isn&#8217;t necessary. For example,
 service_object.module::ClassName instead of
-AdWords::V13::SomeService::ClassName Using this will also make it easier to
-upgrade between API versions, since it removes the need for hardcoded
+AdWords::V13::SomeService::ClassName. Using this will also make it easier
+to upgrade between API versions, since it removes the need for hardcoded
 numbers.
 
 </li>
