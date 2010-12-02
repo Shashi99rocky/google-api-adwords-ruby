@@ -57,7 +57,7 @@ unit usage and statistics information.
         <dd>
             <ul>
                 
-                <li><a href="#M000029">new</a></li>
+                <li><a href="#M000027">new</a></li>
                 
             </ul>
         </dd>
@@ -66,7 +66,7 @@ unit usage and statistics information.
         <dd>
             <ul>
                 
-                <li><a href="#M000030">on_callback</a></li>
+                <li><a href="#M000028">on_callback</a></li>
                 
             </ul>
         </dd>
@@ -75,7 +75,7 @@ unit usage and statistics information.
         <dd>
             <ul>
                 
-                <li><a href="#M000033">parse_header</a></li>
+                <li><a href="#M000031">parse_header</a></li>
                 
             </ul>
         </dd>
@@ -97,9 +97,9 @@ unit usage and statistics information.
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="M000029">
+                <div class="title" id="M000027">
                     
-                    <a name="M000029"></a><b>new</b>(parent)
+                    <a name="M000027"></a><b>new</b>(parent)
                     
                 </div>
                 
@@ -124,11 +124,11 @@ href="ResponseHandler.html">ResponseHandler</a> should be tied
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000029_source')" id="l_M000029_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000027_source')" id="l_M000027_source">show</a>
                         
                     </p>
-                    <div id="M000029_source" class="dyn-source">
-                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 474</span>
+                    <div id="M000027_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 509</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">parent</span>)
       <span class="ruby-ivar">@parent</span> = <span class="ruby-identifier">parent</span>
     <span class="ruby-keyword kw">end</span></pre>
@@ -140,9 +140,9 @@ href="ResponseHandler.html">ResponseHandler</a> should be tied
             <div class="sectiontitle">Instance Public methods</div>
             
             <div class="method">
-                <div class="title" id="M000030">
+                <div class="title" id="M000028">
                     
-                    <a name="M000030"></a><b>on_callback</b>(method_name, endpoint, envelope, params, fault = false, fault_msg = nil)
+                    <a name="M000028"></a><b>on_callback</b>(method_name, endpoint, envelope, params, fault = false, fault_msg = nil)
                     
                 </div>
                 
@@ -181,11 +181,11 @@ Args:
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000030_source')" id="l_M000030_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000028_source')" id="l_M000028_source">show</a>
                         
                     </p>
-                    <div id="M000030_source" class="dyn-source">
-                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 489</span>
+                    <div id="M000028_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 524</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">on_callback</span>(<span class="ruby-identifier">method_name</span>, <span class="ruby-identifier">endpoint</span>, <span class="ruby-identifier">envelope</span>, <span class="ruby-identifier">params</span>, <span class="ruby-identifier">fault</span> = <span class="ruby-keyword kw">false</span>,
         <span class="ruby-identifier">fault_msg</span> = <span class="ruby-keyword kw">nil</span>)
       <span class="ruby-identifier">units</span> = <span class="ruby-keyword kw">nil</span>
@@ -268,9 +268,9 @@ Args:
             </div>
             
             <div class="method">
-                <div class="title" id="M000033">
+                <div class="title" id="M000031">
                     
-                    <a name="M000033"></a><b>parse_header</b>(header)
+                    <a name="M000031"></a><b>parse_header</b>(header)
                     
                 </div>
                 
@@ -298,11 +298,11 @@ header is nil
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000033_source')" id="l_M000033_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000031_source')" id="l_M000031_source">show</a>
                         
                     </p>
-                    <div id="M000033_source" class="dyn-source">
-                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 574</span>
+                    <div id="M000031_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 609</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">parse_header</span>(<span class="ruby-identifier">header</span>)
       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">header</span>.<span class="ruby-identifier">nil?</span>
         <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span>
