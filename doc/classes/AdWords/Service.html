@@ -50,7 +50,7 @@ Contains helper methods for loading and managing the available services.
         <dd>
             <ul>
                 
-                <li><a href="#M000050">add_environment</a></li>
+                <li><a href="#M000068">add_environment</a></li>
                 
             </ul>
         </dd>
@@ -59,7 +59,7 @@ Contains helper methods for loading and managing the available services.
         <dd>
             <ul>
                 
-                <li><a href="#M000052">do_require</a></li>
+                <li><a href="#M000069">do_require</a></li>
                 
             </ul>
         </dd>
@@ -68,7 +68,7 @@ Contains helper methods for loading and managing the available services.
         <dd>
             <ul>
                 
-                <li><a href="#M000040">environment_has_version</a></li>
+                <li><a href="#M000052">environment_has_version</a></li>
                 
             </ul>
         </dd>
@@ -77,33 +77,33 @@ Contains helper methods for loading and managing the available services.
         <dd>
             <ul>
                 
-                <li><a href="#M000049">get_auth_server</a>,</li>
+                <li><a href="#M000066">get_auth_server</a>,</li>
                 
-                <li><a href="#M000045">get_default_environment</a>,</li>
+                <li><a href="#M000060">get_default_environment</a>,</li>
                 
-                <li><a href="#M000042">get_default_version</a>,</li>
+                <li><a href="#M000056">get_default_version</a>,</li>
                 
-                <li><a href="#M000046">get_endpoint</a>,</li>
+                <li><a href="#M000061">get_endpoint</a>,</li>
                 
-                <li><a href="#M000044">get_environments</a>,</li>
+                <li><a href="#M000059">get_environments</a>,</li>
                 
-                <li><a href="#M000054">get_interface_name</a>,</li>
+                <li><a href="#M000071">get_interface_name</a>,</li>
                 
-                <li><a href="#M000039">get_latest_version</a>,</li>
+                <li><a href="#M000051">get_latest_version</a>,</li>
                 
-                <li><a href="#M000053">get_module_name</a>,</li>
+                <li><a href="#M000070">get_module_name</a>,</li>
                 
-                <li><a href="#M000056">get_namespace_v2009</a>,</li>
+                <li><a href="#M000073">get_namespace_v2009</a>,</li>
                 
-                <li><a href="#M000047">get_report_download_url</a>,</li>
+                <li><a href="#M000063">get_report_download_url</a>,</li>
                 
-                <li><a href="#M000043">get_services</a>,</li>
+                <li><a href="#M000058">get_services</a>,</li>
                 
-                <li><a href="#M000048">get_subdir</a>,</li>
+                <li><a href="#M000064">get_subdir</a>,</li>
                 
-                <li><a href="#M000038">get_versions</a>,</li>
+                <li><a href="#M000050">get_versions</a>,</li>
                 
-                <li><a href="#M000055">get_wrapper_name</a></li>
+                <li><a href="#M000072">get_wrapper_name</a></li>
                 
             </ul>
         </dd>
@@ -112,9 +112,9 @@ Contains helper methods for loading and managing the available services.
         <dd>
             <ul>
                 
-                <li><a href="#M000057">validate_param</a>,</li>
+                <li><a href="#M000074">validate_param</a>,</li>
                 
-                <li><a href="#M000041">version_has_service</a></li>
+                <li><a href="#M000055">version_has_service</a></li>
                 
             </ul>
         </dd>
@@ -163,9 +163,9 @@ Set defaults
             <div class="sectiontitle">Class Public methods</div>
             
             <div class="method">
-                <div class="title" id="M000050">
+                <div class="title" id="M000068">
                     
-                    <a name="M000050"></a><b>add_environment</b>(name, endpoint_hash)
+                    <a name="M000068"></a><b>add_environment</b>(name, endpoint_hash)
                     
                 </div>
                 
@@ -196,10 +196,10 @@ e.g.:
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000050_source')" id="l_M000050_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000068_source')" id="l_M000068_source">show</a>
                         
                     </p>
-                    <div id="M000050_source" class="dyn-source">
+                    <div id="M000068_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 296</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">add_environment</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">endpoint_hash</span>)
       <span class="ruby-ivar">@@environments</span>[<span class="ruby-identifier">name</span>] = <span class="ruby-identifier">endpoint_hash</span>
@@ -210,9 +210,9 @@ e.g.:
             </div>
             
             <div class="method">
-                <div class="title" id="M000052">
+                <div class="title" id="M000069">
                     
-                    <a name="M000052"></a><b>do_require</b>(version)
+                    <a name="M000069"></a><b>do_require</b>(version)
                     
                 </div>
                 
@@ -236,10 +236,10 @@ Args:
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000052_source')" id="l_M000052_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000069_source')" id="l_M000069_source">show</a>
                         
                     </p>
-                    <div id="M000052_source" class="dyn-source">
+                    <div id="M000069_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 305</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">do_require</span>(<span class="ruby-identifier">version</span>)
       <span class="ruby-identifier">get_services</span>(<span class="ruby-identifier">version</span>).<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">service</span><span class="ruby-operator">|</span>
@@ -252,9 +252,9 @@ Args:
             </div>
             
             <div class="method">
-                <div class="title" id="M000040">
+                <div class="title" id="M000052">
                     
-                    <a name="M000040"></a><b>environment_has_version</b>(environment, version)
+                    <a name="M000052"></a><b>environment_has_version</b>(environment, version)
                     
                 </div>
                 
@@ -274,10 +274,10 @@ contains the given version
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000040_source')" id="l_M000040_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000052_source')" id="l_M000052_source">show</a>
                         
                     </p>
-                    <div id="M000040_source" class="dyn-source">
+                    <div id="M000052_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 166</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">environment_has_version</span>(<span class="ruby-identifier">environment</span>, <span class="ruby-identifier">version</span>)
       <span class="ruby-keyword kw">return</span> (<span class="ruby-operator">!</span><span class="ruby-ivar">@@environments</span>[<span class="ruby-identifier">environment</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">and</span>
@@ -289,9 +289,9 @@ contains the given version
             </div>
             
             <div class="method">
-                <div class="title" id="M000049">
+                <div class="title" id="M000066">
                     
-                    <a name="M000049"></a><b>get_auth_server</b>(environment)
+                    <a name="M000066"></a><b>get_auth_server</b>(environment)
                     
                 </div>
                 
@@ -329,10 +329,10 @@ Returns: Array containing
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000049_source')" id="l_M000049_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000066_source')" id="l_M000066_source">show</a>
                         
                     </p>
-                    <div id="M000049_source" class="dyn-source">
+                    <div id="M000066_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 278</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_auth_server</span>(<span class="ruby-identifier">environment</span>)
       <span class="ruby-comment cmt"># If we don't have an entry for this environment, we just return the</span>
@@ -349,9 +349,9 @@ Returns: Array containing
             </div>
             
             <div class="method">
-                <div class="title" id="M000045">
+                <div class="title" id="M000060">
                     
-                    <a name="M000045"></a><b>get_default_environment</b>()
+                    <a name="M000060"></a><b>get_default_environment</b>()
                     
                 </div>
                 
@@ -370,10 +370,10 @@ Returns: Default environment (as a string)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000045_source')" id="l_M000045_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000060_source')" id="l_M000060_source">show</a>
                         
                     </p>
-                    <div id="M000045_source" class="dyn-source">
+                    <div id="M000060_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 217</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_default_environment</span>
       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">DEFAULT_ENVIRONMENT</span>
@@ -384,9 +384,9 @@ Returns: Default environment (as a string)
             </div>
             
             <div class="method">
-                <div class="title" id="M000042">
+                <div class="title" id="M000056">
                     
-                    <a name="M000042"></a><b>get_default_version</b>()
+                    <a name="M000056"></a><b>get_default_version</b>()
                     
                 </div>
                 
@@ -405,10 +405,10 @@ Returns: Default version (as an integer)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000042_source')" id="l_M000042_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000056_source')" id="l_M000056_source">show</a>
                         
                     </p>
-                    <div id="M000042_source" class="dyn-source">
+                    <div id="M000056_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 187</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_default_version</span>
       <span class="ruby-keyword kw">return</span> <span class="ruby-constant">DEFAULT_VERSION</span>
@@ -419,9 +419,9 @@ Returns: Default version (as an integer)
             </div>
             
             <div class="method">
-                <div class="title" id="M000046">
+                <div class="title" id="M000061">
                     
-                    <a name="M000046"></a><b>get_endpoint</b>(environment, version, service)
+                    <a name="M000061"></a><b>get_endpoint</b>(environment, version, service)
                     
                 </div>
                 
@@ -455,10 +455,10 @@ Returns: The endpoint URL (as a string)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000046_source')" id="l_M000046_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000061_source')" id="l_M000061_source">show</a>
                         
                     </p>
-                    <div id="M000046_source" class="dyn-source">
+                    <div id="M000061_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 231</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_endpoint</span>(<span class="ruby-identifier">environment</span>, <span class="ruby-identifier">version</span>, <span class="ruby-identifier">service</span>)
       <span class="ruby-identifier">base</span> = <span class="ruby-ivar">@@environments</span>[<span class="ruby-identifier">environment</span>][<span class="ruby-identifier">version</span>]
@@ -472,9 +472,9 @@ Returns: The endpoint URL (as a string)
             </div>
             
             <div class="method">
-                <div class="title" id="M000044">
+                <div class="title" id="M000059">
                     
-                    <a name="M000044"></a><b>get_environments</b>()
+                    <a name="M000059"></a><b>get_environments</b>()
                     
                 </div>
                 
@@ -493,10 +493,10 @@ Returns: List of available environments (as strings)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000044_source')" id="l_M000044_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000059_source')" id="l_M000059_source">show</a>
                         
                     </p>
-                    <div id="M000044_source" class="dyn-source">
+                    <div id="M000059_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 208</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_environments</span>
       <span class="ruby-ivar">@@environments</span>.<span class="ruby-identifier">keys</span>
@@ -507,9 +507,9 @@ Returns: List of available environments (as strings)
             </div>
             
             <div class="method">
-                <div class="title" id="M000054">
+                <div class="title" id="M000071">
                     
-                    <a name="M000054"></a><b>get_interface_name</b>(version, service)
+                    <a name="M000071"></a><b>get_interface_name</b>(version, service)
                     
                 </div>
                 
@@ -539,10 +539,10 @@ Returns: The full interface class name for the given service (as a string)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000054_source')" id="l_M000054_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000071_source')" id="l_M000071_source">show</a>
                         
                     </p>
-                    <div id="M000054_source" class="dyn-source">
+                    <div id="M000071_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 333</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_interface_name</span>(<span class="ruby-identifier">version</span>, <span class="ruby-identifier">service</span>)
       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">version</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">version</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-value">13</span>
@@ -558,9 +558,9 @@ Returns: The full interface class name for the given service (as a string)
             </div>
             
             <div class="method">
-                <div class="title" id="M000039">
+                <div class="title" id="M000051">
                     
-                    <a name="M000039"></a><b>get_latest_version</b>()
+                    <a name="M000051"></a><b>get_latest_version</b>()
                     
                 </div>
                 
@@ -579,10 +579,10 @@ Returns: Latest version (as an integer)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000039_source')" id="l_M000039_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000051_source')" id="l_M000051_source">show</a>
                         
                     </p>
-                    <div id="M000039_source" class="dyn-source">
+                    <div id="M000051_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 156</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_latest_version</span>
       <span class="ruby-ivar">@@services</span>.<span class="ruby-identifier">keys</span>.<span class="ruby-identifier">select</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">service</span><span class="ruby-operator">|</span> <span class="ruby-identifier">service</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span> }.<span class="ruby-identifier">max</span>
@@ -593,9 +593,9 @@ Returns: Latest version (as an integer)
             </div>
             
             <div class="method">
-                <div class="title" id="M000053">
+                <div class="title" id="M000070">
                     
-                    <a name="M000053"></a><b>get_module_name</b>(version, service)
+                    <a name="M000070"></a><b>get_module_name</b>(version, service)
                     
                 </div>
                 
@@ -625,10 +625,10 @@ Returns: The full module name for the given service (as a string)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000053_source')" id="l_M000053_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000070_source')" id="l_M000070_source">show</a>
                         
                     </p>
-                    <div id="M000053_source" class="dyn-source">
+                    <div id="M000070_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 320</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_module_name</span>(<span class="ruby-identifier">version</span>, <span class="ruby-identifier">service</span>)
       <span class="ruby-keyword kw">return</span> <span class="ruby-node">&quot;AdWords::V#{version.to_s}::#{service}Service&quot;</span>
@@ -639,9 +639,9 @@ Returns: The full module name for the given service (as a string)
             </div>
             
             <div class="method">
-                <div class="title" id="M000056">
+                <div class="title" id="M000073">
                     
-                    <a name="M000056"></a><b>get_namespace_v2009</b>(driver)
+                    <a name="M000073"></a><b>get_namespace_v2009</b>(driver)
                     
                 </div>
                 
@@ -668,10 +668,10 @@ Returns: String with the namespace
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000056_source')" id="l_M000056_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000073_source')" id="l_M000073_source">show</a>
                         
                     </p>
-                    <div id="M000056_source" class="dyn-source">
+                    <div id="M000073_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 362</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_namespace_v2009</span>(<span class="ruby-identifier">driver</span>)
       <span class="ruby-comment cmt"># This is a huge hack to get the correct namespace for a given service,</span>
@@ -688,9 +688,9 @@ Returns: String with the namespace
             </div>
             
             <div class="method">
-                <div class="title" id="M000047">
+                <div class="title" id="M000063">
                     
-                    <a name="M000047"></a><b>get_report_download_url</b>(environment, version)
+                    <a name="M000063"></a><b>get_report_download_url</b>(environment, version)
                     
                 </div>
                 
@@ -720,10 +720,10 @@ Returns: The endpoint URL (as a string)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000047_source')" id="l_M000047_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000063_source')" id="l_M000063_source">show</a>
                         
                     </p>
-                    <div id="M000047_source" class="dyn-source">
+                    <div id="M000063_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 247</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_report_download_url</span>(<span class="ruby-identifier">environment</span>, <span class="ruby-identifier">version</span>)
       <span class="ruby-identifier">base</span> = <span class="ruby-ivar">@@environments</span>[<span class="ruby-identifier">environment</span>][<span class="ruby-identifier">version</span>]
@@ -737,9 +737,9 @@ Returns: The endpoint URL (as a string)
             </div>
             
             <div class="method">
-                <div class="title" id="M000043">
+                <div class="title" id="M000058">
                     
-                    <a name="M000043"></a><b>get_services</b>(version)
+                    <a name="M000058"></a><b>get_services</b>(version)
                     
                 </div>
                 
@@ -766,10 +766,10 @@ Returns: List of names of services (as strings) available for given version
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000043_source')" id="l_M000043_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000058_source')" id="l_M000058_source">show</a>
                         
                     </p>
-                    <div id="M000043_source" class="dyn-source">
+                    <div id="M000058_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 199</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_services</span>(<span class="ruby-identifier">version</span>)
       <span class="ruby-ivar">@@services</span>[<span class="ruby-identifier">version</span>]
@@ -780,9 +780,9 @@ Returns: List of names of services (as strings) available for given version
             </div>
             
             <div class="method">
-                <div class="title" id="M000048">
+                <div class="title" id="M000064">
                     
-                    <a name="M000048"></a><b>get_subdir</b>(version, service)
+                    <a name="M000064"></a><b>get_subdir</b>(version, service)
                     
                 </div>
                 
@@ -813,10 +813,10 @@ Returns: The endpoint URL (as a string)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000048_source')" id="l_M000048_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000064_source')" id="l_M000064_source">show</a>
                         
                     </p>
-                    <div id="M000048_source" class="dyn-source">
+                    <div id="M000064_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 263</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_subdir</span>(<span class="ruby-identifier">version</span>, <span class="ruby-identifier">service</span>)
       <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@@subdirs</span>[[<span class="ruby-identifier">version</span>, <span class="ruby-identifier">service</span>]]
@@ -827,9 +827,9 @@ Returns: The endpoint URL (as a string)
             </div>
             
             <div class="method">
-                <div class="title" id="M000038">
+                <div class="title" id="M000050">
                     
-                    <a name="M000038"></a><b>get_versions</b>()
+                    <a name="M000050"></a><b>get_versions</b>()
                     
                 </div>
                 
@@ -848,10 +848,10 @@ Returns: List of versions available (as integers)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000038_source')" id="l_M000038_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000050_source')" id="l_M000050_source">show</a>
                         
                     </p>
-                    <div id="M000038_source" class="dyn-source">
+                    <div id="M000050_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 147</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_versions</span>
       <span class="ruby-ivar">@@services</span>.<span class="ruby-identifier">keys</span>
@@ -862,9 +862,9 @@ Returns: List of versions available (as integers)
             </div>
             
             <div class="method">
-                <div class="title" id="M000055">
+                <div class="title" id="M000072">
                     
-                    <a name="M000055"></a><b>get_wrapper_name</b>(version, service)
+                    <a name="M000072"></a><b>get_wrapper_name</b>(version, service)
                     
                 </div>
                 
@@ -894,10 +894,10 @@ Returns: The full wrapper class name for the given service (as a string)
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000055_source')" id="l_M000055_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000072_source')" id="l_M000072_source">show</a>
                         
                     </p>
-                    <div id="M000055_source" class="dyn-source">
+                    <div id="M000072_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 351</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">get_wrapper_name</span>(<span class="ruby-identifier">version</span>, <span class="ruby-identifier">service</span>)
       <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">get_module_name</span>(<span class="ruby-identifier">version</span>, <span class="ruby-identifier">service</span>) <span class="ruby-operator">+</span> <span class="ruby-node">&quot;::#{service}ServiceWrapper&quot;</span>
@@ -908,9 +908,9 @@ Returns: The full wrapper class name for the given service (as a string)
             </div>
             
             <div class="method">
-                <div class="title" id="M000057">
+                <div class="title" id="M000074">
                     
-                    <a name="M000057"></a><b>validate_param</b>(param_name, param, type)
+                    <a name="M000074"></a><b>validate_param</b>(param_name, param, type)
                     
                 </div>
                 
@@ -952,10 +952,10 @@ Raises:
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000057_source')" id="l_M000057_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000074_source')" id="l_M000074_source">show</a>
                         
                     </p>
-                    <div id="M000057_source" class="dyn-source">
+                    <div id="M000074_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 387</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">validate_param</span>(<span class="ruby-identifier">param_name</span>, <span class="ruby-identifier">param</span>, <span class="ruby-identifier">type</span>)
       <span class="ruby-keyword kw">return</span> <span class="ruby-keyword kw">nil</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">param</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-identifier">type</span>
@@ -974,9 +974,9 @@ Raises:
             </div>
             
             <div class="method">
-                <div class="title" id="M000041">
+                <div class="title" id="M000055">
                     
-                    <a name="M000041"></a><b>version_has_service</b>(version, service)
+                    <a name="M000055"></a><b>version_has_service</b>(version, service)
                     
                 </div>
                 
@@ -996,10 +996,10 @@ the given service
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000041_source')" id="l_M000041_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000055_source')" id="l_M000055_source">show</a>
                         
                     </p>
-                    <div id="M000041_source" class="dyn-source">
+                    <div id="M000055_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r/services.rb, line 177</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">version_has_service</span>(<span class="ruby-identifier">version</span>, <span class="ruby-identifier">service</span>)
       <span class="ruby-keyword kw">return</span> (<span class="ruby-operator">!</span><span class="ruby-ivar">@@services</span>[<span class="ruby-identifier">version</span>].<span class="ruby-identifier">nil?</span> <span class="ruby-keyword kw">and</span>

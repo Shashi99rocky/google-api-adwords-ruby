@@ -60,7 +60,7 @@ Holds all the services, as well as login credentials.
         <dd>
             <ul>
                 
-                <li><a href="#M000009">get_service</a></li>
+                <li><a href="#M000012">get_service</a></li>
                 
             </ul>
         </dd>
@@ -78,9 +78,20 @@ Holds all the services, as well as login credentials.
         <dd>
             <ul>
                 
-                <li><a href="#M000007">partial_failure</a>,</li>
+                <li><a href="#M000008">partial_failure</a>,</li>
                 
-                <li><a href="#M000008">partial_failure=</a></li>
+                <li><a href="#M000009">partial_failure=</a></li>
+                
+            </ul>
+        </dd>
+    
+        <dt>R</dt>
+        <dd>
+            <ul>
+                
+                <li><a href="#M000010">return_money_in_micros</a>,</li>
+                
+                <li><a href="#M000011">return_money_in_micros=</a></li>
                 
             </ul>
         </dd>
@@ -89,7 +100,7 @@ Holds all the services, as well as login credentials.
         <dd>
             <ul>
                 
-                <li><a href="#M000013">service</a></li>
+                <li><a href="#M000016">service</a></li>
                 
             </ul>
         </dd>
@@ -98,9 +109,9 @@ Holds all the services, as well as login credentials.
         <dd>
             <ul>
                 
-                <li><a href="#M000001">use_mcc</a>,</li>
+                <li><a href="#M000003">use_mcc</a>,</li>
                 
-                <li><a href="#M000004">use_mcc=</a></li>
+                <li><a href="#M000005">use_mcc=</a></li>
                 
             </ul>
         </dd>
@@ -109,9 +120,9 @@ Holds all the services, as well as login credentials.
         <dd>
             <ul>
                 
-                <li><a href="#M000005">validate_only</a>,</li>
+                <li><a href="#M000006">validate_only</a>,</li>
                 
-                <li><a href="#M000006">validate_only=</a></li>
+                <li><a href="#M000007">validate_only=</a></li>
                 
             </ul>
         </dd>
@@ -260,9 +271,9 @@ object containing the login information
             <div class="sectiontitle">Instance Public methods</div>
             
             <div class="method">
-                <div class="title" id="M000009">
+                <div class="title" id="M000012">
                     
-                    <a name="M000009"></a><b>get_service</b>(name, version = nil)
+                    <a name="M000012"></a><b>get_service</b>(name, version = nil)
                     
                 </div>
                 
@@ -296,7 +307,7 @@ Returns:
                 <div class="aka">
                     This method is also aliased as
                     
-                    <a href="API.html#M000013">service</a>
+                    <a href="API.html#M000016">service</a>
                     
                 </div>
                 
@@ -304,11 +315,11 @@ Returns:
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000009_source')" id="l_M000009_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000012_source')" id="l_M000012_source">show</a>
                         
                     </p>
-                    <div id="M000009_source" class="dyn-source">
-                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 200</span>
+                    <div id="M000012_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 235</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">get_service</span>(<span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span> = <span class="ruby-keyword kw">nil</span>)
       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">name</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Integer</span> <span class="ruby-keyword kw">and</span> <span class="ruby-identifier">version</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">String</span>
         <span class="ruby-identifier">name</span>, <span class="ruby-identifier">version</span> = <span class="ruby-identifier">version</span>, <span class="ruby-identifier">name</span>
@@ -349,9 +360,9 @@ Returns:
             </div>
             
             <div class="method">
-                <div class="title" id="M000007">
+                <div class="title" id="M000008">
                     
-                    <a name="M000007"></a><b>partial_failure</b>()
+                    <a name="M000008"></a><b>partial_failure</b>()
                     
                 </div>
                 
@@ -365,13 +376,13 @@ enabled and/or returns the current status of the property.
 Args:
 </p>
 <ul>
-<li>accepts a block, which it will execute as a validate-only operation.
+<li>accepts a block, which it will execute as a partial failure operation.
 
 </li>
 </ul>
 <p>
-Returns: Boolean indicating whether validate-only operations are currently
-enabled or disabled
+Returns: Boolean indicating whether partial failure operations are
+currently enabled or disabled
 </p>
 
                 </div>
@@ -381,10 +392,10 @@ enabled or disabled
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000007_source')" id="l_M000007_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000008_source')" id="l_M000008_source">show</a>
                         
                     </p>
-                    <div id="M000007_source" class="dyn-source">
+                    <div id="M000008_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 168</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">partial_failure</span>
       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
@@ -404,9 +415,9 @@ enabled or disabled
             </div>
             
             <div class="method">
-                <div class="title" id="M000008">
+                <div class="title" id="M000009">
                     
-                    <a name="M000008"></a><b>partial_failure=</b>(value)
+                    <a name="M000009"></a><b>partial_failure=</b>(value)
                     
                 </div>
                 
@@ -431,10 +442,10 @@ Args:
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000008_source')" id="l_M000008_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000009_source')" id="l_M000009_source">show</a>
                         
                     </p>
-                    <div id="M000008_source" class="dyn-source">
+                    <div id="M000009_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 187</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">partial_failure=</span>(<span class="ruby-identifier">value</span>)
       <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">partial_failure</span> = <span class="ruby-identifier">value</span>
@@ -445,15 +456,112 @@ Args:
             </div>
             
             <div class="method">
-                <div class="title" id="M000013">
+                <div class="title" id="M000010">
                     
-                    <a name="M000013"></a><b>service</b>(name, version = nil)
+                    <a name="M000010"></a><b>return_money_in_micros</b>()
                     
                 </div>
                 
                 <div class="description">
                   <p>
-Alias for <a href="API.html#M000009">get_service</a>
+Helper method to provide a simple way of performing requests with the
+returnMoneyInMicros option enabled. Executes a block of code with the
+option enabled and/or returns the current status of the property.
+</p>
+<p>
+Args:
+</p>
+<ul>
+<li>accepts a block, which it will execute with the returnMoneyInMicros option
+enabled.
+
+</li>
+</ul>
+<p>
+Returns: Boolean indicating whether the returnMoneyInMicros option is
+currently enabled or disabled
+</p>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000010_source')" id="l_M000010_source">show</a>
+                        
+                    </p>
+                    <div id="M000010_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 203</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">return_money_in_micros</span>
+      <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
+        <span class="ruby-identifier">previous</span> = <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">return_money_in_micros</span>
+        <span class="ruby-keyword kw">begin</span>
+          <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">return_money_in_micros</span> = <span class="ruby-keyword kw">true</span>
+          <span class="ruby-keyword kw">yield</span>
+        <span class="ruby-keyword kw">ensure</span>
+          <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">return_money_in_micros</span> = <span class="ruby-identifier">previous</span>
+        <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">end</span>
+      <span class="ruby-keyword kw">return</span> <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">return_money_in_micros</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000011">
+                    
+                    <a name="M000011"></a><b>return_money_in_micros=</b>(value)
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Helper method to provide a simple way of performing requests with the
+returnMoneyInMicros option enabled.
+</p>
+<p>
+Args:
+</p>
+<ul>
+<li>value: the new value for the property (boolean)
+
+</li>
+</ul>
+
+                </div>
+                
+                
+                
+                
+                <div class="sourcecode">
+                    <p class="source-link">
+                        Source: <a href="javascript:toggleSource('M000011_source')" id="l_M000011_source">show</a>
+                        
+                    </p>
+                    <div id="M000011_source" class="dyn-source">
+                        <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 222</span>
+    <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">return_money_in_micros=</span>(<span class="ruby-identifier">value</span>)
+      <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">return_money_in_micros</span> = <span class="ruby-identifier">value</span>
+    <span class="ruby-keyword kw">end</span></pre>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <div class="method">
+                <div class="title" id="M000016">
+                    
+                    <a name="M000016"></a><b>service</b>(name, version = nil)
+                    
+                </div>
+                
+                <div class="description">
+                  <p>
+Alias for <a href="API.html#M000012">get_service</a>
 </p>
 
                 </div>
@@ -463,9 +571,9 @@ Alias for <a href="API.html#M000009">get_service</a>
             </div>
             
             <div class="method">
-                <div class="title" id="M000001">
+                <div class="title" id="M000003">
                     
-                    <a name="M000001"></a><b>use_mcc</b>()
+                    <a name="M000003"></a><b>use_mcc</b>()
                     
                 </div>
                 
@@ -495,10 +603,10 @@ enabled or disabled
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000001_source')" id="l_M000001_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000003_source')" id="l_M000003_source">show</a>
                         
                     </p>
-                    <div id="M000001_source" class="dyn-source">
+                    <div id="M000003_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 98</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">use_mcc</span>
       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
@@ -518,9 +626,9 @@ enabled or disabled
             </div>
             
             <div class="method">
-                <div class="title" id="M000004">
+                <div class="title" id="M000005">
                     
-                    <a name="M000004"></a><b>use_mcc=</b>(value)
+                    <a name="M000005"></a><b>use_mcc=</b>(value)
                     
                 </div>
                 
@@ -546,10 +654,10 @@ Args:
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000004_source')" id="l_M000004_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000005_source')" id="l_M000005_source">show</a>
                         
                     </p>
-                    <div id="M000004_source" class="dyn-source">
+                    <div id="M000005_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 118</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">use_mcc=</span>(<span class="ruby-identifier">value</span>)
       <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">use_mcc</span> = <span class="ruby-identifier">value</span>
@@ -560,9 +668,9 @@ Args:
             </div>
             
             <div class="method">
-                <div class="title" id="M000005">
+                <div class="title" id="M000006">
                     
-                    <a name="M000005"></a><b>validate_only</b>()
+                    <a name="M000006"></a><b>validate_only</b>()
                     
                 </div>
                 
@@ -592,10 +700,10 @@ enabled or disabled
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000005_source')" id="l_M000005_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000006_source')" id="l_M000006_source">show</a>
                         
                     </p>
-                    <div id="M000005_source" class="dyn-source">
+                    <div id="M000006_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 133</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">validate_only</span>
       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">block_given?</span>
@@ -615,9 +723,9 @@ enabled or disabled
             </div>
             
             <div class="method">
-                <div class="title" id="M000006">
+                <div class="title" id="M000007">
                     
-                    <a name="M000006"></a><b>validate_only=</b>(value)
+                    <a name="M000007"></a><b>validate_only=</b>(value)
                     
                 </div>
                 
@@ -643,10 +751,10 @@ Args:
                 
                 <div class="sourcecode">
                     <p class="source-link">
-                        Source: <a href="javascript:toggleSource('M000006_source')" id="l_M000006_source">show</a>
+                        Source: <a href="javascript:toggleSource('M000007_source')" id="l_M000007_source">show</a>
                         
                     </p>
-                    <div id="M000006_source" class="dyn-source">
+                    <div id="M000007_source" class="dyn-source">
                         <pre><span class="ruby-comment cmt"># File lib/adwords4r.rb, line 153</span>
     <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">validate_only=</span>(<span class="ruby-identifier">value</span>)
       <span class="ruby-ivar">@credentials</span>.<span class="ruby-identifier">validate_only</span> = <span class="ruby-identifier">value</span>
