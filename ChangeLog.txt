@@ -1,3 +1,7 @@
+19.4.0
+- Added support for the returnMoneyInMicros header.
+- Added handle_partial_failures.rb example for v201008.
+
 19.3.0
 - Added support for CustomerSyncService, ServicedAccountService and
   UserListService in v201008.
