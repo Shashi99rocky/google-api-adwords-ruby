@@ -159,11 +159,11 @@ module AdWords
     # enabled and/or returns the current status of the property.
     #
     # Args:
-    # - accepts a block, which it will execute as a validate-only operation.
+    # - accepts a block, which it will execute as a partial failure operation.
     #
     # Returns:
-    # Boolean indicating whether validate-only operations are currently enabled
-    # or disabled
+    # Boolean indicating whether partial failure operations are currently
+    # enabled or disabled
     #
     def partial_failure
       if block_given?
@@ -186,6 +186,41 @@ module AdWords
     #
     def partial_failure=(value)
       @credentials.partial_failure = value
+    end
+
+    # Helper method to provide a simple way of performing requests with the
+    # returnMoneyInMicros option enabled. Executes a block of code with the
+    # option enabled and/or returns the current status of the property.
+    #
+    # Args:
+    # - accepts a block, which it will execute with the returnMoneyInMicros
+    #   option enabled.
+    #
+    # Returns:
+    # Boolean indicating whether the returnMoneyInMicros option is currently
+    # enabled or disabled
+    #
+    def return_money_in_micros
+      if block_given?
+        previous = @credentials.return_money_in_micros
+        begin
+          @credentials.return_money_in_micros = true
+          yield
+        ensure
+          @credentials.return_money_in_micros = previous
+        end
+      end
+      return @credentials.return_money_in_micros
+    end
+
+    # Helper method to provide a simple way of performing requests with the
+    # returnMoneyInMicros option enabled.
+    #
+    # Args:
+    # - value: the new value for the property (boolean)
+    #
+    def return_money_in_micros=(value)
+      @credentials.return_money_in_micros = value
     end
 
     # Obtain an API service, given a version and its name.

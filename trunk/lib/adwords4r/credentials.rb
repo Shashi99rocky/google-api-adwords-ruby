@@ -87,6 +87,11 @@ module AdWords
             XSD::QName.new(ns, 'partialFailure'), 'true')
         header.add(partial_failure)
       end
+      if @parent.return_money_in_micros
+        return_money_in_micros = SOAP::SOAPElement.new(
+            XSD::QName.new(ns, 'returnMoneyInMicros'), 'true')
+        header.add(return_money_in_micros)
+      end
       return header
     end
   end
@@ -134,6 +139,8 @@ module AdWords
     attr_accessor :validate_only
     # Whether we're making requests with support for partial failures
     attr_accessor :partial_failure
+    # Whether we're making requests with the returnMoneyInMicros option enabled
+    attr_accessor :return_money_in_micros
 
     public
 
