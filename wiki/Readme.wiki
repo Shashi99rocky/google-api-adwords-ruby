@@ -1,5 +1,9 @@
 #summary AdWords API Ruby Client Library Readme
 
+|| Note: || This client library has been deprecated in favor of http://code.google.com/p/google-api-ads-ruby ||
+
+----
+
 = Google adwords4r Library =
 
 Welcome to adwords4r: Bringing the delights of Ruby programming to the !AdWords world!
